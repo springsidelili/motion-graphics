@@ -1,5 +1,5 @@
 // Dev sheet: every animated icon at three moments of its entrance.
-import { createCanvas } from '@napi-rs/canvas';
+import { createCanvas, png } from '../src/engine/canvas';
 import fs from 'node:fs';
 import { loadAssets } from '../src/engine/assets';
 import * as I from '../src/engine/icons';
@@ -21,5 +21,5 @@ names.forEach((n, i) => lts.forEach((lt) => {
   k++;
 }));
 fs.mkdirSync('out', { recursive: true });
-fs.writeFileSync('out/icons.png', c.toBuffer('image/png'));
+fs.writeFileSync('out/icons.png', png(c));
 console.log('ok', names.join(','));

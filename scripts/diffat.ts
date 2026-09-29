@@ -1,12 +1,12 @@
 // Where does the picture change between two consecutive frames? Prints the bbox of big changes.
-import { createCanvas } from '@napi-rs/canvas';
+import { createCanvas, pixels } from '../src/engine/canvas';
 import { loadAssets } from '../src/engine/assets';
 import { renderFrame } from '../src/timeline';
 await loadAssets();
 const c = createCanvas(1920, 1080), ctx = c.getContext('2d');
 for (const t of process.argv.slice(2).map(Number)) {
-  renderFrame(ctx, t - 1 / 60); const a = Buffer.from(c.data());
-  renderFrame(ctx, t); const b = c.data();
+  renderFrame(ctx, t - 1 / 60); const a = Buffer.from(pixels(c));
+  renderFrame(ctx, t); const b = pixels(c);
   let x0 = 1e9, y0 = 1e9, x1 = -1, y1 = -1, n = 0;
   for (let p = 0; p < 1920 * 1080; p++) {
     const d = Math.abs(a[p * 4]! - b[p * 4]!) + Math.abs(a[p * 4 + 1]! - b[p * 4 + 1]!) + Math.abs(a[p * 4 + 2]! - b[p * 4 + 2]!);

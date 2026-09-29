@@ -1,23 +1,27 @@
-// Renders frames [a, b) at fps and pipes raw RGBA into ffmpeg (libx264, BT.709-tagged).
-import { createCanvas } from '@napi-rs/canvas';
+// Renders frames [a, b) and pipes raw RGBA into one ffmpeg process.
+// Spawned by scripts/render.ts with a JSON job: { a, b, fps, out, enc, id }.
+// Prints "P <frames done>" lines on stdout for the progress meter.
 import { spawn } from 'node:child_process';
 import { loadAssets, W, H } from '../src/engine/assets';
+import { createCanvas, pixels } from '../src/engine/canvas';
 import { renderFrame } from '../src/timeline';
+import { FFMPEG } from './encoders';
 
-const [a, b, fps, out, crf, preset, id] = process.argv.slice(2);
-const A = +a!, B = +b!, FPS = +fps!;
+const job = JSON.parse(process.argv[2]!) as { a: number; b: number; fps: number; out: string; enc: string[]; id: number };
 await loadAssets();
-const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgba', '-s', `${W}x${H}`, '-r', String(FPS), '-i', 'pipe:0',
-  '-vf', 'scale=out_color_matrix=bt709:out_range=tv,format=yuv420p', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709',
-  '-c:v', 'libx264', '-preset', preset!, '-crf', crf!, '-tune', 'animation', '-g', String(FPS * 2), '-threads', '2', out!], { stdio: ['pipe', 'inherit', 'inherit'] });
+const ff = spawn(FFMPEG, ['-y', '-hide_banner', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgba', '-s', `${W}x${H}`, '-r', String(job.fps), '-i', 'pipe:0', ...job.enc, '-f', 'mp4', job.out],
+  { stdio: ['pipe', 'inherit', 'inherit'] });
+let ffExit: number | null = null;
+const exited = new Promise<number>((r) => ff.on('exit', (code) => r((ffExit = code ?? 1))));
+ff.on('error', (e) => { console.error(`cannot start ffmpeg (${FFMPEG}): ${e.message}`); process.exit(1); });
+ff.stdin.on('error', () => {}); // ffmpeg quit early (e.g. no free encoder session); its exit code is reported below
+
 const c = createCanvas(W, H), ctx = c.getContext('2d');
-const t0 = performance.now();
-for (let f = A; f < B; f++) {
-  renderFrame(ctx, f / FPS);
-  const buf = c.data();
-  if (!ff.stdin.write(Buffer.from(buf))) await new Promise((r) => ff.stdin.once('drain', r));
-  const n = f - A + 1;
-  if (n % 120 === 0) process.stdout.write(`[w${id}] ${n}/${B - A} ${(n / ((performance.now() - t0) / 1000)).toFixed(1)} fps\n`);
+for (let f = job.a; f < job.b && ffExit === null; f++) {
+  renderFrame(ctx, f / job.fps);
+  if (!ff.stdin.write(Buffer.from(pixels(c)))) await Promise.race([new Promise((r) => ff.stdin.once('drain', r)), exited]);
+  const n = f - job.a + 1;
+  if (n % 30 === 0 || f === job.b - 1) process.stdout.write(`P ${n}\n`);
 }
 ff.stdin.end();
-await new Promise((r) => ff.on('exit', r));
+process.exit(await exited);

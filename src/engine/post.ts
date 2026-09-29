@@ -1,4 +1,4 @@
-import { createCanvas, type Canvas } from '@napi-rs/canvas';
+import { createCanvas, beginFrame, type AnyCanvas as Canvas } from './canvas';
 import { img, type Ctx, W, H } from './assets';
 import { C } from './theme';
 import { mulberry32, noise1, rgba, prog, ease, lerp } from './util';
@@ -26,6 +26,7 @@ export type BG = { hue?: [string, string, string]; energy?: number; grid?: numbe
 export function background(ctx: Ctx, t: number, o: BG = {}) {
   if (!lo) lo = createCanvas(W / LO, H / LO);
   const l = lo.getContext('2d');
+  beginFrame(l); // redrawn every frame: on skia-canvas this drops last frame's recording
   l.setTransform(1, 0, 0, 1, 0, 0);
   l.globalCompositeOperation = 'source-over';
   const g = l.createLinearGradient(0, 0, (W * 0.3) / LO, H / LO);

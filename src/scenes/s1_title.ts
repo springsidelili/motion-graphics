@@ -2,7 +2,7 @@
 // A pipette drops into a microplate well; the ripple lights the plate; lit wells
 // lift off and assemble "ACI"; the full name is spelled out and each initial is
 // tied to its big letter; finally the letters collapse to one dot = the ACI node.
-import { createCanvas } from '@napi-rs/canvas';
+import { createCanvas } from '../engine/canvas';
 import { img, type Ctx, W, H } from '../engine/assets';
 import { C, BRAND } from '../engine/theme';
 import { cue } from '../engine/narration';

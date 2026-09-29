@@ -9,7 +9,7 @@
 import json, numpy as np, soundfile as sf, re, sys, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-raw = json.load(open(os.path.join(ROOT, 'data/asr_raw.json')))
+raw = json.load(open(os.path.join(ROOT, 'data/asr_raw.json'), encoding='utf-8'))
 WAV = sys.argv[1] if len(sys.argv) > 1 else 'wav'  # dir with m{i}.wav (16 kHz mono)
 
 # (clip, [asr words...], [canonical words...]) - replaced left to right, first match
@@ -95,4 +95,4 @@ for clip, d in raw.items():
     text = ' '.join(w['w'] for w in words)
     out[clip] = {'duration': round(dur, 3), 'text': text, 'words': words, 'speech': [[round(a, 2), round(b, 2)] for a, b in regs]}
     print(f'clip {clip}: {len(words)} words, {len(regs)} voiced regions, {snapped} onsets snapped\n  {text}\n')
-json.dump(out, open(os.path.join(ROOT, 'data/narration.json'), 'w'), indent=1, ensure_ascii=False)
+json.dump(out, open(os.path.join(ROOT, 'data/narration.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)

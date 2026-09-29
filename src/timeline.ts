@@ -1,5 +1,6 @@
 // The edit: scene windows on the master timeline + global finishing passes.
 import type { Ctx } from './engine/assets';
+import { beginFrame } from './engine/canvas';
 import type { Scene } from './engine/scene';
 import { DURATION, clip } from './engine/narration';
 import { background, finish, hud, type Chapter } from './engine/post';
@@ -31,6 +32,7 @@ export const chapters: Chapter[] = [
 ];
 
 export function renderFrame(ctx: Ctx, t: number) {
+  beginFrame(ctx);
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.globalAlpha = 1;
   ctx.globalCompositeOperation = 'source-over';

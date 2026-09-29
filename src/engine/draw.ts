@@ -1,4 +1,4 @@
-import { createCanvas, type Canvas } from '@napi-rs/canvas';
+import { createCanvas, type AnyCanvas as Canvas } from './canvas';
 import { img, type Ctx, W, H } from './assets';
 import { F, C, type FontKey } from './theme';
 import { clamp, ease, lerp, prog, rgba, type Pt, type RGB, bezier, TAU, springAt } from './util';

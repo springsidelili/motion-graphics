@@ -15,6 +15,7 @@ from scipy import signal
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'out', 'audio')
 SR = 48000
+FFMPEG = os.environ.get('FFMPEG', 'ffmpeg')
 rng = np.random.default_rng(7)
 
 def t_(dur): return np.arange(int(dur * SR)) / SR
@@ -126,10 +127,10 @@ def envelope(x, win=0.25):
     return np.convolve(m, ker, 'same')
 
 def ff(args):
-    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', *args], check=True)
+    subprocess.run([FFMPEG, '-y', '-loglevel', 'error', *args], check=True)
 
 def main():
-    cues = json.load(open(os.path.join(OUT, 'cues.json')))
+    cues = json.load(open(os.path.join(OUT, 'cues.json'), encoding='utf-8'))
     dur = cues['duration']; N = int(dur * SR)
     # --- narration: gentle cleanup + presence, on the master timeline
     voice = np.zeros((N, 2))
@@ -168,7 +169,7 @@ def main():
     sf.write(os.path.join(OUT, 'mix_raw.wav'), mix.astype(np.float32), SR, subtype='FLOAT')
     # --- master: two-pass loudnorm to -15 LUFS / -1.5 dBTP (YouTube plays at -14)
     raw = os.path.join(OUT, 'mix_raw.wav')
-    r = subprocess.run(['ffmpeg', '-hide_banner', '-i', raw, '-af', 'loudnorm=I=-15:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    r = subprocess.run([FFMPEG, '-hide_banner', '-i', raw, '-af', 'loudnorm=I=-15:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
     m = json.loads(r[r.rindex('{'):r.rindex('}') + 1])
     ln = f"loudnorm=I=-15:TP=-1.5:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true"
     ff(['-i', raw, '-af', ln + ',aresample=48000', '-c:a', 'pcm_s24le', os.path.join(OUT, 'mix.wav')])

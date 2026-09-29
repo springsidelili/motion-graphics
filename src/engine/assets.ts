@@ -1,8 +1,8 @@
-import { GlobalFonts, loadImage, type Image, type SKRSContext2D } from '@napi-rs/canvas';
+import { loadImage, registerFonts, type Img as Image, type Ctx } from './canvas';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export type Ctx = SKRSContext2D;
+export type { Ctx };
 export const W = 1920, H = 1080;
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 
@@ -32,7 +32,7 @@ export const img: { faces: Record<string, Image>; logo: Image; photos: Record<st
 let loaded = false;
 export async function loadAssets() {
   if (loaded) return;
-  for (const [f, fam] of FONTS) GlobalFonts.registerFromPath(path.join(ROOT, 'node_modules/@expo-google-fonts', f), fam);
+  registerFonts(FONTS.map(([f, fam]) => [path.join(ROOT, 'node_modules/@expo-google-fonts', f), fam]));
   for (const id of FACES) img.faces[id] = await loadImage(path.join(ROOT, 'assets/img/faces', `${id}.png`));
   img.logo = await loadImage(path.join(ROOT, 'assets/img/isce2_logo_white.png'));
   for (const id of PHOTOS) img.photos[id] = { color: await loadImage(path.join(ROOT, 'assets/img/labs', `${id}.jpg`)), gray: await loadImage(path.join(ROOT, 'assets/img/labs', `${id}_g.jpg`)) };

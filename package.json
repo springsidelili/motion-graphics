@@ -2,7 +2,17 @@
   "name": "aci-motion-graphics",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
+    "doctor": "tsx scripts/doctor.ts",
+    "build": "tsx scripts/build.ts",
+    "build:gpu": "tsx scripts/build.ts --backend gpu",
+    "cues": "tsx scripts/cues.ts",
+    "audio": "tsx scripts/py.ts tools/audio.py",
+    "render": "tsx scripts/render.ts video",
+    "render:gpu": "tsx scripts/render.ts video --backend gpu",
     "stills": "tsx scripts/render.ts stills",
     "sheet": "tsx scripts/render.ts sheet",
     "video": "tsx scripts/render.ts video",
@@ -16,5 +26,8 @@
     "@types/node": "^26.6.3",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "optionalDependencies": {
+    "skia-canvas": "^3.0.8"
   }
 }
