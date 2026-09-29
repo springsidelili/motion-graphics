@@ -1,13 +1,13 @@
-# ACI Division — Motion Graphics Storyboard (Part 1: slides 1–4)
+# ACI Division — Motion Graphics Storyboard (slides 1–12)
 
-Runtime 3:07 · 1920×1080 · 60 fps · narration = the deck's own audio (mastered), word-synced.
+Runtime 10:30 · 1920×1080 · 60 fps · narration = the deck's own audio (mastered), word-synced.
 
 ## Design principles (from the brief)
 
 | Principle | How it is applied |
 |---|---|
 | **Temporal alignment** | Every reveal is keyed to the *spoken word*, not to a hand-typed time. `data/narration.json` holds word-level timings (offline ASR + onset snapping); scenes look words up by text (`cue(4, 'Andrew Lim')`) and animate ~0.1 s *ahead* of the onset so eye and ear land together. |
-| **Auditory restraint** | Six procedural sound types only (drop, soft pop, whoosh, chime, tick, low swell), each placed on a focal moment, mixed 18–26 dB under the voice. A near-subliminal pad fills pauses and ducks under speech. |
+| **Auditory restraint** | Procedural, deliberately dark sounds only: muffled non-tonal taps (no pitched bleeps), a round low drop, a warm low mallet, air-only whooshes, a low swell. Each sound is low-passed and the SFX bus is low-passed again at 6 kHz; cues sit on focal moments ~18 dB under the voice. A near-subliminal pad fills pauses and ducks under speech. |
 | **Functional abstraction** | Slides were text walls and screenshots. The video rebuilds them as mechanisms: the org chart becomes a tree a light pulse travels down; domains are explained by animated instrument icons (a chromatogram drawing its peaks, X-ray diffraction rings, an NMR spin decaying); services and responsibilities orbit a hub. |
 | **Visual continuity** | One motif runs through everything: **the well** (a circle, from the microplate on the title slide). A drop lands in a well → the lit wells become the letters "ACI" → the letters collapse to a dot → the dot *is* the ACI node in the org chart → it divides into the three domain circles → those colours carry into the team columns → the columns fold back into the resource hub. Every cut is a shape match. |
 
@@ -68,3 +68,62 @@ Times are indicative (seconds). The code never hard-codes them: every beat is lo
 | 173–176 | "managed, optimised, and kept relevant" | Three outcome checks. |
 | 179.6 | "…across the Institute" | Pulses travel hub → every lab on the ring. |
 | 181–186 | — | End card: ACI wordmark + ISCE² logo. |
+
+### 5 · Our laboratories (182.8 – 233.2) — slide 5
+| t | Narration | Picture |
+|---|---|---|
+| 181.6 | — | The resource hub shrinks into the red location pin (same pin as scene 2). |
+| 183–188 | "…where our ACI laboratories are located within the Institute" | A vector redraw of the Level-1 site plan draws itself outward from the pin; the ACI lab strip glows on "ACI laboratories". |
+| 190.3 | "Our eight analytical laboratories … level 1" | The strip's eight cells lift out of the plan into a lab stack (count-up), beside the real corridor photo. |
+| 199.6 / 204–206 / 212 | "Lab 1-01" · "Labs 1-02, 1-03 and 1-06" · "Labs 1-04 and 1-05" | Each bar fills in its domain colour exactly on its spoken number; a legend builds on each domain name. |
+| 213.9–217 | "Labs 1-07 and 1-08 are shared…" | Violet hatching + "ACI / SCBT", "ACI / FEMT / C3". |
+| 221.8 / 226.6 | "close to one another" · "integrated analytical support" | The stack tightens; pulses run between neighbouring labs; header becomes *Integrated analytical support*. |
+| 231.4 | — | Lab 1-01 (blue) expands into a colour wash that opens the C/MS chapter. |
+
+### 6–7 · Chromatography / Mass Spectrometry (233 – 355) — slides 6, 7
+| t | Narration | Picture |
+|---|---|---|
+| 235–238 | "…three technical domains, starting with chromatography…" | Domain selector (the docked chips from scene 3) lights C/MS and docks; title card with the domain lead. |
+| 242.6 / 244.1 / 245.4 | "gas chromatography · liquid chromatography · mass spectrometry" | Real lab photos arrive on their names (duotone → colour). |
+| 247–252 | "separate, identify, and analyse" | Working mechanism: a sample splits into bands in a column, the bands draw a chromatogram as they elute, and a mass spectrum rises — each verb lands on its word. |
+| 255 / 257 | "routine testing · complex investigations" | Two tags. |
+| 270–353 | slide 7 | Capability tree (GC / LC / elemental). Row headers preview on "broad range of instruments"; each instrument chip pops on its name; tags (microplastics, solid/liquid/gas, targeted/non-targeted) on their words; a *Mass spectrometry* bracket on "advanced mass spectrometry". |
+
+### 8–9 · X-Ray Spectroscopy / Microscopy (355 – 473) — slides 8, 9
+| t | Narration | Picture |
+|---|---|---|
+| 357–362 | "…second technical domain, X-ray… led by Ms. Angeline Seo" | Selector passes the highlight C/MS → X-ray; title card + lead. |
+| 364 | "key instruments" | Filmstrip of the instrument photos. |
+| 369–377 | "SEM and TEM … very small length scales" | Spotlight: continuous zoom grains → particles → atomic lattice with a live scale bar (100 µm → 1 nm). |
+| 378–381 | "SAXS and WAXS" | Rings on a detector: small-angle on "SAXS", wide-angle on "WAXS". |
+| 382–385 | "XPS … elemental and chemical analysis" | Photoelectron spectrum; element peaks label on "elemental", C 1s splits into C–C / C=O on "chemical". |
+| 387–398 | "Powder X-ray diffractometer … in-situ … structural changes" | Heated reaction chamber + XRD waterfall whose peaks shift and a new phase appears. |
+| 400–405 | "XRF with mapping … distribution" | A beam raster-scans a sample and builds an element map pixel by pixel. |
+| 406–415 | "morphology, structure, surface chemistry, elemental composition" | Tray of instruments wires to each property on its word. |
+| 418–471 | slide 9 | Capability tree; a length-scale ruler (mm → Å) places micro-CT, SEM, AFM and TEM on "different length scales". |
+
+### 10–11 · NMR / Physical / Thermal (473 – 597) — slides 10, 11
+| t | Narration | Picture |
+|---|---|---|
+| 475–480 | "…third technical domain, NMR, physical and thermal…" | Selector → NMR; title card + lead. |
+| 485–497 | "Nuclear Magnetic Resonance … structure identification … quantitative analysis" | Panel: NMR photo; a molecule's proton groups light their spectrum peaks; integrals (3H : 2H : 1H) rise on "quantitative". |
+| 499–511 | "thermal, chemical and physical characterisation laboratory…" | Panel: lab photo; heating ramp with mass-loss + heat-flow curves, porous particle; checks on each property. |
+| 512–525 | "molecular and bulk property perspective … research, product development, problem solving" | Molecular ↔ bulk bridge, then three outcomes. |
+| 527–596 | slide 11 | Capability tree; temperature-program overlay (ramp, TGA, DSC) on "controlled temperature conditions"; a *molecular structure → physical → chemical → thermal* journey on those words. |
+
+### 12 · Capabilities at a glance (597.7 – 630) — slide 12
+| t | Narration | Picture |
+|---|---|---|
+| 598–606 | "…wide range of analytical capabilities … three technical domains" | All capabilities cascade into three domain columns. |
+| 607–614 | "…different types of samples and analytical needs" | The wall steps back; solids, liquids, gases, powders. |
+| 615–623 | "our team can work with you to identify the most appropriate analytical approach for your specific research needs" | The 11 team portraits connect to "You"; techniques funnel into one best-fit approach, handed to you. |
+| 623.8 | — | ACI end card, fade out. |
+
+## Revision log
+
+**Rev 2 (feedback on part 1)**
+- Sound: the tonal UI "pops"/ticks replaced by muffled non-tonal taps; drop re-voiced lower and rounder; chime replaced by a warm low mallet; per-sound low-pass plus a 6 kHz low-pass on the SFX bus.
+- "Technical training": the cap icon now sits outside the pill with a clear gap.
+- The ISCE² *Internal R&D* box now encloses the *Shared scientific resources* label; the industry stream leaves through the box's side.
+- Industry → services: the camera travels to the industry node, which becomes the hub that emits each service tile on its keyword (and folds back into the solutions orb) — replaces the zoom-and-cut.
+- Ong Li Li's NMR lead card now appears in place (like the other leads); the flight from management was removed.

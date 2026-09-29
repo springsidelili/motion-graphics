@@ -1,8 +1,8 @@
 // Scene 4a · Our team (slide 4, first half).
 // Leadership lands on the management row; three domain columns rise in the
 // same colours as scene 3; the camera walks column by column and every person
-// pops in on their spoken name. Ong Li Li's card flies from management into the
-// NMR lead slot, showing her dual role. Then the team folds into one hub.
+// pops in on their spoken name (Ong Li Li's NMR lead card appears in place,
+// like the other leads). Then the team folds into one hub.
 import { type Ctx, W, H } from '../engine/assets';
 import { C, DOMAINS } from '../engine/theme';
 import { cue, clip } from '../engine/narration';
@@ -22,8 +22,9 @@ const T = {
   deputy: cue(4, 'Division Deputy Director').t,
   cols: cue(4, 'three technical domains').t,
   slots: cue(4, 'respective domain lead').t,
-  focus: [cue(4, 'Chromatography and Mass').t - 0.35, cue(4, 'X-ray Spectroscopy').t - 0.35, cue(4, 'Ong Li Li also').t - 0.25],
-  leads: [cue(4, 'Ong Wai Chung').t, cue(4, 'Angeline Seo').t, cue(4, 'domain lead of NMR').t],
+  focus: [cue(4, 'Chromatography and Mass').t - 0.35, cue(4, 'X-ray Spectroscopy').t - 0.35, cue(4, 'respectively').t - 0.1],
+  leads: [cue(4, 'Ong Wai Chung').t, cue(4, 'Angeline Seo').t, cue(4, 'Ong Li Li also').t],
+  nmrLead: cue(4, 'domain lead of NMR').t,
   label: [cue(4, 'instrument specialists').t, cue(4, 'senior domain specialists').t, cue(4, 'supported by instrument').t + 0.3],
   nmr: cue(4, 'NMR').t,
   wide: cue(4, 'Kuan Kai Cong').t + 0.9,
@@ -64,7 +65,7 @@ const DOM_ICON = [I.chromatogram, I.xray, I.nmr];
 const FOCUS: Cam[] = [
   { x: COL.xs[0]!, y: 705, z: 1.4 },
   { x: COL.xs[1]!, y: 715, z: 1.36 },
-  { x: 1400, y: 615, z: 1.18 },
+  { x: COL.xs[2]!, y: 705, z: 1.4 },
 ];
 function cam(t: number): Cam {
   let c = CAM0;
@@ -142,46 +143,19 @@ function drawColumn(ctx: Ctx, i: number, t: number, fold: number) {
     const sp = prog(t, T.slots + i * 0.12, 0.5);
     const leadT0 = T.leads[i]! - 0.3;
     withAlpha(ctx, 1 - cardsFold, () => {
-      if (sp > 0 && (i === 2 ? t < flyLand() : t < leadT0 + 0.2)) withAlpha(ctx, sp * (1 - prog(t, i === 2 ? flyLand() - 0.2 : leadT0, 0.3)), () => {
+      if (sp > 0 && t < leadT0 + 0.2) withAlpha(ctx, sp * (1 - prog(t, leadT0, 0.3)), () => {
         rr(ctx, x - CARD.w / 2, LEAD_Y - CARD.h / 2, CARD.w, CARD.h, CARD.h / 2);
         ctx.setLineDash([8, 8]); strokeStyle(ctx, D.color, 2, 0.8); ctx.stroke();
         ctx.beginPath(); ctx.arc(x - CARD.w / 2 + CARD.h / 2, LEAD_Y, CARD.h * 0.34, 0, TAU); ctx.stroke(); ctx.setLineDash([]);
         text(ctx, 'DOMAIN LEAD', x - CARD.w / 2 + CARD.h * 0.98, LEAD_Y + 8, { f: 'mono', size: 20, weight: 700, color: D.color, tracking: 2 });
       });
-      if (i < 2) personCard(ctx, t, leadT0, { id: LEADS[i]!.id, name: LEADS[i]!.name, role: 'Domain Lead' }, x - CARD.w / 2, LEAD_Y - CARD.h / 2, CARD.w, CARD.h, D.color,
-        { nameT: T.leads[i]!, faceT: T.leads[i]! - 0.05, roleT: leadT0 + 0.5, nameSize: 26 });
+      personCard(ctx, t, leadT0, { id: LEADS[i]!.id, name: LEADS[i]!.name, role: 'Domain Lead' }, x - CARD.w / 2, LEAD_Y - CARD.h / 2, CARD.w, CARD.h, D.color,
+        { nameT: T.leads[i]!, faceT: T.leads[i]! - 0.05, roleT: i === 2 ? T.nmrLead : leadT0 + 0.5, nameSize: 26 });
       // specialists
       if (t > T.label[i]! - 0.1) typeText(ctx, SPEC_LABEL[i]!, t, T.label[i]!, x - CARD.w / 2 + 8, SPEC_Y[0]! - CARD.h / 2 - 22, { f: 'mono', size: 18, weight: 700, color: rgba(D.color, 1), tracking: 3 }, 40, false);
       SPECS[i]!.forEach((p, k) => personCard(ctx, t, p.t - 0.28, { id: p.id, name: p.name, role: p.role }, x - CARD.w / 2, SPEC_Y[k]! - CARD.h / 2, CARD.w, CARD.h, D.color,
         { nameT: p.t, faceT: p.t - 0.05, roleT: p.t + 0.25, nameSize: 26, badge: p.badge ? { text: p.badge[0], t: p.badge[1] } : undefined }));
     });
-  });
-}
-
-// Ong Li Li's dual role: her management card sends a copy down into the NMR lead slot.
-const flyStart = () => T.focus[2]! + 0.75;
-const flyLand = () => flyStart() + 1.15;
-function drawFlight(ctx: Ctx, t: number, fold: number) {
-  if (t < flyStart()) return;
-  const u = prog(t, flyStart(), 1.15, ease.inOutCubic);
-  const A: Pt = { x: MG.xs[1]! + MG.w / 2, y: MG.y };
-  const B: Pt = { x: COL.xs[2]!, y: LEAD_Y };
-  const path = bezierPts(A, { x: A.x + 60, y: A.y + 180 }, { x: B.x - 220, y: B.y - 160 }, B, 40);
-  const q = path[Math.round(u * 40)]!;
-  withAlpha(ctx, 1 - fold, () => {
-    // lasting dashed link: one person, two roles
-    strokeStyle(ctx, C.violet, 2, 0.7); ctx.setLineDash([6, 8]); ctx.lineDashOffset = -t * 30;
-    polyPartial(ctx, path, u); ctx.setLineDash([]);
-    const w = lerp(MG.w, CARD.w, u), h = lerp(MG.h, CARD.h, u);
-    const lift = Math.sin(u * Math.PI) * 0.08;
-    const k = ease.inOutCubic(clamp((u - 0.3) / 0.4)); // violet deputy-director card → green domain-lead card
-    withT(ctx, q.x, q.y, 1 + lift, () => {
-      if (u < 1) glow(ctx, 0, 0, w * 0.6, C.violet, 0.5 * Math.sin(u * Math.PI));
-      withAlpha(ctx, 1 - k, () => personCard(ctx, t, 0, { id: 'ong_li_li', name: 'Ong Li Li', role: 'Division Deputy Director' }, -w / 2, -h / 2, w, h, C.violet, { nameSize: 26 }));
-      withAlpha(ctx, k, () => personCard(ctx, t, 0, { id: 'ong_li_li', name: 'Ong Li Li', role: 'Domain Lead' }, -w / 2, -h / 2, w, h, C.nmr, { nameSize: 26, roleT: flyStart() + 0.55 }));
-    });
-    const land = pulse(t, flyLand(), 0.1, 0.5) * 0.8;
-    if (land > 0.01) glow(ctx, B.x, B.y, 320, C.nmr, land);
   });
 }
 
@@ -211,7 +185,6 @@ export const s4: Scene = {
     drawHeader(ctx, t, fold);
     drawManagement(ctx, t, fold);
     for (let i = 0; i < 3; i++) drawColumn(ctx, i, t, fold);
-    drawFlight(ctx, t, prog(t, T.fold, 0.4, ease.inOutCubic));
     drawFold(ctx, t);
     ctx.restore();
   },

@@ -30,52 +30,59 @@ def sweep_sine(f0, f1, dur, curve=0.05):
     return np.sin(2 * np.pi * np.cumsum(f) / SR)
 
 # ---------------------------------------------------------------- one-shots
+def lp(x, fc, order=4):
+    return signal.sosfilt(signal.butter(order, fc, 'lp', fs=SR, output='sos'), x, axis=0)
+
+# Everything here is deliberately dark and non-tonal where it repeats: the UI
+# "pops" are muffled taps (filtered noise + a low body), not pitched bleeps.
 def drop():
-    t = t_(0.5)
-    body = sweep_sine(520, 1450, 0.5, 0.035) * np.exp(-t / 0.06)
-    res = np.sin(2 * np.pi * 820 * t) * np.exp(-t / 0.16) * 0.35 * np.clip((t - 0.02) / 0.01, 0, 1)
-    click = signal.sosfilt(signal.butter(2, 3000, 'hp', fs=SR, output='sos'), rng.standard_normal(len(t))) * np.exp(-t / 0.002) * 0.25
-    return stereo(fade(norm(body + res + click), 0.001, 0.05))
+    """Round water 'bloop' for the pipette drop: low sweep, no click, low-passed."""
+    t = t_(0.45)
+    body = sweep_sine(260, 560, 0.45, 0.04) * np.exp(-t / 0.07)
+    res = np.sin(2 * np.pi * 330 * t) * np.exp(-t / 0.12) * 0.3 * np.clip((t - 0.02) / 0.015, 0, 1)
+    return stereo(fade(norm(lp(body + res, 2800)), 0.004, 0.08))
+
+def tap(dur=0.16, band=(140, 900), decay=0.02, body_hz=120, body=0.55):
+    """Soft, felt-more-than-heard tap: band-limited noise transient + a low thump."""
+    t = t_(dur)
+    nz = signal.sosfilt(signal.butter(2, list(band), 'bp', fs=SR, output='sos'), rng.standard_normal(len(t))) * np.exp(-t / decay)
+    th = np.sin(2 * np.pi * body_hz * t) * np.exp(-t / 0.045) * body
+    return stereo(fade(norm(lp(norm(nz) + th, 2200)), 0.002, 0.04))
 
 def pop():
-    t = t_(0.2)
-    s = sweep_sine(620, 470, 0.2, 0.03) * np.exp(-t / 0.045) + 0.25 * np.sin(2 * np.pi * 1240 * t) * np.exp(-t / 0.02)
-    tr = signal.sosfilt(signal.butter(2, 1800, 'lp', fs=SR, output='sos'), rng.standard_normal(len(t))) * np.exp(-t / 0.004) * 0.3
-    return stereo(fade(norm(s + tr), 0.0015, 0.04))
+    return tap()
 
 def tick():
-    t = t_(0.08)
-    s = np.sin(2 * np.pi * 2300 * t) * np.exp(-t / 0.012) + 0.4 * np.sin(2 * np.pi * 3450 * t) * np.exp(-t / 0.008)
-    return stereo(fade(norm(s), 0.0005, 0.02))
+    return tap(0.1, (250, 1600), 0.01, 170, 0.3)
 
 def whoosh(dur=0.75, reverse=False):
     n = int(dur * SR); x = rng.standard_normal(n)
     out = np.zeros(n); blk = 1024; zi = None
     for i in range(0, n, blk):
-        u = i / n; fc = 250 * (12 ** u)  # 250 Hz → 3 kHz
-        sos = signal.butter(2, [fc * 0.6, min(fc * 1.6, 20000)], 'bp', fs=SR, output='sos')
+        u = i / n; fc = 200 * (7 ** u)  # 200 Hz → 1.4 kHz: air, not hiss
+        sos = signal.butter(2, [fc * 0.6, fc * 1.5], 'bp', fs=SR, output='sos')
         if zi is None: zi = signal.sosfilt_zi(sos) * 0
         out[i:i + blk], zi = signal.sosfilt(sos, x[i:i + blk], zi=zi)
     u = np.linspace(0, 1, n); env = np.sin(np.pi * np.clip(u / 0.62, 0, 1) ** 1.2 * 0.5) ** 2 * np.clip((1 - u) / 0.38, 0, 1) ** 1.5
-    m = norm(out * env)
+    m = norm(lp(out * env, 3500))
     if reverse: m = m[::-1]
-    pan = np.linspace(-0.5, 0.5, n) * (-1 if reverse else 1)
+    pan = np.linspace(-0.4, 0.4, n) * (-1 if reverse else 1)
     return np.stack([m * np.cos((pan + 1) * np.pi / 4), m * np.sin((pan + 1) * np.pi / 4)], 1) * 1.3
 
 def chime():
-    t = t_(2.6)
-    def bell(f, amp, delay):
-        s = np.zeros_like(t); td = np.clip(t - delay, 0, None); on = (t >= delay)
-        for k, a, d in [(1, 1, 1.5), (2.0, 0.35, 0.9), (3.0, 0.14, 0.55), (4.16, 0.06, 0.35)]:
-            s += a * np.sin(2 * np.pi * f * k * td) * np.exp(-td / d)
-        return s * on * amp * np.clip(td / 0.004, 0, 1)
-    L = bell(880.0, 1, 0) + bell(1318.5, 0.55, 0.075) + bell(1760.0, 0.25, 0.15)
-    R = bell(880.9, 1, 0.004) + bell(1319.6, 0.55, 0.08) + bell(1761.4, 0.25, 0.155)
-    return np.stack([norm(L), norm(R)], 1) * 0.9
+    """Warm, low mallet (marimba-like: fundamental + soft 4th partial), no glassy highs."""
+    t = t_(2.2)
+    def mallet(f, amp, delay):
+        td = np.clip(t - delay, 0, None); on = (t >= delay)
+        s = np.sin(2 * np.pi * f * td) * np.exp(-td / 0.9) + 0.18 * np.sin(2 * np.pi * f * 3.9 * td) * np.exp(-td / 0.12)
+        return s * on * amp * np.clip(td / 0.006, 0, 1)
+    L = mallet(392.0, 1, 0) + mallet(587.3, 0.45, 0.09)
+    R = mallet(392.4, 1, 0.003) + mallet(587.9, 0.45, 0.093)
+    return np.stack([norm(lp(L, 2500)), norm(lp(R, 2500))], 1) * 0.9
 
 def swell(dur=1.8):
     t = t_(dur); n = len(t)
-    nz = signal.sosfilt(signal.butter(2, 900, 'lp', fs=SR, output='sos'), rng.standard_normal(n))
+    nz = signal.sosfilt(signal.butter(2, 700, 'lp', fs=SR, output='sos'), rng.standard_normal(n))
     tone = np.sin(2 * np.pi * 110 * t) * 0.5 + np.sin(2 * np.pi * 164.8 * t) * 0.3 + np.sin(2 * np.pi * 220.4 * t) * 0.2
     u = t / dur; env = (u ** 2) * np.clip((1 - u) / 0.25, 0, 1)
     return stereo(fade(norm((norm(nz) * 0.6 + tone * 0.6) * env), 0.01, 0.1))
@@ -87,7 +94,7 @@ def thump():
 
 SYN = {'drop': drop, 'pop': pop, 'tick': tick, 'whoosh': whoosh, 'whooshIn': lambda: whoosh(0.7, True), 'chime': chime, 'swell': swell, 'thump': thump}
 # base level of each sound (dBFS peak) before the per-cue gain: 16–26 dB under the voice peaks
-BASE = {'drop': -15, 'pop': -21, 'tick': -25, 'whoosh': -21, 'whooshIn': -21, 'chime': -19, 'swell': -23, 'thump': -17}
+BASE = {'drop': -16, 'pop': -20, 'tick': -23, 'whoosh': -22, 'whooshIn': -22, 'chime': -21, 'swell': -23, 'thump': -17}
 
 # ---------------------------------------------------------------- pad bed
 def pad(dur):
@@ -144,6 +151,7 @@ def main():
         if pan: s = s * np.array([np.cos((pan + 1) * np.pi / 4), np.sin((pan + 1) * np.pi / 4)]) * 1.414
         i0 = max(0, int(c['t'] * SR)); n = min(len(s), N - i0)
         fx[i0:i0 + n] += s[:n] * g
+    fx = lp(fx, 6000)  # SFX bus low-pass: nothing bright competes with the voice or the pad
     # --- pad, ducked under the voice (sidechain from the voice envelope)
     use_pad = '--no-pad' not in sys.argv
     bed = np.zeros((N, 2))

@@ -527,3 +527,164 @@ export const digitalLeaf = (ctx: Ctx, cx: number, cy: number, s: number, lt: num
     }
   });
 };
+
+// ---------------------------------------------------------------- capability-tree row headers (slides 7, 9, 11)
+/** GC: a coiled capillary column in an oven; carrier gas dots run the coil to a flame (FID). */
+export const gcOven: Icon = (ctx, cx, cy, s, lt, color, a = 1) => {
+  if (lt <= 0) return;
+  const p = springAt(lt, 0, 0.6, 12);
+  withAlpha(ctx, a * clamp(p), () => {
+    rr(ctx, cx - s * 0.42, cy - s * 0.34, s * 0.64, s * 0.68, 8); strokeStyle(ctx, C.text2, LW(s)); ctx.stroke();
+    const ox = cx - s * 0.1, oy = cy;
+    const pts: Pt[] = [];
+    for (let i = 0; i <= 120; i++) { const u = i / 120, an = u * TAU * 3, r = s * (0.06 + 0.18 * u); pts.push({ x: ox + Math.cos(an) * r, y: oy + Math.sin(an) * r * 0.9 }); }
+    strokeStyle(ctx, color, LW(s) * 0.9); polyPartial(ctx, pts, prog(lt, 0.1, 0.8));
+    // heat shimmer on the oven wall
+    for (let k = 0; k < 3; k++) { const u = ((lt * 0.8 + k / 3) % 1); withAlpha(ctx, Math.sin(u * Math.PI) * 0.6, () => { strokeStyle(ctx, C.xray, 2); ctx.beginPath(); ctx.moveTo(cx - s * 0.38 + k * s * 0.18, cy + s * 0.3); ctx.quadraticCurveTo(cx - s * 0.34 + k * s * 0.18, cy + s * 0.3 - u * s * 0.12, cx - s * 0.38 + k * s * 0.18, cy + s * 0.3 - u * s * 0.22); ctx.stroke(); }); }
+    if (lt > 0.8) for (let k = 0; k < 4; k++) { const u = ((lt * 0.35 + k / 4) % 1); const q = pts[Math.floor(u * 120)]!; glow(ctx, q.x, q.y, s * 0.05, color, 0.9); }
+    // exit line + flame detector
+    const fx = cx + s * 0.36, fy = cy - s * 0.02;
+    strokeStyle(ctx, color, LW(s) * 0.8); ctx.beginPath(); ctx.moveTo(cx + s * 0.22, fy); ctx.lineTo(fx - s * 0.04, fy); ctx.stroke();
+    const fl = 0.8 + 0.2 * Math.sin(lt * 17) * Math.sin(lt * 7);
+    ctx.beginPath(); ctx.moveTo(fx, fy - s * 0.2 * fl); ctx.quadraticCurveTo(fx + s * 0.07, fy - s * 0.04, fx, fy + s * 0.04); ctx.quadraticCurveTo(fx - s * 0.07, fy - s * 0.04, fx, fy - s * 0.2 * fl);
+    ctx.fillStyle = rgba(C.cyan, 0.7); ctx.fill(); glow(ctx, fx, fy - s * 0.07, s * 0.14, C.cyan, 0.7);
+  });
+};
+
+/** LC: solvent bottle → pulsing pump → packed column → eluting droplets. */
+export const lcColumn: Icon = (ctx, cx, cy, s, lt, color, a = 1) => {
+  if (lt <= 0) return;
+  const p = springAt(lt, 0, 0.6, 12);
+  withAlpha(ctx, a * clamp(p), () => {
+    const bx = cx - s * 0.36;
+    rr(ctx, bx - s * 0.08, cy - s * 0.3, s * 0.16, s * 0.24, 6); strokeStyle(ctx, C.text2, LW(s)); ctx.stroke();
+    ctx.fillStyle = rgba(color, 0.5); ctx.fillRect(bx - s * 0.07, cy - s * 0.18, s * 0.14, s * 0.11);
+    strokeStyle(ctx, C.text2, LW(s) * 0.8); ctx.beginPath(); ctx.moveTo(bx, cy - s * 0.06); ctx.lineTo(bx, cy + s * 0.14); ctx.lineTo(cx - s * 0.02, cy + s * 0.14); ctx.stroke();
+    const pump = 1 + 0.12 * Math.max(0, Math.sin(lt * 7));
+    ctx.beginPath(); ctx.arc(cx - s * 0.14, cy + s * 0.14, s * 0.06 * pump, 0, TAU); ctx.fillStyle = rgba(color, 0.8); ctx.fill();
+    const colX = cx + s * 0.12;
+    rr(ctx, colX - s * 0.05, cy - s * 0.32, s * 0.1, s * 0.5, 8); strokeStyle(ctx, color, LW(s)); ctx.stroke();
+    for (let k = 0; k < 18; k++) dot(ctx, colX - s * 0.025 + (k % 3) * s * 0.025, cy - s * 0.28 + Math.floor(k / 3) * s * 0.075, s * 0.011, C.text3);
+    strokeStyle(ctx, C.text2, LW(s) * 0.8); ctx.beginPath(); ctx.moveTo(cx - s * 0.02, cy + s * 0.14); ctx.lineTo(colX, cy + s * 0.14); ctx.lineTo(colX, cy + s * 0.18); ctx.stroke();
+    // band travelling down the column, then a droplet
+    const u = (lt * 0.5) % 1;
+    glow(ctx, colX, lerp(cy - s * 0.3, cy + s * 0.16, u), s * 0.07, color, 0.9);
+    const dx = cx + s * 0.36, du = (lt * 0.9) % 1;
+    strokeStyle(ctx, C.text2, LW(s) * 0.8); ctx.beginPath(); ctx.moveTo(colX + s * 0.05, cy - s * 0.3); ctx.lineTo(dx, cy - s * 0.3); ctx.lineTo(dx, cy - s * 0.2); ctx.stroke();
+    dot(ctx, dx, lerp(cy - s * 0.16, cy + s * 0.26, du * du), s * 0.03, color, 1 - du * 0.5);
+  });
+};
+
+/** ICP: argon plasma torch flickering, ions streaming into a quadrupole. */
+export const icpTorch: Icon = (ctx, cx, cy, s, lt, color, a = 1) => {
+  if (lt <= 0) return;
+  const p = springAt(lt, 0, 0.6, 12);
+  withAlpha(ctx, a * clamp(p), () => {
+    const tx = cx - s * 0.28;
+    strokeStyle(ctx, C.text2, LW(s));
+    for (const w of [0.08, 0.13]) { ctx.beginPath(); ctx.moveTo(tx - s * w, cy + s * 0.34); ctx.lineTo(tx - s * w, cy + s * 0.05); ctx.moveTo(tx + s * w, cy + s * 0.34); ctx.lineTo(tx + s * w, cy + s * 0.05); ctx.stroke(); }
+    // RF coil
+    for (let k = 0; k < 3; k++) { ctx.beginPath(); ctx.ellipse(tx, cy + s * 0.02 - k * s * 0.07, s * 0.17, s * 0.03, 0, 0, TAU); strokeStyle(ctx, C.xray, LW(s) * 0.7, 0.8); ctx.stroke(); }
+    const fl = 1 + 0.08 * Math.sin(lt * 13) + 0.05 * Math.sin(lt * 29);
+    for (const [k, col] of [[1, color], [0.65, '#FFFFFF']] as [number, string][]) {
+      const hgt = s * 0.36 * fl * k;
+      ctx.beginPath(); ctx.moveTo(tx, cy - s * 0.02 - hgt); ctx.bezierCurveTo(tx + s * 0.12 * k, cy - s * 0.02 - hgt * 0.4, tx + s * 0.1 * k, cy + s * 0.04, tx, cy + s * 0.05); ctx.bezierCurveTo(tx - s * 0.1 * k, cy + s * 0.04, tx - s * 0.12 * k, cy - s * 0.02 - hgt * 0.4, tx, cy - s * 0.02 - hgt);
+      ctx.fillStyle = rgba(col, k === 1 ? 0.55 : 0.8); ctx.fill();
+    }
+    glow(ctx, tx, cy - s * 0.12, s * 0.28, color, 0.8);
+    // quadrupole rods + ions
+    const qx = cx + s * 0.18;
+    for (const dy of [-0.09, 0.09]) { rr(ctx, qx - s * 0.12, cy + dy * s - s * 0.02, s * 0.3, s * 0.04, 4); ctx.fillStyle = rgba(C.text2, 0.7); ctx.fill(); }
+    for (let k = 0; k < 4; k++) { const u = ((lt * 0.9 + k / 4) % 1); const x = lerp(tx + s * 0.1, qx + s * 0.2, u); const y = cy - s * 0.1 + Math.sin(u * 12 + k) * s * 0.03 * (x > qx - s * 0.12 ? 1 : 0.3) + s * 0.1 * Math.min(1, u * 2) ; dot(ctx, x, y - s * 0.1 + s * 0.1, s * 0.018, '#FFFFFF', Math.sin(u * Math.PI)); }
+  });
+};
+
+/** Electron microscope: column, beam, and a raster scan building an image. */
+export const emScope: Icon = (ctx, cx, cy, s, lt, color, a = 1) => {
+  if (lt <= 0) return;
+  const p = springAt(lt, 0, 0.6, 12);
+  withAlpha(ctx, a * clamp(p), () => {
+    const x0 = cx - s * 0.18;
+    strokeStyle(ctx, C.text2, LW(s));
+    ctx.beginPath(); ctx.moveTo(x0 - s * 0.1, cy - s * 0.38); ctx.lineTo(x0 + s * 0.1, cy - s * 0.38); ctx.lineTo(x0 + s * 0.06, cy - s * 0.02); ctx.lineTo(x0 - s * 0.06, cy - s * 0.02); ctx.closePath(); ctx.stroke();
+    for (let k = 0; k < 2; k++) { ctx.beginPath(); ctx.ellipse(x0, cy - s * 0.28 + k * s * 0.13, s * 0.09 - k * s * 0.015, s * 0.025, 0, 0, TAU); ctx.stroke(); }
+    // raster on the sample plate (right)
+    const px = cx + s * 0.02, py = cy + s * 0.04, pw = s * 0.4, ph = s * 0.3;
+    rr(ctx, px, py - ph / 2, pw, ph, 5); strokeStyle(ctx, color, LW(s) * 0.8); ctx.stroke();
+    const rows = 8, k = (lt * 0.6) % 1, row = Math.floor(k * rows), u = (k * rows) % 1;
+    for (let r = 0; r < row; r++) { const yy = py - ph / 2 + (r + 0.5) * (ph / rows); strokeStyle(ctx, color, s * 0.022, 0.25 + 0.5 * (0.5 + 0.5 * Math.sin(r * 2.1))); ctx.beginPath(); ctx.moveTo(px + 5, yy); ctx.lineTo(px + pw - 5, yy); ctx.stroke(); }
+    const bx = px + 5 + u * (pw - 10), by = py - ph / 2 + (row + 0.5) * (ph / rows);
+    strokeStyle(ctx, C.cyan, LW(s) * 0.8, 0.8); ctx.beginPath(); ctx.moveTo(x0, cy - s * 0.02); ctx.lineTo(bx, by); ctx.stroke();
+    glow(ctx, bx, by, s * 0.06, C.cyan, 1); dot(ctx, bx, by, s * 0.012, '#FFFFFF');
+  });
+};
+
+/** Surface probe (XPS / Raman): photons in, electrons / shifted light out of a surface. */
+export const surfaceProbe: Icon = (ctx, cx, cy, s, lt, color, a = 1) => {
+  if (lt <= 0) return;
+  const p = springAt(lt, 0, 0.6, 12);
+  withAlpha(ctx, a * clamp(p), () => {
+    const sy = cy + s * 0.2;
+    for (let i = 0; i < 7; i++) dot(ctx, cx - s * 0.36 + i * s * 0.12, sy, s * 0.035, i === 3 ? color : C.text3);
+    for (let i = 0; i < 6; i++) dot(ctx, cx - s * 0.3 + i * s * 0.12, sy + s * 0.1, s * 0.035, C.text3, 0.6);
+    const hit = { x: cx, y: sy - s * 0.04 };
+    const wave = (x0: number, y0: number, x1: number, y1: number, amp: number, col: string, u: number) => {
+      const pts: Pt[] = [];
+      for (let i = 0; i <= 40; i++) { const v = i / 40, x = lerp(x0, x1, v), y = lerp(y0, y1, v), nx = -(y1 - y0), ny = x1 - x0, L = Math.hypot(nx, ny); const o = Math.sin(v * 22 - lt * 12) * amp; pts.push({ x: x + (nx / L) * o, y: y + (ny / L) * o }); }
+      strokeStyle(ctx, col, LW(s) * 0.8); polyPartial(ctx, pts, u);
+    };
+    wave(cx - s * 0.42, cy - s * 0.36, hit.x, hit.y, s * 0.02, C.gold, prog(lt, 0.1, 0.5));
+    if (lt > 0.6) {
+      const k = ((lt - 0.6) * 0.8) % 1;
+      const ex = lerp(hit.x, cx + s * 0.38, k), ey = lerp(hit.y, cy - s * 0.36, k);
+      strokeStyle(ctx, color, LW(s) * 0.7, 0.35); ctx.setLineDash([4, 5]); ctx.beginPath(); ctx.moveTo(hit.x, hit.y); ctx.lineTo(cx + s * 0.38, cy - s * 0.36); ctx.stroke(); ctx.setLineDash([]);
+      glow(ctx, ex, ey, s * 0.07, color, 1); dot(ctx, ex, ey, s * 0.025, '#FFFFFF');
+      text(ctx, 'e-', ex + s * 0.05, ey - s * 0.02, { f: 'mono', size: Math.round(s * 0.1), weight: 700, color, alpha: Math.sin(k * Math.PI) });
+    }
+    glow(ctx, hit.x, hit.y, s * 0.1, C.gold, 0.5 + 0.3 * Math.sin(lt * 6));
+  });
+};
+
+/** Porous particle with a size-distribution curve: surface area, pores, particle size. */
+export const porous: Icon = (ctx, cx, cy, s, lt, color, a = 1) => {
+  if (lt <= 0) return;
+  const p = springAt(lt, 0, 0.6, 12);
+  withAlpha(ctx, a * clamp(p), () => {
+    const px = cx - s * 0.2, R = s * 0.2;
+    ctx.beginPath(); for (let i = 0; i <= 40; i++) { const an = (i / 40) * TAU, r = R * (1 + 0.08 * Math.sin(an * 5 + 1) + 0.05 * Math.sin(an * 9)); i ? ctx.lineTo(px + Math.cos(an) * r, cy + Math.sin(an) * r) : ctx.moveTo(px + Math.cos(an) * r, cy + Math.sin(an) * r); } ctx.closePath();
+    ctx.fillStyle = rgba(color, 0.25); ctx.fill(); strokeStyle(ctx, color, LW(s)); ctx.stroke();
+    const pores = [[-0.3, -0.2, 0.18], [0.25, -0.3, 0.13], [0.1, 0.25, 0.2], [-0.35, 0.35, 0.12], [0.4, 0.1, 0.1]];
+    pores.forEach(([dx, dy, r], i) => { const g = 0.7 + 0.3 * Math.sin(lt * 2 + i); ctx.beginPath(); ctx.arc(px + dx! * R, cy + dy! * R, r! * R * g, 0, TAU); ctx.fillStyle = C.ink0; ctx.fill(); });
+    // gas molecules adsorbing
+    for (let k = 0; k < 4; k++) { const u = ((lt * 0.5 + k / 4) % 1); const an = k * 1.7; dot(ctx, px + Math.cos(an) * R * lerp(2.2, 1.05, u), cy + Math.sin(an) * R * lerp(2.2, 1.05, u), s * 0.018, C.cyan, 1 - u * 0.4); }
+    // distribution curve
+    const x0 = cx + s * 0.08, x1 = cx + s * 0.46, yb = cy + s * 0.2;
+    strokeStyle(ctx, C.text3, LW(s) * 0.7); ctx.beginPath(); ctx.moveTo(x0, cy - s * 0.24); ctx.lineTo(x0, yb); ctx.lineTo(x1, yb); ctx.stroke();
+    const pts: Pt[] = []; for (let i = 0; i <= 40; i++) { const u = i / 40; pts.push({ x: lerp(x0, x1, u), y: yb - Math.exp(-((u - 0.45) ** 2) / 0.02) * s * 0.36 }); }
+    strokeStyle(ctx, color, LW(s)); polyPartial(ctx, pts, prog(lt, 0.3, 0.9, ease.inOutCubic));
+  });
+};
+
+/** Thermal analysis: a heating ramp with a mass-loss step (TGA) and a heat-flow peak (DSC). */
+export const thermalCurve: Icon = (ctx, cx, cy, s, lt, color, a = 1) => {
+  if (lt <= 0) return;
+  withAlpha(ctx, a, () => {
+    const x0 = cx - s * 0.42, x1 = cx + s * 0.34, y0 = cy - s * 0.32, yb = cy + s * 0.28;
+    strokeStyle(ctx, C.text3, LW(s) * 0.7, prog(lt, 0, 0.4)); ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x0, yb); ctx.lineTo(x1, yb); ctx.stroke();
+    const u = prog(lt, 0.2, 1.6, ease.inOutSine);
+    const N = 60, tga: Pt[] = [], dsc: Pt[] = [];
+    for (let i = 0; i <= N; i++) {
+      const v = i / N, x = lerp(x0 + 4, x1, v);
+      tga.push({ x, y: y0 + s * 0.08 + s * 0.25 / (1 + Math.exp(-(v - 0.55) * 22)) });
+      dsc.push({ x, y: yb - s * 0.12 - Math.exp(-((v - 0.4) ** 2) / 0.004) * s * 0.22 });
+    }
+    strokeStyle(ctx, color, LW(s)); const h = polyPartial(ctx, tga, u);
+    strokeStyle(ctx, C.xray, LW(s) * 0.9); polyPartial(ctx, dsc, u);
+    if (h && u < 1) { glow(ctx, h.x, h.y, s * 0.06, color, 1); }
+    // thermometer rising with the ramp
+    const tx = cx + s * 0.44, lvl = lt > 1.8 ? 0.6 + 0.3 * Math.sin((lt - 1.8) * 1.5) : u;
+    rr(ctx, tx - s * 0.025, cy - s * 0.3, s * 0.05, s * 0.44, s * 0.025); strokeStyle(ctx, C.text2, LW(s) * 0.7); ctx.stroke();
+    ctx.beginPath(); ctx.arc(tx, cy + s * 0.2, s * 0.045, 0, TAU); ctx.fillStyle = C.xray; ctx.fill();
+    ctx.fillStyle = C.xray; ctx.fillRect(tx - s * 0.012, cy + s * 0.16 - lvl * s * 0.4, s * 0.024, lvl * s * 0.4);
+  });
+};

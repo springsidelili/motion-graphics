@@ -1762,5 +1762,4358 @@
    }
   ],
   "dur": 90.801625
+ },
+ "5": {
+  "text": "This slide gives you an overview of where our ACI laboratories are located within the Institute. Our eight analytical laboratories are conveniently located together on level 1. Chromatography and Mass Spectrometry is based in Lab 1-1. X-ray spectroscopy and microscopy is located in Labs 1-2, 1-3 and 1-6, while NMR Physical and Thermal Characterization is based in Labs 1-4 and 1-5. Labs 1-7 and 1-8 are shared laboratories with other RD divisions. Having our analytical capabilities located close to one another makes it easier for our teams to provide integrated analytical support for a wide range of research needs.",
+  "words": [
+   {
+    "w": "This",
+    "start": 0.24,
+    "end": 0.48
+   },
+   {
+    "w": "slide",
+    "start": 0.48,
+    "end": 0.88
+   },
+   {
+    "w": "gives",
+    "start": 0.88,
+    "end": 1.36
+   },
+   {
+    "w": "you",
+    "start": 1.36,
+    "end": 1.52
+   },
+   {
+    "w": "an",
+    "start": 1.52,
+    "end": 1.84
+   },
+   {
+    "w": "overview",
+    "start": 1.84,
+    "end": 2.4
+   },
+   {
+    "w": "of",
+    "start": 2.4,
+    "end": 2.72
+   },
+   {
+    "w": "where",
+    "start": 2.72,
+    "end": 3.04
+   },
+   {
+    "w": "our",
+    "start": 3.04,
+    "end": 3.28
+   },
+   {
+    "w": "ACI",
+    "start": 3.28,
+    "end": 4.08
+   },
+   {
+    "w": "laboratories",
+    "start": 4.16,
+    "end": 5.04
+   },
+   {
+    "w": "are",
+    "start": 5.04,
+    "end": 5.28
+   },
+   {
+    "w": "located",
+    "start": 5.28,
+    "end": 5.76
+   },
+   {
+    "w": "within",
+    "start": 5.76,
+    "end": 6.0
+   },
+   {
+    "w": "the",
+    "start": 6.0,
+    "end": 6.16
+   },
+   {
+    "w": "Institute.",
+    "start": 6.16,
+    "end": 7.44
+   },
+   {
+    "w": "Our",
+    "start": 7.44,
+    "end": 7.68
+   },
+   {
+    "w": "eight",
+    "start": 7.68,
+    "end": 8.08
+   },
+   {
+    "w": "analytical",
+    "start": 8.08,
+    "end": 8.8
+   },
+   {
+    "w": "laboratories",
+    "start": 8.8,
+    "end": 9.76
+   },
+   {
+    "w": "are",
+    "start": 9.76,
+    "end": 9.92
+   },
+   {
+    "w": "conveniently",
+    "start": 9.92,
+    "end": 10.8
+   },
+   {
+    "w": "located",
+    "start": 10.8,
+    "end": 11.28
+   },
+   {
+    "w": "together",
+    "start": 11.28,
+    "end": 11.76
+   },
+   {
+    "w": "on",
+    "start": 11.76,
+    "end": 12.0
+   },
+   {
+    "w": "level",
+    "start": 12.0,
+    "end": 12.4
+   },
+   {
+    "w": "1.",
+    "start": 12.4,
+    "end": 13.28
+   },
+   {
+    "w": "Chromatography",
+    "start": 13.28,
+    "end": 14.32
+   },
+   {
+    "w": "and",
+    "start": 14.32,
+    "end": 14.48
+   },
+   {
+    "w": "Mass",
+    "start": 14.48,
+    "end": 14.8
+   },
+   {
+    "w": "Spectrometry",
+    "start": 14.8,
+    "end": 15.68
+   },
+   {
+    "w": "is",
+    "start": 15.68,
+    "end": 15.92
+   },
+   {
+    "w": "based",
+    "start": 15.92,
+    "end": 16.32
+   },
+   {
+    "w": "in",
+    "start": 16.32,
+    "end": 16.48
+   },
+   {
+    "w": "Lab",
+    "start": 16.48,
+    "end": 16.8
+   },
+   {
+    "w": "1-1.",
+    "start": 16.8,
+    "end": 18.0
+   },
+   {
+    "w": "X-ray",
+    "start": 18.0,
+    "end": 18.48
+   },
+   {
+    "w": "spectroscopy",
+    "start": 18.48,
+    "end": 19.2
+   },
+   {
+    "w": "and",
+    "start": 19.2,
+    "end": 19.36
+   },
+   {
+    "w": "microscopy",
+    "start": 19.36,
+    "end": 20.24
+   },
+   {
+    "w": "is",
+    "start": 20.24,
+    "end": 20.4
+   },
+   {
+    "w": "located",
+    "start": 20.4,
+    "end": 20.88
+   },
+   {
+    "w": "in",
+    "start": 20.88,
+    "end": 21.04
+   },
+   {
+    "w": "Labs",
+    "start": 21.04,
+    "end": 21.44
+   },
+   {
+    "w": "1-2,",
+    "start": 21.44,
+    "end": 22.32
+   },
+   {
+    "w": "1-3",
+    "start": 22.32,
+    "end": 22.72
+   },
+   {
+    "w": "and",
+    "start": 22.96,
+    "end": 23.12
+   },
+   {
+    "w": "1-6,",
+    "start": 23.12,
+    "end": 24.08
+   },
+   {
+    "w": "while",
+    "start": 24.08,
+    "end": 24.4
+   },
+   {
+    "w": "NMR",
+    "start": 24.4,
+    "end": 25.04
+   },
+   {
+    "w": "Physical",
+    "start": 25.28,
+    "end": 25.84
+   },
+   {
+    "w": "and",
+    "start": 25.84,
+    "end": 26.0
+   },
+   {
+    "w": "Thermal",
+    "start": 26.0,
+    "end": 26.32
+   },
+   {
+    "w": "Characterization",
+    "start": 26.32,
+    "end": 27.6
+   },
+   {
+    "w": "is",
+    "start": 27.6,
+    "end": 27.84
+   },
+   {
+    "w": "based",
+    "start": 27.84,
+    "end": 28.24
+   },
+   {
+    "w": "in",
+    "start": 28.24,
+    "end": 28.4
+   },
+   {
+    "w": "Labs",
+    "start": 28.4,
+    "end": 28.8
+   },
+   {
+    "w": "1-4",
+    "start": 28.8,
+    "end": 29.2
+   },
+   {
+    "w": "and",
+    "start": 29.36,
+    "end": 29.52
+   },
+   {
+    "w": "1-5.",
+    "start": 29.52,
+    "end": 30.64
+   },
+   {
+    "w": "Labs",
+    "start": 30.64,
+    "end": 31.12
+   },
+   {
+    "w": "1-7",
+    "start": 31.12,
+    "end": 31.52
+   },
+   {
+    "w": "and",
+    "start": 31.76,
+    "end": 31.92
+   },
+   {
+    "w": "1-8",
+    "start": 31.92,
+    "end": 32.24
+   },
+   {
+    "w": "are",
+    "start": 32.48,
+    "end": 32.72
+   },
+   {
+    "w": "shared",
+    "start": 32.72,
+    "end": 33.04
+   },
+   {
+    "w": "laboratories",
+    "start": 33.04,
+    "end": 33.84
+   },
+   {
+    "w": "with",
+    "start": 33.84,
+    "end": 34.08
+   },
+   {
+    "w": "other",
+    "start": 34.08,
+    "end": 34.32
+   },
+   {
+    "w": "RD",
+    "start": 34.32,
+    "end": 34.88
+   },
+   {
+    "w": "divisions.",
+    "start": 34.88,
+    "end": 36.08
+   },
+   {
+    "w": "Having",
+    "start": 36.08,
+    "end": 36.48
+   },
+   {
+    "w": "our",
+    "start": 36.48,
+    "end": 36.72
+   },
+   {
+    "w": "analytical",
+    "start": 36.72,
+    "end": 37.52
+   },
+   {
+    "w": "capabilities",
+    "start": 37.52,
+    "end": 38.4
+   },
+   {
+    "w": "located",
+    "start": 38.4,
+    "end": 38.96
+   },
+   {
+    "w": "close",
+    "start": 38.96,
+    "end": 39.44
+   },
+   {
+    "w": "to",
+    "start": 39.44,
+    "end": 39.6
+   },
+   {
+    "w": "one",
+    "start": 39.6,
+    "end": 39.76
+   },
+   {
+    "w": "another",
+    "start": 39.92,
+    "end": 40.08
+   },
+   {
+    "w": "makes",
+    "start": 40.4,
+    "end": 40.8
+   },
+   {
+    "w": "it",
+    "start": 40.8,
+    "end": 41.12
+   },
+   {
+    "w": "easier",
+    "start": 41.12,
+    "end": 41.76
+   },
+   {
+    "w": "for",
+    "start": 41.76,
+    "end": 42.08
+   },
+   {
+    "w": "our",
+    "start": 42.08,
+    "end": 42.32
+   },
+   {
+    "w": "teams",
+    "start": 42.32,
+    "end": 42.96
+   },
+   {
+    "w": "to",
+    "start": 42.96,
+    "end": 43.2
+   },
+   {
+    "w": "provide",
+    "start": 43.36,
+    "end": 43.84
+   },
+   {
+    "w": "integrated",
+    "start": 43.84,
+    "end": 44.48
+   },
+   {
+    "w": "analytical",
+    "start": 44.48,
+    "end": 45.2
+   },
+   {
+    "w": "support",
+    "start": 45.2,
+    "end": 45.68
+   },
+   {
+    "w": "for",
+    "start": 45.68,
+    "end": 45.92
+   },
+   {
+    "w": "a",
+    "start": 45.92,
+    "end": 46.16
+   },
+   {
+    "w": "wide",
+    "start": 46.16,
+    "end": 46.48
+   },
+   {
+    "w": "range",
+    "start": 46.48,
+    "end": 46.88
+   },
+   {
+    "w": "of",
+    "start": 46.88,
+    "end": 47.04
+   },
+   {
+    "w": "research",
+    "start": 47.04,
+    "end": 47.52
+   },
+   {
+    "w": "needs.",
+    "start": 47.52,
+    "end": 48.24
+   }
+  ],
+  "dur": 48.408
+ },
+ "6": {
+  "text": "Let's now take a closer look at our three technical domains, starting with chromatography and mass spectrometry. This domain brings together three key areas, gas chromatography, liquid chromatography, and mass spectrometry. These complementary techniques allow us to separate, identify, and analyze a wide range of chemical compounds, supporting both routine testing and more complex analytical investigations. In the following slides, I will briefly introduce some of the key analytical capabilities and instrumentation available within this domain.",
+  "words": [
+   {
+    "w": "Let's",
+    "start": 0.0,
+    "end": 0.48
+   },
+   {
+    "w": "now",
+    "start": 0.48,
+    "end": 0.72
+   },
+   {
+    "w": "take",
+    "start": 0.72,
+    "end": 0.88
+   },
+   {
+    "w": "a",
+    "start": 0.88,
+    "end": 0.96
+   },
+   {
+    "w": "closer",
+    "start": 0.96,
+    "end": 1.36
+   },
+   {
+    "w": "look",
+    "start": 1.36,
+    "end": 1.6
+   },
+   {
+    "w": "at",
+    "start": 1.6,
+    "end": 1.76
+   },
+   {
+    "w": "our",
+    "start": 1.76,
+    "end": 2.0
+   },
+   {
+    "w": "three",
+    "start": 2.0,
+    "end": 2.32
+   },
+   {
+    "w": "technical",
+    "start": 2.32,
+    "end": 2.88
+   },
+   {
+    "w": "domains,",
+    "start": 2.88,
+    "end": 3.76
+   },
+   {
+    "w": "starting",
+    "start": 3.76,
+    "end": 4.08
+   },
+   {
+    "w": "with",
+    "start": 4.08,
+    "end": 4.24
+   },
+   {
+    "w": "chromatography",
+    "start": 4.24,
+    "end": 5.12
+   },
+   {
+    "w": "and",
+    "start": 5.12,
+    "end": 5.28
+   },
+   {
+    "w": "mass",
+    "start": 5.28,
+    "end": 5.6
+   },
+   {
+    "w": "spectrometry.",
+    "start": 5.6,
+    "end": 6.72
+   },
+   {
+    "w": "This",
+    "start": 6.72,
+    "end": 6.96
+   },
+   {
+    "w": "domain",
+    "start": 6.96,
+    "end": 7.44
+   },
+   {
+    "w": "brings",
+    "start": 7.44,
+    "end": 7.76
+   },
+   {
+    "w": "together",
+    "start": 7.76,
+    "end": 8.16
+   },
+   {
+    "w": "three",
+    "start": 8.16,
+    "end": 8.4
+   },
+   {
+    "w": "key",
+    "start": 8.4,
+    "end": 8.72
+   },
+   {
+    "w": "areas,",
+    "start": 8.72,
+    "end": 9.52
+   },
+   {
+    "w": "gas",
+    "start": 9.52,
+    "end": 9.92
+   },
+   {
+    "w": "chromatography,",
+    "start": 9.92,
+    "end": 10.96
+   },
+   {
+    "w": "liquid",
+    "start": 10.96,
+    "end": 11.44
+   },
+   {
+    "w": "chromatography,",
+    "start": 11.44,
+    "end": 12.32
+   },
+   {
+    "w": "and",
+    "start": 12.32,
+    "end": 12.4
+   },
+   {
+    "w": "mass",
+    "start": 12.4,
+    "end": 12.72
+   },
+   {
+    "w": "spectrometry.",
+    "start": 12.72,
+    "end": 14.0
+   },
+   {
+    "w": "These",
+    "start": 14.0,
+    "end": 14.32
+   },
+   {
+    "w": "complementary",
+    "start": 14.32,
+    "end": 15.04
+   },
+   {
+    "w": "techniques",
+    "start": 15.04,
+    "end": 15.76
+   },
+   {
+    "w": "allow",
+    "start": 15.76,
+    "end": 16.16
+   },
+   {
+    "w": "us",
+    "start": 16.16,
+    "end": 16.4
+   },
+   {
+    "w": "to",
+    "start": 16.4,
+    "end": 16.64
+   },
+   {
+    "w": "separate,",
+    "start": 16.64,
+    "end": 17.6
+   },
+   {
+    "w": "identify,",
+    "start": 17.6,
+    "end": 18.32
+   },
+   {
+    "w": "and",
+    "start": 18.32,
+    "end": 18.48
+   },
+   {
+    "w": "analyze",
+    "start": 18.48,
+    "end": 19.12
+   },
+   {
+    "w": "a",
+    "start": 19.12,
+    "end": 19.2
+   },
+   {
+    "w": "wide",
+    "start": 19.2,
+    "end": 19.52
+   },
+   {
+    "w": "range",
+    "start": 19.52,
+    "end": 19.84
+   },
+   {
+    "w": "of",
+    "start": 19.84,
+    "end": 20.0
+   },
+   {
+    "w": "chemical",
+    "start": 20.0,
+    "end": 20.48
+   },
+   {
+    "w": "compounds,",
+    "start": 20.48,
+    "end": 21.44
+   },
+   {
+    "w": "supporting",
+    "start": 21.44,
+    "end": 21.92
+   },
+   {
+    "w": "both",
+    "start": 21.92,
+    "end": 22.24
+   },
+   {
+    "w": "routine",
+    "start": 22.24,
+    "end": 22.8
+   },
+   {
+    "w": "testing",
+    "start": 22.8,
+    "end": 23.36
+   },
+   {
+    "w": "and",
+    "start": 23.36,
+    "end": 23.68
+   },
+   {
+    "w": "more",
+    "start": 23.68,
+    "end": 23.84
+   },
+   {
+    "w": "complex",
+    "start": 23.84,
+    "end": 24.4
+   },
+   {
+    "w": "analytical",
+    "start": 24.4,
+    "end": 25.2
+   },
+   {
+    "w": "investigations.",
+    "start": 25.2,
+    "end": 26.64
+   },
+   {
+    "w": "In",
+    "start": 26.64,
+    "end": 26.8
+   },
+   {
+    "w": "the",
+    "start": 26.8,
+    "end": 26.96
+   },
+   {
+    "w": "following",
+    "start": 26.96,
+    "end": 27.52
+   },
+   {
+    "w": "slides,",
+    "start": 27.52,
+    "end": 28.4
+   },
+   {
+    "w": "I",
+    "start": 28.4,
+    "end": 28.56
+   },
+   {
+    "w": "will",
+    "start": 28.56,
+    "end": 28.8
+   },
+   {
+    "w": "briefly",
+    "start": 28.8,
+    "end": 29.28
+   },
+   {
+    "w": "introduce",
+    "start": 29.28,
+    "end": 29.92
+   },
+   {
+    "w": "some",
+    "start": 29.92,
+    "end": 30.08
+   },
+   {
+    "w": "of",
+    "start": 30.08,
+    "end": 30.24
+   },
+   {
+    "w": "the",
+    "start": 30.24,
+    "end": 30.32
+   },
+   {
+    "w": "key",
+    "start": 30.32,
+    "end": 30.64
+   },
+   {
+    "w": "analytical",
+    "start": 30.64,
+    "end": 31.36
+   },
+   {
+    "w": "capabilities",
+    "start": 31.36,
+    "end": 32.24
+   },
+   {
+    "w": "and",
+    "start": 32.24,
+    "end": 32.48
+   },
+   {
+    "w": "instrumentation",
+    "start": 32.48,
+    "end": 33.44
+   },
+   {
+    "w": "available",
+    "start": 33.44,
+    "end": 34.08
+   },
+   {
+    "w": "within",
+    "start": 34.08,
+    "end": 34.4
+   },
+   {
+    "w": "this",
+    "start": 34.4,
+    "end": 34.64
+   },
+   {
+    "w": "domain.",
+    "start": 34.64,
+    "end": 35.44
+   }
+  ],
+  "dur": 35.616
+ },
+ "7": {
+  "text": "Within this domain, we have a broad range of instruments to support different analytical needs. For gas chromatography, our capabilities include conventional GC with TCD and FID detectors, comprehensive two-dimensional GC, or GC by GC, as well as GCMS equipped with pyrolysis, which can be used for microplastic analysis, thermal desorption, and headspace capabilities. We also have a refinery gas analyzer with a grab sampling system for gas analysis. For liquid chromatography, we have HPLC systems equipped with different detectors. We also have GPC systems using either THF or aqueous system, depending on the solubility of the samples. Our combustion ion chromatography capability supports the quantification of halogens, anions and cations in solid, liquid, and gas samples. For more advanced mass spectrometry, we have LCQ-TOF-MS and high-resolution LC-MSMS using the QX active orbit trap, supporting both targeted and nintargeted analysis. Finally, for elemental analysis, we have ICPMS and ICPOES, supported by microwave digestion for sample preparation.",
+  "words": [
+   {
+    "w": "Within",
+    "start": 0.0,
+    "end": 0.64
+   },
+   {
+    "w": "this",
+    "start": 0.64,
+    "end": 0.8
+   },
+   {
+    "w": "domain,",
+    "start": 0.8,
+    "end": 1.6
+   },
+   {
+    "w": "we",
+    "start": 1.6,
+    "end": 1.76
+   },
+   {
+    "w": "have",
+    "start": 1.76,
+    "end": 1.92
+   },
+   {
+    "w": "a",
+    "start": 1.92,
+    "end": 2.08
+   },
+   {
+    "w": "broad",
+    "start": 2.08,
+    "end": 2.4
+   },
+   {
+    "w": "range",
+    "start": 2.4,
+    "end": 2.72
+   },
+   {
+    "w": "of",
+    "start": 2.72,
+    "end": 2.88
+   },
+   {
+    "w": "instruments",
+    "start": 2.88,
+    "end": 3.6
+   },
+   {
+    "w": "to",
+    "start": 3.6,
+    "end": 3.84
+   },
+   {
+    "w": "support",
+    "start": 3.84,
+    "end": 4.24
+   },
+   {
+    "w": "different",
+    "start": 4.24,
+    "end": 4.56
+   },
+   {
+    "w": "analytical",
+    "start": 4.56,
+    "end": 5.36
+   },
+   {
+    "w": "needs.",
+    "start": 5.36,
+    "end": 6.24
+   },
+   {
+    "w": "For",
+    "start": 6.24,
+    "end": 6.48
+   },
+   {
+    "w": "gas",
+    "start": 6.48,
+    "end": 6.88
+   },
+   {
+    "w": "chromatography,",
+    "start": 6.88,
+    "end": 8.08
+   },
+   {
+    "w": "our",
+    "start": 8.08,
+    "end": 8.32
+   },
+   {
+    "w": "capabilities",
+    "start": 8.32,
+    "end": 9.12
+   },
+   {
+    "w": "include",
+    "start": 9.12,
+    "end": 9.6
+   },
+   {
+    "w": "conventional",
+    "start": 9.6,
+    "end": 10.24
+   },
+   {
+    "w": "GC",
+    "start": 10.24,
+    "end": 10.72
+   },
+   {
+    "w": "with",
+    "start": 10.8,
+    "end": 10.96
+   },
+   {
+    "w": "TCD",
+    "start": 11.12,
+    "end": 11.84
+   },
+   {
+    "w": "and",
+    "start": 11.92,
+    "end": 12.08
+   },
+   {
+    "w": "FID",
+    "start": 12.08,
+    "end": 12.8
+   },
+   {
+    "w": "detectors,",
+    "start": 12.8,
+    "end": 13.84
+   },
+   {
+    "w": "comprehensive",
+    "start": 13.84,
+    "end": 14.64
+   },
+   {
+    "w": "two-dimensional",
+    "start": 14.64,
+    "end": 15.36
+   },
+   {
+    "w": "GC,",
+    "start": 15.36,
+    "end": 16.16
+   },
+   {
+    "w": "or",
+    "start": 16.16,
+    "end": 16.32
+   },
+   {
+    "w": "GC",
+    "start": 16.32,
+    "end": 16.8
+   },
+   {
+    "w": "by",
+    "start": 16.88,
+    "end": 16.96
+   },
+   {
+    "w": "GC,",
+    "start": 17.12,
+    "end": 18.16
+   },
+   {
+    "w": "as",
+    "start": 18.16,
+    "end": 18.32
+   },
+   {
+    "w": "well",
+    "start": 18.32,
+    "end": 18.56
+   },
+   {
+    "w": "as",
+    "start": 18.56,
+    "end": 18.8
+   },
+   {
+    "w": "GCMS",
+    "start": 18.8,
+    "end": 19.84
+   },
+   {
+    "w": "equipped",
+    "start": 19.92,
+    "end": 20.32
+   },
+   {
+    "w": "with",
+    "start": 20.32,
+    "end": 20.48
+   },
+   {
+    "w": "pyrolysis,",
+    "start": 20.48,
+    "end": 21.68
+   },
+   {
+    "w": "which",
+    "start": 21.68,
+    "end": 21.92
+   },
+   {
+    "w": "can",
+    "start": 21.92,
+    "end": 22.16
+   },
+   {
+    "w": "be",
+    "start": 22.16,
+    "end": 22.32
+   },
+   {
+    "w": "used",
+    "start": 22.32,
+    "end": 22.56
+   },
+   {
+    "w": "for",
+    "start": 22.56,
+    "end": 22.8
+   },
+   {
+    "w": "microplastic",
+    "start": 22.8,
+    "end": 23.84
+   },
+   {
+    "w": "analysis,",
+    "start": 23.84,
+    "end": 24.64
+   },
+   {
+    "w": "thermal",
+    "start": 24.64,
+    "end": 25.12
+   },
+   {
+    "w": "desorption,",
+    "start": 25.12,
+    "end": 25.92
+   },
+   {
+    "w": "and",
+    "start": 25.92,
+    "end": 26.08
+   },
+   {
+    "w": "headspace",
+    "start": 26.08,
+    "end": 26.72
+   },
+   {
+    "w": "capabilities.",
+    "start": 26.72,
+    "end": 28.16
+   },
+   {
+    "w": "We",
+    "start": 28.24,
+    "end": 28.48
+   },
+   {
+    "w": "also",
+    "start": 28.48,
+    "end": 28.72
+   },
+   {
+    "w": "have",
+    "start": 28.72,
+    "end": 28.96
+   },
+   {
+    "w": "a",
+    "start": 28.96,
+    "end": 29.12
+   },
+   {
+    "w": "refinery",
+    "start": 29.12,
+    "end": 29.68
+   },
+   {
+    "w": "gas",
+    "start": 29.68,
+    "end": 30.0
+   },
+   {
+    "w": "analyzer",
+    "start": 30.0,
+    "end": 30.88
+   },
+   {
+    "w": "with",
+    "start": 30.96,
+    "end": 31.2
+   },
+   {
+    "w": "a",
+    "start": 31.2,
+    "end": 31.36
+   },
+   {
+    "w": "grab",
+    "start": 31.36,
+    "end": 31.76
+   },
+   {
+    "w": "sampling",
+    "start": 31.76,
+    "end": 32.4
+   },
+   {
+    "w": "system",
+    "start": 32.4,
+    "end": 32.72
+   },
+   {
+    "w": "for",
+    "start": 32.72,
+    "end": 32.96
+   },
+   {
+    "w": "gas",
+    "start": 32.96,
+    "end": 33.36
+   },
+   {
+    "w": "analysis.",
+    "start": 33.36,
+    "end": 34.64
+   },
+   {
+    "w": "For",
+    "start": 34.64,
+    "end": 34.88
+   },
+   {
+    "w": "liquid",
+    "start": 34.88,
+    "end": 35.36
+   },
+   {
+    "w": "chromatography,",
+    "start": 35.36,
+    "end": 36.56
+   },
+   {
+    "w": "we",
+    "start": 36.56,
+    "end": 36.72
+   },
+   {
+    "w": "have",
+    "start": 36.72,
+    "end": 36.88
+   },
+   {
+    "w": "HPLC",
+    "start": 36.88,
+    "end": 38.0
+   },
+   {
+    "w": "systems",
+    "start": 38.0,
+    "end": 38.48
+   },
+   {
+    "w": "equipped",
+    "start": 38.48,
+    "end": 39.04
+   },
+   {
+    "w": "with",
+    "start": 39.04,
+    "end": 39.2
+   },
+   {
+    "w": "different",
+    "start": 39.2,
+    "end": 39.44
+   },
+   {
+    "w": "detectors.",
+    "start": 39.44,
+    "end": 40.8
+   },
+   {
+    "w": "We",
+    "start": 40.8,
+    "end": 41.12
+   },
+   {
+    "w": "also",
+    "start": 41.12,
+    "end": 41.44
+   },
+   {
+    "w": "have",
+    "start": 41.44,
+    "end": 41.76
+   },
+   {
+    "w": "GPC",
+    "start": 41.76,
+    "end": 42.64
+   },
+   {
+    "w": "systems",
+    "start": 42.64,
+    "end": 43.2
+   },
+   {
+    "w": "using",
+    "start": 43.2,
+    "end": 43.52
+   },
+   {
+    "w": "either",
+    "start": 43.52,
+    "end": 43.92
+   },
+   {
+    "w": "THF",
+    "start": 43.92,
+    "end": 44.64
+   },
+   {
+    "w": "or",
+    "start": 44.96,
+    "end": 45.2
+   },
+   {
+    "w": "aqueous",
+    "start": 45.36,
+    "end": 46.08
+   },
+   {
+    "w": "system,",
+    "start": 46.08,
+    "end": 46.72
+   },
+   {
+    "w": "depending",
+    "start": 46.72,
+    "end": 47.12
+   },
+   {
+    "w": "on",
+    "start": 47.12,
+    "end": 47.28
+   },
+   {
+    "w": "the",
+    "start": 47.28,
+    "end": 47.36
+   },
+   {
+    "w": "solubility",
+    "start": 47.36,
+    "end": 48.08
+   },
+   {
+    "w": "of",
+    "start": 48.08,
+    "end": 48.24
+   },
+   {
+    "w": "the",
+    "start": 48.24,
+    "end": 48.4
+   },
+   {
+    "w": "samples.",
+    "start": 48.4,
+    "end": 49.68
+   },
+   {
+    "w": "Our",
+    "start": 49.68,
+    "end": 49.92
+   },
+   {
+    "w": "combustion",
+    "start": 49.92,
+    "end": 50.72
+   },
+   {
+    "w": "ion",
+    "start": 50.72,
+    "end": 51.12
+   },
+   {
+    "w": "chromatography",
+    "start": 51.12,
+    "end": 51.92
+   },
+   {
+    "w": "capability",
+    "start": 51.92,
+    "end": 52.72
+   },
+   {
+    "w": "supports",
+    "start": 52.72,
+    "end": 53.28
+   },
+   {
+    "w": "the",
+    "start": 53.28,
+    "end": 53.44
+   },
+   {
+    "w": "quantification",
+    "start": 53.44,
+    "end": 54.16
+   },
+   {
+    "w": "of",
+    "start": 54.16,
+    "end": 54.32
+   },
+   {
+    "w": "halogens,",
+    "start": 54.32,
+    "end": 55.36
+   },
+   {
+    "w": "anions",
+    "start": 55.36,
+    "end": 55.84
+   },
+   {
+    "w": "and",
+    "start": 56.08,
+    "end": 56.24
+   },
+   {
+    "w": "cations",
+    "start": 56.24,
+    "end": 56.64
+   },
+   {
+    "w": "in",
+    "start": 56.96,
+    "end": 57.12
+   },
+   {
+    "w": "solid,",
+    "start": 57.12,
+    "end": 57.76
+   },
+   {
+    "w": "liquid,",
+    "start": 57.76,
+    "end": 58.32
+   },
+   {
+    "w": "and",
+    "start": 58.32,
+    "end": 58.48
+   },
+   {
+    "w": "gas",
+    "start": 58.48,
+    "end": 58.8
+   },
+   {
+    "w": "samples.",
+    "start": 58.8,
+    "end": 59.92
+   },
+   {
+    "w": "For",
+    "start": 59.92,
+    "end": 60.16
+   },
+   {
+    "w": "more",
+    "start": 60.16,
+    "end": 60.48
+   },
+   {
+    "w": "advanced",
+    "start": 60.48,
+    "end": 60.96
+   },
+   {
+    "w": "mass",
+    "start": 60.96,
+    "end": 61.28
+   },
+   {
+    "w": "spectrometry,",
+    "start": 61.28,
+    "end": 62.4
+   },
+   {
+    "w": "we",
+    "start": 62.4,
+    "end": 62.56
+   },
+   {
+    "w": "have",
+    "start": 62.56,
+    "end": 62.8
+   },
+   {
+    "w": "LCQ-TOF-MS",
+    "start": 62.8,
+    "end": 64.64
+   },
+   {
+    "w": "and",
+    "start": 64.8,
+    "end": 64.96
+   },
+   {
+    "w": "high-resolution",
+    "start": 64.96,
+    "end": 65.84
+   },
+   {
+    "w": "LC-MSMS",
+    "start": 65.84,
+    "end": 68.0
+   },
+   {
+    "w": "using",
+    "start": 68.0,
+    "end": 68.24
+   },
+   {
+    "w": "the",
+    "start": 68.24,
+    "end": 68.4
+   },
+   {
+    "w": "QX",
+    "start": 68.4,
+    "end": 68.8
+   },
+   {
+    "w": "active",
+    "start": 68.88,
+    "end": 69.2
+   },
+   {
+    "w": "orbit",
+    "start": 69.2,
+    "end": 69.52
+   },
+   {
+    "w": "trap,",
+    "start": 69.6,
+    "end": 70.24
+   },
+   {
+    "w": "supporting",
+    "start": 70.24,
+    "end": 70.64
+   },
+   {
+    "w": "both",
+    "start": 70.64,
+    "end": 70.96
+   },
+   {
+    "w": "targeted",
+    "start": 70.96,
+    "end": 71.52
+   },
+   {
+    "w": "and",
+    "start": 71.52,
+    "end": 71.76
+   },
+   {
+    "w": "nintargeted",
+    "start": 71.76,
+    "end": 72.48
+   },
+   {
+    "w": "analysis.",
+    "start": 72.48,
+    "end": 73.76
+   },
+   {
+    "w": "Finally,",
+    "start": 73.76,
+    "end": 74.48
+   },
+   {
+    "w": "for",
+    "start": 74.48,
+    "end": 74.72
+   },
+   {
+    "w": "elemental",
+    "start": 74.72,
+    "end": 75.36
+   },
+   {
+    "w": "analysis,",
+    "start": 75.36,
+    "end": 76.24
+   },
+   {
+    "w": "we",
+    "start": 76.24,
+    "end": 76.48
+   },
+   {
+    "w": "have",
+    "start": 76.48,
+    "end": 76.64
+   },
+   {
+    "w": "ICPMS",
+    "start": 76.64,
+    "end": 77.92
+   },
+   {
+    "w": "and",
+    "start": 78.08,
+    "end": 78.32
+   },
+   {
+    "w": "ICPOES,",
+    "start": 78.32,
+    "end": 80.24
+   },
+   {
+    "w": "supported",
+    "start": 80.24,
+    "end": 80.72
+   },
+   {
+    "w": "by",
+    "start": 80.72,
+    "end": 80.88
+   },
+   {
+    "w": "microwave",
+    "start": 80.88,
+    "end": 81.6
+   },
+   {
+    "w": "digestion",
+    "start": 81.6,
+    "end": 82.24
+   },
+   {
+    "w": "for",
+    "start": 82.24,
+    "end": 82.4
+   },
+   {
+    "w": "sample",
+    "start": 82.4,
+    "end": 82.88
+   },
+   {
+    "w": "preparation.",
+    "start": 82.88,
+    "end": 83.84
+   }
+  ],
+  "dur": 84.096
+ },
+ "8": {
+  "text": "Moving on to our second technical domain, X-ray Spectroscopy and Microscopy, led by Ms. Angel Lin. Here, you can see some of the key instruments available within this domain. We have SEM and TEM, which allow us to examine the morphology and structure of materials at very small length scales. We also have SACS and WACS4 studying material structures and XPS for surface elemental and chemical analysis. In addition, our Powder X-ray diffractometer is equipped with a Reaction Chamber 4 in situ XRD studies, allowing us to monitor structural changes under reaction conditions. We also have XRF with mapping capability for elemental analysis and distribution. Together, these instruments provide complementary information on the morphology, structure, surface chemistry, and elemental composition of different materials.",
+  "words": [
+   {
+    "w": "Moving",
+    "start": 0.16,
+    "end": 0.72
+   },
+   {
+    "w": "on",
+    "start": 0.72,
+    "end": 0.96
+   },
+   {
+    "w": "to",
+    "start": 0.96,
+    "end": 1.2
+   },
+   {
+    "w": "our",
+    "start": 1.2,
+    "end": 1.44
+   },
+   {
+    "w": "second",
+    "start": 1.44,
+    "end": 1.92
+   },
+   {
+    "w": "technical",
+    "start": 1.92,
+    "end": 2.48
+   },
+   {
+    "w": "domain,",
+    "start": 2.48,
+    "end": 3.2
+   },
+   {
+    "w": "X-ray",
+    "start": 3.2,
+    "end": 3.84
+   },
+   {
+    "w": "Spectroscopy",
+    "start": 3.84,
+    "end": 4.56
+   },
+   {
+    "w": "and",
+    "start": 4.56,
+    "end": 4.72
+   },
+   {
+    "w": "Microscopy,",
+    "start": 4.72,
+    "end": 5.76
+   },
+   {
+    "w": "led",
+    "start": 5.76,
+    "end": 6.0
+   },
+   {
+    "w": "by",
+    "start": 6.0,
+    "end": 6.16
+   },
+   {
+    "w": "Ms.",
+    "start": 6.16,
+    "end": 6.48
+   },
+   {
+    "w": "Angel",
+    "start": 6.48,
+    "end": 6.88
+   },
+   {
+    "w": "Lin.",
+    "start": 6.88,
+    "end": 7.92
+   },
+   {
+    "w": "Here,",
+    "start": 7.92,
+    "end": 8.48
+   },
+   {
+    "w": "you",
+    "start": 8.48,
+    "end": 8.72
+   },
+   {
+    "w": "can",
+    "start": 8.72,
+    "end": 8.96
+   },
+   {
+    "w": "see",
+    "start": 8.96,
+    "end": 9.2
+   },
+   {
+    "w": "some",
+    "start": 9.2,
+    "end": 9.36
+   },
+   {
+    "w": "of",
+    "start": 9.36,
+    "end": 9.52
+   },
+   {
+    "w": "the",
+    "start": 9.52,
+    "end": 9.6
+   },
+   {
+    "w": "key",
+    "start": 9.6,
+    "end": 9.92
+   },
+   {
+    "w": "instruments",
+    "start": 9.92,
+    "end": 10.4
+   },
+   {
+    "w": "available",
+    "start": 10.4,
+    "end": 10.96
+   },
+   {
+    "w": "within",
+    "start": 10.96,
+    "end": 11.36
+   },
+   {
+    "w": "this",
+    "start": 11.36,
+    "end": 11.6
+   },
+   {
+    "w": "domain.",
+    "start": 11.6,
+    "end": 12.72
+   },
+   {
+    "w": "We",
+    "start": 12.72,
+    "end": 12.96
+   },
+   {
+    "w": "have",
+    "start": 12.96,
+    "end": 13.2
+   },
+   {
+    "w": "SEM",
+    "start": 13.2,
+    "end": 14.0
+   },
+   {
+    "w": "and",
+    "start": 14.24,
+    "end": 14.48
+   },
+   {
+    "w": "TEM,",
+    "start": 14.64,
+    "end": 15.84
+   },
+   {
+    "w": "which",
+    "start": 15.84,
+    "end": 16.0
+   },
+   {
+    "w": "allow",
+    "start": 16.0,
+    "end": 16.4
+   },
+   {
+    "w": "us",
+    "start": 16.4,
+    "end": 16.72
+   },
+   {
+    "w": "to",
+    "start": 16.72,
+    "end": 16.96
+   },
+   {
+    "w": "examine",
+    "start": 16.96,
+    "end": 17.44
+   },
+   {
+    "w": "the",
+    "start": 17.44,
+    "end": 17.6
+   },
+   {
+    "w": "morphology",
+    "start": 17.6,
+    "end": 18.24
+   },
+   {
+    "w": "and",
+    "start": 18.24,
+    "end": 18.4
+   },
+   {
+    "w": "structure",
+    "start": 18.4,
+    "end": 18.8
+   },
+   {
+    "w": "of",
+    "start": 18.8,
+    "end": 19.04
+   },
+   {
+    "w": "materials",
+    "start": 19.04,
+    "end": 19.68
+   },
+   {
+    "w": "at",
+    "start": 19.68,
+    "end": 19.92
+   },
+   {
+    "w": "very",
+    "start": 19.92,
+    "end": 20.24
+   },
+   {
+    "w": "small",
+    "start": 20.24,
+    "end": 20.56
+   },
+   {
+    "w": "length",
+    "start": 20.56,
+    "end": 20.96
+   },
+   {
+    "w": "scales.",
+    "start": 20.96,
+    "end": 22.08
+   },
+   {
+    "w": "We",
+    "start": 22.08,
+    "end": 22.32
+   },
+   {
+    "w": "also",
+    "start": 22.32,
+    "end": 22.56
+   },
+   {
+    "w": "have",
+    "start": 22.56,
+    "end": 22.8
+   },
+   {
+    "w": "SACS",
+    "start": 22.8,
+    "end": 23.28
+   },
+   {
+    "w": "and",
+    "start": 23.36,
+    "end": 23.52
+   },
+   {
+    "w": "WACS4",
+    "start": 23.52,
+    "end": 24.08
+   },
+   {
+    "w": "studying",
+    "start": 24.24,
+    "end": 24.72
+   },
+   {
+    "w": "material",
+    "start": 24.72,
+    "end": 25.2
+   },
+   {
+    "w": "structures",
+    "start": 25.28,
+    "end": 25.84
+   },
+   {
+    "w": "and",
+    "start": 26.16,
+    "end": 26.4
+   },
+   {
+    "w": "XPS",
+    "start": 26.4,
+    "end": 27.2
+   },
+   {
+    "w": "for",
+    "start": 27.36,
+    "end": 27.6
+   },
+   {
+    "w": "surface",
+    "start": 27.6,
+    "end": 28.16
+   },
+   {
+    "w": "elemental",
+    "start": 28.16,
+    "end": 28.8
+   },
+   {
+    "w": "and",
+    "start": 28.8,
+    "end": 29.04
+   },
+   {
+    "w": "chemical",
+    "start": 29.04,
+    "end": 29.52
+   },
+   {
+    "w": "analysis.",
+    "start": 29.52,
+    "end": 30.8
+   },
+   {
+    "w": "In",
+    "start": 30.8,
+    "end": 31.04
+   },
+   {
+    "w": "addition,",
+    "start": 31.04,
+    "end": 31.68
+   },
+   {
+    "w": "our",
+    "start": 31.68,
+    "end": 31.92
+   },
+   {
+    "w": "Powder",
+    "start": 31.92,
+    "end": 32.48
+   },
+   {
+    "w": "X-ray",
+    "start": 32.48,
+    "end": 32.96
+   },
+   {
+    "w": "diffractometer",
+    "start": 32.96,
+    "end": 34.0
+   },
+   {
+    "w": "is",
+    "start": 34.16,
+    "end": 34.4
+   },
+   {
+    "w": "equipped",
+    "start": 34.4,
+    "end": 34.96
+   },
+   {
+    "w": "with",
+    "start": 34.96,
+    "end": 35.12
+   },
+   {
+    "w": "a",
+    "start": 35.12,
+    "end": 35.28
+   },
+   {
+    "w": "Reaction",
+    "start": 35.28,
+    "end": 35.6
+   },
+   {
+    "w": "Chamber",
+    "start": 35.76,
+    "end": 36.24
+   },
+   {
+    "w": "4",
+    "start": 36.24,
+    "end": 36.56
+   },
+   {
+    "w": "in",
+    "start": 36.56,
+    "end": 36.72
+   },
+   {
+    "w": "situ",
+    "start": 36.8,
+    "end": 37.28
+   },
+   {
+    "w": "XRD",
+    "start": 37.36,
+    "end": 38.0
+   },
+   {
+    "w": "studies,",
+    "start": 38.0,
+    "end": 38.88
+   },
+   {
+    "w": "allowing",
+    "start": 38.88,
+    "end": 39.44
+   },
+   {
+    "w": "us",
+    "start": 39.44,
+    "end": 39.6
+   },
+   {
+    "w": "to",
+    "start": 39.6,
+    "end": 39.84
+   },
+   {
+    "w": "monitor",
+    "start": 39.84,
+    "end": 40.4
+   },
+   {
+    "w": "structural",
+    "start": 40.4,
+    "end": 40.96
+   },
+   {
+    "w": "changes",
+    "start": 40.96,
+    "end": 41.52
+   },
+   {
+    "w": "under",
+    "start": 41.52,
+    "end": 41.84
+   },
+   {
+    "w": "reaction",
+    "start": 41.84,
+    "end": 42.4
+   },
+   {
+    "w": "conditions.",
+    "start": 42.4,
+    "end": 43.6
+   },
+   {
+    "w": "We",
+    "start": 43.6,
+    "end": 43.84
+   },
+   {
+    "w": "also",
+    "start": 43.84,
+    "end": 44.16
+   },
+   {
+    "w": "have",
+    "start": 44.16,
+    "end": 44.48
+   },
+   {
+    "w": "XRF",
+    "start": 44.48,
+    "end": 45.36
+   },
+   {
+    "w": "with",
+    "start": 45.68,
+    "end": 45.92
+   },
+   {
+    "w": "mapping",
+    "start": 45.92,
+    "end": 46.4
+   },
+   {
+    "w": "capability",
+    "start": 46.4,
+    "end": 47.12
+   },
+   {
+    "w": "for",
+    "start": 47.12,
+    "end": 47.28
+   },
+   {
+    "w": "elemental",
+    "start": 47.44,
+    "end": 48.08
+   },
+   {
+    "w": "analysis",
+    "start": 48.08,
+    "end": 48.72
+   },
+   {
+    "w": "and",
+    "start": 48.72,
+    "end": 48.96
+   },
+   {
+    "w": "distribution.",
+    "start": 48.96,
+    "end": 50.32
+   },
+   {
+    "w": "Together,",
+    "start": 50.32,
+    "end": 51.12
+   },
+   {
+    "w": "these",
+    "start": 51.12,
+    "end": 51.36
+   },
+   {
+    "w": "instruments",
+    "start": 51.36,
+    "end": 52.08
+   },
+   {
+    "w": "provide",
+    "start": 52.08,
+    "end": 52.48
+   },
+   {
+    "w": "complementary",
+    "start": 52.48,
+    "end": 53.2
+   },
+   {
+    "w": "information",
+    "start": 53.2,
+    "end": 53.84
+   },
+   {
+    "w": "on",
+    "start": 53.84,
+    "end": 54.0
+   },
+   {
+    "w": "the",
+    "start": 54.0,
+    "end": 54.16
+   },
+   {
+    "w": "morphology,",
+    "start": 54.16,
+    "end": 55.28
+   },
+   {
+    "w": "structure,",
+    "start": 55.28,
+    "end": 56.08
+   },
+   {
+    "w": "surface",
+    "start": 56.08,
+    "end": 56.64
+   },
+   {
+    "w": "chemistry,",
+    "start": 56.64,
+    "end": 57.52
+   },
+   {
+    "w": "and",
+    "start": 57.52,
+    "end": 57.76
+   },
+   {
+    "w": "elemental",
+    "start": 57.76,
+    "end": 58.32
+   },
+   {
+    "w": "composition",
+    "start": 58.32,
+    "end": 59.04
+   },
+   {
+    "w": "of",
+    "start": 59.04,
+    "end": 59.2
+   },
+   {
+    "w": "different",
+    "start": 59.2,
+    "end": 59.52
+   },
+   {
+    "w": "materials.",
+    "start": 59.52,
+    "end": 60.48
+   }
+  ],
+  "dur": 60.72
+ },
+ "9": {
+  "text": "Looking more closely to this domain, we can broadly group our instruments into three areas. For X-ray cheracterization, we have powder X-ray diffraction with an in-situ reaction chamber, X-ray fluorescence with mapping capability, as well as small and wide-angle X-ray scattering, or SACS and WACS. For electron microscopy, we have SEM with EDS and BEX capabilities. and TEM with advanced capabilities including Cryo-TEM, EDS, 3D tomography and EALS. We also have 3D X-ray micro-CT and atomic force microscopy, allowing us to examine materials across different length scales. For surface and molecular cheractorization, we have XPS and Raymond spectroscopy, both with in situ gas reaction capabilities.",
+  "words": [
+   {
+    "w": "Looking",
+    "start": 0.0,
+    "end": 0.64
+   },
+   {
+    "w": "more",
+    "start": 0.64,
+    "end": 0.88
+   },
+   {
+    "w": "closely",
+    "start": 0.88,
+    "end": 1.28
+   },
+   {
+    "w": "to",
+    "start": 1.28,
+    "end": 1.52
+   },
+   {
+    "w": "this",
+    "start": 1.52,
+    "end": 1.76
+   },
+   {
+    "w": "domain,",
+    "start": 1.76,
+    "end": 2.48
+   },
+   {
+    "w": "we",
+    "start": 2.48,
+    "end": 2.64
+   },
+   {
+    "w": "can",
+    "start": 2.64,
+    "end": 2.88
+   },
+   {
+    "w": "broadly",
+    "start": 2.88,
+    "end": 3.28
+   },
+   {
+    "w": "group",
+    "start": 3.28,
+    "end": 3.68
+   },
+   {
+    "w": "our",
+    "start": 3.68,
+    "end": 3.92
+   },
+   {
+    "w": "instruments",
+    "start": 3.92,
+    "end": 4.56
+   },
+   {
+    "w": "into",
+    "start": 4.56,
+    "end": 4.88
+   },
+   {
+    "w": "three",
+    "start": 4.88,
+    "end": 5.2
+   },
+   {
+    "w": "areas.",
+    "start": 5.2,
+    "end": 6.16
+   },
+   {
+    "w": "For",
+    "start": 6.16,
+    "end": 6.4
+   },
+   {
+    "w": "X-ray",
+    "start": 6.4,
+    "end": 7.04
+   },
+   {
+    "w": "cheracterization,",
+    "start": 7.04,
+    "end": 8.32
+   },
+   {
+    "w": "we",
+    "start": 8.32,
+    "end": 8.48
+   },
+   {
+    "w": "have",
+    "start": 8.48,
+    "end": 8.64
+   },
+   {
+    "w": "powder",
+    "start": 8.64,
+    "end": 9.2
+   },
+   {
+    "w": "X-ray",
+    "start": 9.2,
+    "end": 9.68
+   },
+   {
+    "w": "diffraction",
+    "start": 9.68,
+    "end": 10.32
+   },
+   {
+    "w": "with",
+    "start": 10.32,
+    "end": 10.56
+   },
+   {
+    "w": "an",
+    "start": 10.56,
+    "end": 10.72
+   },
+   {
+    "w": "in-situ",
+    "start": 10.88,
+    "end": 11.52
+   },
+   {
+    "w": "reaction",
+    "start": 11.52,
+    "end": 11.92
+   },
+   {
+    "w": "chamber,",
+    "start": 11.92,
+    "end": 12.64
+   },
+   {
+    "w": "X-ray",
+    "start": 12.64,
+    "end": 13.2
+   },
+   {
+    "w": "fluorescence",
+    "start": 13.2,
+    "end": 13.84
+   },
+   {
+    "w": "with",
+    "start": 13.84,
+    "end": 14.0
+   },
+   {
+    "w": "mapping",
+    "start": 14.0,
+    "end": 14.48
+   },
+   {
+    "w": "capability,",
+    "start": 14.48,
+    "end": 15.68
+   },
+   {
+    "w": "as",
+    "start": 15.68,
+    "end": 15.92
+   },
+   {
+    "w": "well",
+    "start": 15.92,
+    "end": 16.16
+   },
+   {
+    "w": "as",
+    "start": 16.16,
+    "end": 16.4
+   },
+   {
+    "w": "small",
+    "start": 16.4,
+    "end": 16.88
+   },
+   {
+    "w": "and",
+    "start": 16.96,
+    "end": 17.2
+   },
+   {
+    "w": "wide-angle",
+    "start": 17.2,
+    "end": 17.92
+   },
+   {
+    "w": "X-ray",
+    "start": 17.92,
+    "end": 18.48
+   },
+   {
+    "w": "scattering,",
+    "start": 18.48,
+    "end": 19.2
+   },
+   {
+    "w": "or",
+    "start": 19.2,
+    "end": 19.36
+   },
+   {
+    "w": "SACS",
+    "start": 19.52,
+    "end": 20.0
+   },
+   {
+    "w": "and",
+    "start": 20.08,
+    "end": 20.24
+   },
+   {
+    "w": "WACS.",
+    "start": 20.24,
+    "end": 21.36
+   },
+   {
+    "w": "For",
+    "start": 21.36,
+    "end": 21.6
+   },
+   {
+    "w": "electron",
+    "start": 21.6,
+    "end": 22.24
+   },
+   {
+    "w": "microscopy,",
+    "start": 22.24,
+    "end": 23.28
+   },
+   {
+    "w": "we",
+    "start": 23.28,
+    "end": 23.44
+   },
+   {
+    "w": "have",
+    "start": 23.44,
+    "end": 23.68
+   },
+   {
+    "w": "SEM",
+    "start": 23.68,
+    "end": 24.4
+   },
+   {
+    "w": "with",
+    "start": 24.4,
+    "end": 24.64
+   },
+   {
+    "w": "EDS",
+    "start": 24.64,
+    "end": 25.52
+   },
+   {
+    "w": "and",
+    "start": 25.52,
+    "end": 25.76
+   },
+   {
+    "w": "BEX",
+    "start": 25.76,
+    "end": 26.48
+   },
+   {
+    "w": "capabilities.",
+    "start": 26.48,
+    "end": 27.68
+   },
+   {
+    "w": "and",
+    "start": 27.68,
+    "end": 27.84
+   },
+   {
+    "w": "TEM",
+    "start": 27.84,
+    "end": 28.64
+   },
+   {
+    "w": "with",
+    "start": 28.64,
+    "end": 28.88
+   },
+   {
+    "w": "advanced",
+    "start": 28.88,
+    "end": 29.36
+   },
+   {
+    "w": "capabilities",
+    "start": 29.36,
+    "end": 30.16
+   },
+   {
+    "w": "including",
+    "start": 30.16,
+    "end": 30.48
+   },
+   {
+    "w": "Cryo-TEM,",
+    "start": 30.48,
+    "end": 32.08
+   },
+   {
+    "w": "EDS,",
+    "start": 32.08,
+    "end": 32.88
+   },
+   {
+    "w": "3D",
+    "start": 32.88,
+    "end": 33.44
+   },
+   {
+    "w": "tomography",
+    "start": 33.44,
+    "end": 34.16
+   },
+   {
+    "w": "and",
+    "start": 34.24,
+    "end": 34.4
+   },
+   {
+    "w": "EALS.",
+    "start": 34.4,
+    "end": 35.52
+   },
+   {
+    "w": "We",
+    "start": 35.52,
+    "end": 35.76
+   },
+   {
+    "w": "also",
+    "start": 35.76,
+    "end": 36.08
+   },
+   {
+    "w": "have",
+    "start": 36.08,
+    "end": 36.4
+   },
+   {
+    "w": "3D",
+    "start": 36.4,
+    "end": 37.04
+   },
+   {
+    "w": "X-ray",
+    "start": 37.04,
+    "end": 37.44
+   },
+   {
+    "w": "micro-CT",
+    "start": 37.44,
+    "end": 38.48
+   },
+   {
+    "w": "and",
+    "start": 38.72,
+    "end": 38.96
+   },
+   {
+    "w": "atomic",
+    "start": 38.96,
+    "end": 39.44
+   },
+   {
+    "w": "force",
+    "start": 39.44,
+    "end": 39.76
+   },
+   {
+    "w": "microscopy,",
+    "start": 39.76,
+    "end": 40.96
+   },
+   {
+    "w": "allowing",
+    "start": 40.96,
+    "end": 41.44
+   },
+   {
+    "w": "us",
+    "start": 41.44,
+    "end": 41.68
+   },
+   {
+    "w": "to",
+    "start": 41.68,
+    "end": 41.92
+   },
+   {
+    "w": "examine",
+    "start": 41.92,
+    "end": 42.4
+   },
+   {
+    "w": "materials",
+    "start": 42.4,
+    "end": 42.96
+   },
+   {
+    "w": "across",
+    "start": 42.96,
+    "end": 43.36
+   },
+   {
+    "w": "different",
+    "start": 43.36,
+    "end": 43.6
+   },
+   {
+    "w": "length",
+    "start": 43.6,
+    "end": 44.08
+   },
+   {
+    "w": "scales.",
+    "start": 44.08,
+    "end": 45.12
+   },
+   {
+    "w": "For",
+    "start": 45.12,
+    "end": 45.36
+   },
+   {
+    "w": "surface",
+    "start": 45.52,
+    "end": 46.08
+   },
+   {
+    "w": "and",
+    "start": 46.08,
+    "end": 46.16
+   },
+   {
+    "w": "molecular",
+    "start": 46.16,
+    "end": 46.72
+   },
+   {
+    "w": "cheractorization,",
+    "start": 46.72,
+    "end": 48.08
+   },
+   {
+    "w": "we",
+    "start": 48.08,
+    "end": 48.24
+   },
+   {
+    "w": "have",
+    "start": 48.24,
+    "end": 48.48
+   },
+   {
+    "w": "XPS",
+    "start": 48.48,
+    "end": 49.36
+   },
+   {
+    "w": "and",
+    "start": 49.36,
+    "end": 49.52
+   },
+   {
+    "w": "Raymond",
+    "start": 49.52,
+    "end": 50.16
+   },
+   {
+    "w": "spectroscopy,",
+    "start": 50.16,
+    "end": 51.28
+   },
+   {
+    "w": "both",
+    "start": 51.28,
+    "end": 51.52
+   },
+   {
+    "w": "with",
+    "start": 51.52,
+    "end": 51.76
+   },
+   {
+    "w": "in",
+    "start": 51.76,
+    "end": 51.92
+   },
+   {
+    "w": "situ",
+    "start": 51.92,
+    "end": 52.4
+   },
+   {
+    "w": "gas",
+    "start": 52.48,
+    "end": 52.72
+   },
+   {
+    "w": "reaction",
+    "start": 52.72,
+    "end": 53.2
+   },
+   {
+    "w": "capabilities.",
+    "start": 53.2,
+    "end": 54.24
+   }
+  ],
+  "dur": 54.456
+ },
+ "10": {
+  "text": "Moving on to our third technical domain, NMR, physical and thermal cheracterization. Our capabilities can broadly be divided into two areas. The first is Nuclear Magnetic Resonance, or NMR, where we have liquid-state NMR spectrometers for molecular structure identification, structural cheracterization, and quantitative analysis. The second is our thermal, chemical, and physical characterization laboratory. which houses a wide range of instruments for evaluating the thermal behavior, physical properties, and other characteristics of different materials. Together, these capabilities allow us to look at materials from both a molecular and bulk property perspective, providing complementary information to support research, product development, and problem solving.",
+  "words": [
+   {
+    "w": "Moving",
+    "start": 0.16,
+    "end": 0.72
+   },
+   {
+    "w": "on",
+    "start": 0.72,
+    "end": 0.96
+   },
+   {
+    "w": "to",
+    "start": 0.96,
+    "end": 1.2
+   },
+   {
+    "w": "our",
+    "start": 1.2,
+    "end": 1.44
+   },
+   {
+    "w": "third",
+    "start": 1.44,
+    "end": 2.0
+   },
+   {
+    "w": "technical",
+    "start": 2.0,
+    "end": 2.48
+   },
+   {
+    "w": "domain,",
+    "start": 2.48,
+    "end": 3.28
+   },
+   {
+    "w": "NMR,",
+    "start": 3.28,
+    "end": 4.24
+   },
+   {
+    "w": "physical",
+    "start": 4.24,
+    "end": 4.8
+   },
+   {
+    "w": "and",
+    "start": 4.8,
+    "end": 4.96
+   },
+   {
+    "w": "thermal",
+    "start": 4.96,
+    "end": 5.28
+   },
+   {
+    "w": "cheracterization.",
+    "start": 5.28,
+    "end": 6.88
+   },
+   {
+    "w": "Our",
+    "start": 6.88,
+    "end": 7.12
+   },
+   {
+    "w": "capabilities",
+    "start": 7.12,
+    "end": 7.92
+   },
+   {
+    "w": "can",
+    "start": 7.92,
+    "end": 8.16
+   },
+   {
+    "w": "broadly",
+    "start": 8.16,
+    "end": 8.64
+   },
+   {
+    "w": "be",
+    "start": 8.64,
+    "end": 8.8
+   },
+   {
+    "w": "divided",
+    "start": 8.8,
+    "end": 9.28
+   },
+   {
+    "w": "into",
+    "start": 9.28,
+    "end": 9.44
+   },
+   {
+    "w": "two",
+    "start": 9.44,
+    "end": 9.76
+   },
+   {
+    "w": "areas.",
+    "start": 9.76,
+    "end": 10.64
+   },
+   {
+    "w": "The",
+    "start": 10.64,
+    "end": 10.8
+   },
+   {
+    "w": "first",
+    "start": 10.8,
+    "end": 11.12
+   },
+   {
+    "w": "is",
+    "start": 11.12,
+    "end": 11.36
+   },
+   {
+    "w": "Nuclear",
+    "start": 11.36,
+    "end": 11.92
+   },
+   {
+    "w": "Magnetic",
+    "start": 11.92,
+    "end": 12.48
+   },
+   {
+    "w": "Resonance,",
+    "start": 12.48,
+    "end": 13.52
+   },
+   {
+    "w": "or",
+    "start": 13.52,
+    "end": 13.84
+   },
+   {
+    "w": "NMR,",
+    "start": 13.84,
+    "end": 14.88
+   },
+   {
+    "w": "where",
+    "start": 14.88,
+    "end": 15.12
+   },
+   {
+    "w": "we",
+    "start": 15.12,
+    "end": 15.28
+   },
+   {
+    "w": "have",
+    "start": 15.28,
+    "end": 15.44
+   },
+   {
+    "w": "liquid-state",
+    "start": 15.44,
+    "end": 16.24
+   },
+   {
+    "w": "NMR",
+    "start": 16.24,
+    "end": 16.8
+   },
+   {
+    "w": "spectrometers",
+    "start": 16.8,
+    "end": 17.68
+   },
+   {
+    "w": "for",
+    "start": 17.68,
+    "end": 17.84
+   },
+   {
+    "w": "molecular",
+    "start": 17.84,
+    "end": 18.56
+   },
+   {
+    "w": "structure",
+    "start": 18.56,
+    "end": 19.04
+   },
+   {
+    "w": "identification,",
+    "start": 19.04,
+    "end": 20.24
+   },
+   {
+    "w": "structural",
+    "start": 20.24,
+    "end": 20.8
+   },
+   {
+    "w": "cheracterization,",
+    "start": 20.8,
+    "end": 22.08
+   },
+   {
+    "w": "and",
+    "start": 22.08,
+    "end": 22.32
+   },
+   {
+    "w": "quantitative",
+    "start": 22.32,
+    "end": 23.04
+   },
+   {
+    "w": "analysis.",
+    "start": 23.04,
+    "end": 24.32
+   },
+   {
+    "w": "The",
+    "start": 24.32,
+    "end": 24.56
+   },
+   {
+    "w": "second",
+    "start": 24.56,
+    "end": 24.96
+   },
+   {
+    "w": "is",
+    "start": 24.96,
+    "end": 25.2
+   },
+   {
+    "w": "our",
+    "start": 25.2,
+    "end": 25.44
+   },
+   {
+    "w": "thermal,",
+    "start": 25.44,
+    "end": 26.16
+   },
+   {
+    "w": "chemical,",
+    "start": 26.16,
+    "end": 26.72
+   },
+   {
+    "w": "and",
+    "start": 26.72,
+    "end": 26.8
+   },
+   {
+    "w": "physical",
+    "start": 26.8,
+    "end": 27.2
+   },
+   {
+    "w": "characterization",
+    "start": 27.2,
+    "end": 28.24
+   },
+   {
+    "w": "laboratory.",
+    "start": 28.24,
+    "end": 29.2
+   },
+   {
+    "w": "which",
+    "start": 29.2,
+    "end": 29.36
+   },
+   {
+    "w": "houses",
+    "start": 29.36,
+    "end": 29.84
+   },
+   {
+    "w": "a",
+    "start": 29.84,
+    "end": 30.0
+   },
+   {
+    "w": "wide",
+    "start": 30.0,
+    "end": 30.32
+   },
+   {
+    "w": "range",
+    "start": 30.32,
+    "end": 30.56
+   },
+   {
+    "w": "of",
+    "start": 30.56,
+    "end": 30.8
+   },
+   {
+    "w": "instruments",
+    "start": 30.8,
+    "end": 31.44
+   },
+   {
+    "w": "for",
+    "start": 31.44,
+    "end": 31.68
+   },
+   {
+    "w": "evaluating",
+    "start": 31.68,
+    "end": 32.4
+   },
+   {
+    "w": "the",
+    "start": 32.4,
+    "end": 32.48
+   },
+   {
+    "w": "thermal",
+    "start": 32.48,
+    "end": 32.96
+   },
+   {
+    "w": "behavior,",
+    "start": 32.96,
+    "end": 33.76
+   },
+   {
+    "w": "physical",
+    "start": 33.76,
+    "end": 34.32
+   },
+   {
+    "w": "properties,",
+    "start": 34.32,
+    "end": 35.12
+   },
+   {
+    "w": "and",
+    "start": 35.12,
+    "end": 35.36
+   },
+   {
+    "w": "other",
+    "start": 35.36,
+    "end": 35.6
+   },
+   {
+    "w": "characteristics",
+    "start": 35.6,
+    "end": 36.4
+   },
+   {
+    "w": "of",
+    "start": 36.4,
+    "end": 36.64
+   },
+   {
+    "w": "different",
+    "start": 36.64,
+    "end": 36.88
+   },
+   {
+    "w": "materials.",
+    "start": 36.88,
+    "end": 38.08
+   },
+   {
+    "w": "Together,",
+    "start": 38.08,
+    "end": 38.96
+   },
+   {
+    "w": "these",
+    "start": 38.96,
+    "end": 39.2
+   },
+   {
+    "w": "capabilities",
+    "start": 39.2,
+    "end": 40.0
+   },
+   {
+    "w": "allow",
+    "start": 40.0,
+    "end": 40.4
+   },
+   {
+    "w": "us",
+    "start": 40.4,
+    "end": 40.64
+   },
+   {
+    "w": "to",
+    "start": 40.64,
+    "end": 40.88
+   },
+   {
+    "w": "look",
+    "start": 40.88,
+    "end": 41.04
+   },
+   {
+    "w": "at",
+    "start": 41.04,
+    "end": 41.2
+   },
+   {
+    "w": "materials",
+    "start": 41.2,
+    "end": 41.84
+   },
+   {
+    "w": "from",
+    "start": 41.84,
+    "end": 42.0
+   },
+   {
+    "w": "both",
+    "start": 42.0,
+    "end": 42.24
+   },
+   {
+    "w": "a",
+    "start": 42.24,
+    "end": 42.4
+   },
+   {
+    "w": "molecular",
+    "start": 42.4,
+    "end": 43.04
+   },
+   {
+    "w": "and",
+    "start": 43.04,
+    "end": 43.28
+   },
+   {
+    "w": "bulk",
+    "start": 43.28,
+    "end": 43.76
+   },
+   {
+    "w": "property",
+    "start": 43.76,
+    "end": 44.24
+   },
+   {
+    "w": "perspective,",
+    "start": 44.24,
+    "end": 45.12
+   },
+   {
+    "w": "providing",
+    "start": 45.12,
+    "end": 45.68
+   },
+   {
+    "w": "complementary",
+    "start": 45.68,
+    "end": 46.48
+   },
+   {
+    "w": "information",
+    "start": 46.48,
+    "end": 47.2
+   },
+   {
+    "w": "to",
+    "start": 47.2,
+    "end": 47.44
+   },
+   {
+    "w": "support",
+    "start": 47.44,
+    "end": 47.84
+   },
+   {
+    "w": "research,",
+    "start": 47.84,
+    "end": 48.8
+   },
+   {
+    "w": "product",
+    "start": 48.8,
+    "end": 49.28
+   },
+   {
+    "w": "development,",
+    "start": 49.28,
+    "end": 49.92
+   },
+   {
+    "w": "and",
+    "start": 49.92,
+    "end": 50.16
+   },
+   {
+    "w": "problem",
+    "start": 50.16,
+    "end": 50.48
+   },
+   {
+    "w": "solving.",
+    "start": 50.56,
+    "end": 51.36
+   }
+  ],
+  "dur": 51.504
+ },
+ "11": {
+  "text": "Looking more closely at third domain, our capabilities can be broadly grouped into three areas. First, for NMR, we have liquid-state NMR spectrometers equipped with both eye probe and cryoprobe, supporting molecular structure characterization and quantitative analysis. The second area is chemical and physical characterization, where we have a wide range of instruments for measuring different material properties. These include surface area and pore size, particle size, rheology, spectroscopy, dispersion and stability, as well as mechanical and thermal conductivity measurements. The third area is thermal analysis, where our capabilities include TPDRO, simultaneous DSCTG and DSC, allowing us to study how materials behave and change under controlled temperature conditions. Together, these complementary techniques allow us to characterize materials from their molecular structure through to their physical, chemical, and thermal properties, giving us a more comprehensive understanding of the samples we analyze.",
+  "words": [
+   {
+    "w": "Looking",
+    "start": 0.16,
+    "end": 0.64
+   },
+   {
+    "w": "more",
+    "start": 0.64,
+    "end": 0.88
+   },
+   {
+    "w": "closely",
+    "start": 0.88,
+    "end": 1.28
+   },
+   {
+    "w": "at",
+    "start": 1.28,
+    "end": 1.44
+   },
+   {
+    "w": "third",
+    "start": 1.52,
+    "end": 1.84
+   },
+   {
+    "w": "domain,",
+    "start": 1.92,
+    "end": 2.64
+   },
+   {
+    "w": "our",
+    "start": 2.64,
+    "end": 2.88
+   },
+   {
+    "w": "capabilities",
+    "start": 2.88,
+    "end": 3.68
+   },
+   {
+    "w": "can",
+    "start": 3.68,
+    "end": 3.84
+   },
+   {
+    "w": "be",
+    "start": 3.84,
+    "end": 4.0
+   },
+   {
+    "w": "broadly",
+    "start": 4.0,
+    "end": 4.48
+   },
+   {
+    "w": "grouped",
+    "start": 4.48,
+    "end": 4.96
+   },
+   {
+    "w": "into",
+    "start": 4.96,
+    "end": 5.2
+   },
+   {
+    "w": "three",
+    "start": 5.2,
+    "end": 5.44
+   },
+   {
+    "w": "areas.",
+    "start": 5.44,
+    "end": 6.4
+   },
+   {
+    "w": "First,",
+    "start": 6.4,
+    "end": 7.04
+   },
+   {
+    "w": "for",
+    "start": 7.04,
+    "end": 7.36
+   },
+   {
+    "w": "NMR,",
+    "start": 7.36,
+    "end": 8.4
+   },
+   {
+    "w": "we",
+    "start": 8.4,
+    "end": 8.56
+   },
+   {
+    "w": "have",
+    "start": 8.56,
+    "end": 8.72
+   },
+   {
+    "w": "liquid-state",
+    "start": 8.72,
+    "end": 9.52
+   },
+   {
+    "w": "NMR",
+    "start": 9.52,
+    "end": 10.16
+   },
+   {
+    "w": "spectrometers",
+    "start": 10.16,
+    "end": 11.12
+   },
+   {
+    "w": "equipped",
+    "start": 11.2,
+    "end": 11.76
+   },
+   {
+    "w": "with",
+    "start": 11.76,
+    "end": 11.84
+   },
+   {
+    "w": "both",
+    "start": 11.84,
+    "end": 12.08
+   },
+   {
+    "w": "eye",
+    "start": 12.08,
+    "end": 12.32
+   },
+   {
+    "w": "probe",
+    "start": 12.48,
+    "end": 12.96
+   },
+   {
+    "w": "and",
+    "start": 12.96,
+    "end": 13.12
+   },
+   {
+    "w": "cryoprobe,",
+    "start": 13.12,
+    "end": 14.32
+   },
+   {
+    "w": "supporting",
+    "start": 14.32,
+    "end": 14.8
+   },
+   {
+    "w": "molecular",
+    "start": 14.8,
+    "end": 15.44
+   },
+   {
+    "w": "structure",
+    "start": 15.44,
+    "end": 15.84
+   },
+   {
+    "w": "characterization",
+    "start": 15.84,
+    "end": 16.96
+   },
+   {
+    "w": "and",
+    "start": 16.96,
+    "end": 17.2
+   },
+   {
+    "w": "quantitative",
+    "start": 17.2,
+    "end": 18.0
+   },
+   {
+    "w": "analysis.",
+    "start": 18.0,
+    "end": 19.28
+   },
+   {
+    "w": "The",
+    "start": 19.28,
+    "end": 19.44
+   },
+   {
+    "w": "second",
+    "start": 19.44,
+    "end": 19.84
+   },
+   {
+    "w": "area",
+    "start": 19.84,
+    "end": 20.24
+   },
+   {
+    "w": "is",
+    "start": 20.24,
+    "end": 20.48
+   },
+   {
+    "w": "chemical",
+    "start": 20.48,
+    "end": 21.04
+   },
+   {
+    "w": "and",
+    "start": 21.04,
+    "end": 21.2
+   },
+   {
+    "w": "physical",
+    "start": 21.2,
+    "end": 21.52
+   },
+   {
+    "w": "characterization,",
+    "start": 21.52,
+    "end": 23.04
+   },
+   {
+    "w": "where",
+    "start": 23.04,
+    "end": 23.28
+   },
+   {
+    "w": "we",
+    "start": 23.28,
+    "end": 23.44
+   },
+   {
+    "w": "have",
+    "start": 23.44,
+    "end": 23.6
+   },
+   {
+    "w": "a",
+    "start": 23.6,
+    "end": 23.76
+   },
+   {
+    "w": "wide",
+    "start": 23.76,
+    "end": 24.08
+   },
+   {
+    "w": "range",
+    "start": 24.08,
+    "end": 24.4
+   },
+   {
+    "w": "of",
+    "start": 24.4,
+    "end": 24.56
+   },
+   {
+    "w": "instruments",
+    "start": 24.56,
+    "end": 25.44
+   },
+   {
+    "w": "for",
+    "start": 25.44,
+    "end": 25.68
+   },
+   {
+    "w": "measuring",
+    "start": 25.68,
+    "end": 26.32
+   },
+   {
+    "w": "different",
+    "start": 26.32,
+    "end": 26.56
+   },
+   {
+    "w": "material",
+    "start": 26.56,
+    "end": 27.2
+   },
+   {
+    "w": "properties.",
+    "start": 27.2,
+    "end": 28.48
+   },
+   {
+    "w": "These",
+    "start": 28.48,
+    "end": 28.8
+   },
+   {
+    "w": "include",
+    "start": 28.8,
+    "end": 29.28
+   },
+   {
+    "w": "surface",
+    "start": 29.28,
+    "end": 29.76
+   },
+   {
+    "w": "area",
+    "start": 29.76,
+    "end": 30.08
+   },
+   {
+    "w": "and",
+    "start": 30.08,
+    "end": 30.24
+   },
+   {
+    "w": "pore",
+    "start": 30.24,
+    "end": 30.64
+   },
+   {
+    "w": "size,",
+    "start": 30.64,
+    "end": 31.28
+   },
+   {
+    "w": "particle",
+    "start": 31.28,
+    "end": 31.84
+   },
+   {
+    "w": "size,",
+    "start": 31.84,
+    "end": 32.4
+   },
+   {
+    "w": "rheology,",
+    "start": 32.4,
+    "end": 33.36
+   },
+   {
+    "w": "spectroscopy,",
+    "start": 33.36,
+    "end": 34.4
+   },
+   {
+    "w": "dispersion",
+    "start": 34.4,
+    "end": 35.12
+   },
+   {
+    "w": "and",
+    "start": 35.12,
+    "end": 35.28
+   },
+   {
+    "w": "stability,",
+    "start": 35.28,
+    "end": 36.4
+   },
+   {
+    "w": "as",
+    "start": 36.4,
+    "end": 36.56
+   },
+   {
+    "w": "well",
+    "start": 36.56,
+    "end": 36.8
+   },
+   {
+    "w": "as",
+    "start": 36.8,
+    "end": 37.04
+   },
+   {
+    "w": "mechanical",
+    "start": 37.04,
+    "end": 37.76
+   },
+   {
+    "w": "and",
+    "start": 37.76,
+    "end": 37.92
+   },
+   {
+    "w": "thermal",
+    "start": 37.92,
+    "end": 38.4
+   },
+   {
+    "w": "conductivity",
+    "start": 38.4,
+    "end": 39.12
+   },
+   {
+    "w": "measurements.",
+    "start": 39.12,
+    "end": 40.32
+   },
+   {
+    "w": "The",
+    "start": 40.32,
+    "end": 40.48
+   },
+   {
+    "w": "third",
+    "start": 40.48,
+    "end": 40.88
+   },
+   {
+    "w": "area",
+    "start": 40.88,
+    "end": 41.2
+   },
+   {
+    "w": "is",
+    "start": 41.2,
+    "end": 41.36
+   },
+   {
+    "w": "thermal",
+    "start": 41.36,
+    "end": 41.84
+   },
+   {
+    "w": "analysis,",
+    "start": 41.84,
+    "end": 42.88
+   },
+   {
+    "w": "where",
+    "start": 42.88,
+    "end": 43.04
+   },
+   {
+    "w": "our",
+    "start": 43.04,
+    "end": 43.28
+   },
+   {
+    "w": "capabilities",
+    "start": 43.28,
+    "end": 44.08
+   },
+   {
+    "w": "include",
+    "start": 44.08,
+    "end": 44.48
+   },
+   {
+    "w": "TPDRO,",
+    "start": 44.48,
+    "end": 46.0
+   },
+   {
+    "w": "simultaneous",
+    "start": 46.0,
+    "end": 46.8
+   },
+   {
+    "w": "DSCTG",
+    "start": 46.8,
+    "end": 48.0
+   },
+   {
+    "w": "and",
+    "start": 48.16,
+    "end": 48.32
+   },
+   {
+    "w": "DSC,",
+    "start": 48.4,
+    "end": 49.6
+   },
+   {
+    "w": "allowing",
+    "start": 49.6,
+    "end": 50.16
+   },
+   {
+    "w": "us",
+    "start": 50.16,
+    "end": 50.32
+   },
+   {
+    "w": "to",
+    "start": 50.32,
+    "end": 50.48
+   },
+   {
+    "w": "study",
+    "start": 50.48,
+    "end": 50.8
+   },
+   {
+    "w": "how",
+    "start": 50.8,
+    "end": 50.96
+   },
+   {
+    "w": "materials",
+    "start": 50.96,
+    "end": 51.6
+   },
+   {
+    "w": "behave",
+    "start": 51.6,
+    "end": 52.0
+   },
+   {
+    "w": "and",
+    "start": 52.0,
+    "end": 52.24
+   },
+   {
+    "w": "change",
+    "start": 52.24,
+    "end": 52.72
+   },
+   {
+    "w": "under",
+    "start": 52.72,
+    "end": 52.96
+   },
+   {
+    "w": "controlled",
+    "start": 52.96,
+    "end": 53.52
+   },
+   {
+    "w": "temperature",
+    "start": 53.52,
+    "end": 54.08
+   },
+   {
+    "w": "conditions.",
+    "start": 54.08,
+    "end": 55.12
+   },
+   {
+    "w": "Together,",
+    "start": 55.12,
+    "end": 55.92
+   },
+   {
+    "w": "these",
+    "start": 55.92,
+    "end": 56.16
+   },
+   {
+    "w": "complementary",
+    "start": 56.16,
+    "end": 56.96
+   },
+   {
+    "w": "techniques",
+    "start": 56.96,
+    "end": 57.6
+   },
+   {
+    "w": "allow",
+    "start": 57.6,
+    "end": 57.92
+   },
+   {
+    "w": "us",
+    "start": 57.92,
+    "end": 58.08
+   },
+   {
+    "w": "to",
+    "start": 58.08,
+    "end": 58.32
+   },
+   {
+    "w": "characterize",
+    "start": 58.32,
+    "end": 59.12
+   },
+   {
+    "w": "materials",
+    "start": 59.2,
+    "end": 59.68
+   },
+   {
+    "w": "from",
+    "start": 59.68,
+    "end": 59.84
+   },
+   {
+    "w": "their",
+    "start": 59.84,
+    "end": 60.0
+   },
+   {
+    "w": "molecular",
+    "start": 60.0,
+    "end": 60.72
+   },
+   {
+    "w": "structure",
+    "start": 60.72,
+    "end": 61.52
+   },
+   {
+    "w": "through",
+    "start": 61.52,
+    "end": 61.84
+   },
+   {
+    "w": "to",
+    "start": 61.84,
+    "end": 62.0
+   },
+   {
+    "w": "their",
+    "start": 62.0,
+    "end": 62.24
+   },
+   {
+    "w": "physical,",
+    "start": 62.24,
+    "end": 62.96
+   },
+   {
+    "w": "chemical,",
+    "start": 62.96,
+    "end": 63.52
+   },
+   {
+    "w": "and",
+    "start": 63.52,
+    "end": 63.6
+   },
+   {
+    "w": "thermal",
+    "start": 63.6,
+    "end": 64.08
+   },
+   {
+    "w": "properties,",
+    "start": 64.08,
+    "end": 65.04
+   },
+   {
+    "w": "giving",
+    "start": 65.04,
+    "end": 65.36
+   },
+   {
+    "w": "us",
+    "start": 65.36,
+    "end": 65.52
+   },
+   {
+    "w": "a",
+    "start": 65.52,
+    "end": 65.6
+   },
+   {
+    "w": "more",
+    "start": 65.6,
+    "end": 65.84
+   },
+   {
+    "w": "comprehensive",
+    "start": 65.84,
+    "end": 66.72
+   },
+   {
+    "w": "understanding",
+    "start": 66.72,
+    "end": 67.2
+   },
+   {
+    "w": "of",
+    "start": 67.2,
+    "end": 67.44
+   },
+   {
+    "w": "the",
+    "start": 67.44,
+    "end": 67.52
+   },
+   {
+    "w": "samples",
+    "start": 67.52,
+    "end": 68.08
+   },
+   {
+    "w": "we",
+    "start": 68.08,
+    "end": 68.24
+   },
+   {
+    "w": "analyze.",
+    "start": 68.24,
+    "end": 68.96
+   }
+  ],
+  "dur": 69.216
+ },
+ "12": {
+  "text": "To summarize, this slide brings together the wide range of analytical capabilities available within a CI across our three technical domains. With this broad range of complementary techniques, we are able to support different types of samples and analytical needs. More importantly, our team can work with you to identify the most appropriate analytical approach for your specific research needs.",
+  "words": [
+   {
+    "w": "To",
+    "start": 0.0,
+    "end": 0.24
+   },
+   {
+    "w": "summarize,",
+    "start": 0.48,
+    "end": 1.52
+   },
+   {
+    "w": "this",
+    "start": 1.52,
+    "end": 1.68
+   },
+   {
+    "w": "slide",
+    "start": 1.68,
+    "end": 2.08
+   },
+   {
+    "w": "brings",
+    "start": 2.08,
+    "end": 2.48
+   },
+   {
+    "w": "together",
+    "start": 2.48,
+    "end": 2.8
+   },
+   {
+    "w": "the",
+    "start": 2.8,
+    "end": 3.04
+   },
+   {
+    "w": "wide",
+    "start": 3.04,
+    "end": 3.28
+   },
+   {
+    "w": "range",
+    "start": 3.28,
+    "end": 3.6
+   },
+   {
+    "w": "of",
+    "start": 3.6,
+    "end": 3.76
+   },
+   {
+    "w": "analytical",
+    "start": 3.76,
+    "end": 4.4
+   },
+   {
+    "w": "capabilities",
+    "start": 4.4,
+    "end": 5.12
+   },
+   {
+    "w": "available",
+    "start": 5.12,
+    "end": 5.68
+   },
+   {
+    "w": "within",
+    "start": 5.68,
+    "end": 6.0
+   },
+   {
+    "w": "a",
+    "start": 6.0,
+    "end": 6.16
+   },
+   {
+    "w": "CI",
+    "start": 6.16,
+    "end": 6.64
+   },
+   {
+    "w": "across",
+    "start": 6.88,
+    "end": 7.52
+   },
+   {
+    "w": "our",
+    "start": 7.52,
+    "end": 7.76
+   },
+   {
+    "w": "three",
+    "start": 7.76,
+    "end": 8.0
+   },
+   {
+    "w": "technical",
+    "start": 8.0,
+    "end": 8.64
+   },
+   {
+    "w": "domains.",
+    "start": 8.64,
+    "end": 9.6
+   },
+   {
+    "w": "With",
+    "start": 9.6,
+    "end": 9.84
+   },
+   {
+    "w": "this",
+    "start": 9.84,
+    "end": 10.08
+   },
+   {
+    "w": "broad",
+    "start": 10.08,
+    "end": 10.48
+   },
+   {
+    "w": "range",
+    "start": 10.48,
+    "end": 10.72
+   },
+   {
+    "w": "of",
+    "start": 10.72,
+    "end": 10.96
+   },
+   {
+    "w": "complementary",
+    "start": 10.96,
+    "end": 11.68
+   },
+   {
+    "w": "techniques,",
+    "start": 11.68,
+    "end": 12.64
+   },
+   {
+    "w": "we",
+    "start": 12.64,
+    "end": 12.88
+   },
+   {
+    "w": "are",
+    "start": 12.88,
+    "end": 13.12
+   },
+   {
+    "w": "able",
+    "start": 13.12,
+    "end": 13.36
+   },
+   {
+    "w": "to",
+    "start": 13.36,
+    "end": 13.6
+   },
+   {
+    "w": "support",
+    "start": 13.6,
+    "end": 14.0
+   },
+   {
+    "w": "different",
+    "start": 14.0,
+    "end": 14.32
+   },
+   {
+    "w": "types",
+    "start": 14.32,
+    "end": 14.64
+   },
+   {
+    "w": "of",
+    "start": 14.64,
+    "end": 14.8
+   },
+   {
+    "w": "samples",
+    "start": 14.8,
+    "end": 15.36
+   },
+   {
+    "w": "and",
+    "start": 15.36,
+    "end": 15.52
+   },
+   {
+    "w": "analytical",
+    "start": 15.52,
+    "end": 16.32
+   },
+   {
+    "w": "needs.",
+    "start": 16.32,
+    "end": 16.96
+   },
+   {
+    "w": "More",
+    "start": 16.96,
+    "end": 17.44
+   },
+   {
+    "w": "importantly,",
+    "start": 17.44,
+    "end": 18.4
+   },
+   {
+    "w": "our",
+    "start": 18.4,
+    "end": 18.64
+   },
+   {
+    "w": "team",
+    "start": 18.64,
+    "end": 19.12
+   },
+   {
+    "w": "can",
+    "start": 19.12,
+    "end": 19.36
+   },
+   {
+    "w": "work",
+    "start": 19.36,
+    "end": 19.6
+   },
+   {
+    "w": "with",
+    "start": 19.6,
+    "end": 19.84
+   },
+   {
+    "w": "you",
+    "start": 19.84,
+    "end": 20.08
+   },
+   {
+    "w": "to",
+    "start": 20.08,
+    "end": 20.32
+   },
+   {
+    "w": "identify",
+    "start": 20.56,
+    "end": 21.2
+   },
+   {
+    "w": "the",
+    "start": 21.2,
+    "end": 21.36
+   },
+   {
+    "w": "most",
+    "start": 21.36,
+    "end": 21.6
+   },
+   {
+    "w": "appropriate",
+    "start": 21.6,
+    "end": 22.16
+   },
+   {
+    "w": "analytical",
+    "start": 22.16,
+    "end": 22.8
+   },
+   {
+    "w": "approach",
+    "start": 22.8,
+    "end": 23.28
+   },
+   {
+    "w": "for",
+    "start": 23.28,
+    "end": 23.52
+   },
+   {
+    "w": "your",
+    "start": 23.52,
+    "end": 23.76
+   },
+   {
+    "w": "specific",
+    "start": 23.76,
+    "end": 24.32
+   },
+   {
+    "w": "research",
+    "start": 24.32,
+    "end": 24.88
+   },
+   {
+    "w": "needs.",
+    "start": 24.88,
+    "end": 25.52
+   }
+  ],
+  "dur": 25.752
  }
 }

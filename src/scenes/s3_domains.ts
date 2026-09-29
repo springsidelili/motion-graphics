@@ -42,12 +42,15 @@ const T = {
 
 // ---------------------------------------------------------------- camera
 const CAM_WIDE: Cam = { x: 1230, y: 560, z: 0.74 };
+// On "providing services" the camera travels to the industry node, which then
+// becomes the hub that emits each service on its spoken keyword.
+const SH = { x: W / 2, y: 560 };
+const TH = T.services + 0.7; // camera has settled: the world node hands over to the screen-space hub
 function cam(t: number): Cam {
   const out = prog(t, T.extend - 0.1, 1.5, ease.inOutCubic);
-  const dive = prog(t, T.services - 0.45, 0.9, ease.inCubic);
-  let c = lerpCam(CAM0, CAM_WIDE, out);
-  c = lerpCam(c, { x: INDUSTRY.x, y: INDUSTRY.y, z: 3.2 }, dive);
-  return dive >= 1 ? CAM0 : c;
+  const settle = prog(t, T.services - 0.55, 1.25, ease.inOutCubic);
+  const ind: Cam = { x: INDUSTRY.x, y: INDUSTRY.y - (SH.y - H / 2), z: 1 };
+  return lerpCam(lerpCam(CAM0, CAM_WIDE, out), ind, settle);
 }
 
 // ---------------------------------------------------------------- section A: three domains
@@ -149,7 +152,7 @@ const nodePos = (() => {
 })();
 const COMM = { x: 1480, y: 640, r: 210 };
 const INDUSTRY = { x: 2260, y: 640, r: 150 };
-const BOUND = { x: 300, y: 318, w: 1440, h: 648 };
+const BOUND = { x: 300, y: 318, w: 1440, h: 710 };
 
 function poolCenter(t: number) { const u = prog(t, T.provide - 0.1, 1.0, ease.inOutCubic); return { x: lerp(POOL0.x, POOL1.x, u), y: lerp(POOL0.y, POOL1.y, u) }; }
 
@@ -185,7 +188,7 @@ function drawPool(ctx: Ctx, t: number, a: number) {
       });
     });
     const lbl = prog(t, T.shared, 0.6);
-    text(ctx, 'Shared scientific resources', P.x, P.y + 330 + (1 - lbl) * 14, { f: 'display', size: 34, weight: 600, align: 'center', alpha: lbl });
+    text(ctx, 'Shared scientific resources', P.x, P.y + 322 + (1 - lbl) * 14, { f: 'display', size: 34, weight: 600, align: 'center', alpha: lbl });
   });
 }
 
@@ -220,8 +223,8 @@ function drawCommunity(ctx: Ctx, t: number, a: number) {
     const tr = springAt(t, T.training, 0.6, 12);
     if (tr > 0) withAlpha(ctx, clamp(tr), () => {
       const cx = (P.x + 290 + COMM.x - COMM.r) / 2, cy = P.y + 150;
-      const w = pill(ctx, '      Technical training', cx, cy, { f: 'body', size: 20, weight: 600 }, C.gold);
-      I.cap(ctx, cx - w / 2 + 34, cy + 2, 44, t - T.training, C.gold);
+      const w = pill(ctx, 'Technical training', cx + 30, cy, { f: 'body', size: 20, weight: 600 }, C.gold);
+      I.cap(ctx, cx + 30 - w / 2 - 40, cy + 2, 48, t - T.training, C.gold);
     });
     // community of researchers
     const cp = prog(t, T.provide + 0.2, 0.6);
@@ -265,12 +268,13 @@ function drawBoundary(ctx: Ctx, t: number, a: number) {
   });
 }
 
-function drawIndustry(ctx: Ctx, t: number, a: number) {
+function drawIndustryStream(ctx: Ctx, t: number, a: number) {
   if (t < T.extend - 0.2 || a <= 0) return;
   const P = poolCenter(t);
   withAlpha(ctx, a, () => {
-    const from = { x: P.x + 150, y: P.y + 245 }, to = { x: INDUSTRY.x - INDUSTRY.r * 0.7, y: INDUSTRY.y + INDUSTRY.r * 0.7 };
-    const pts = bezierPts(from, { x: from.x + 380, y: from.y + 330 }, { x: to.x - 700, y: to.y + 320 }, to, 70);
+    // leaves the pool, runs under the community label and exits through the ISCE² box's right side
+    const from = { x: P.x + 180, y: P.y + 215 }, to = { x: INDUSTRY.x - INDUSTRY.r * 0.8, y: INDUSTRY.y + INDUSTRY.r * 0.6 };
+    const pts = bezierPts(from, { x: from.x + 420, y: 1005 }, { x: to.x - 520, y: 1000 }, to, 70);
     ctx.save(); ctx.shadowColor = C.xray; ctx.shadowBlur = 14;
     strokeStyle(ctx, C.xray, 4, 0.9);
     const h = polyPartial(ctx, pts, prog(t, T.extend + 0.3, 1.3, ease.inOutCubic));
@@ -281,15 +285,21 @@ function drawIndustry(ctx: Ctx, t: number, a: number) {
     const ci = pts.findIndex((q) => q.x >= crossX);
     if (ci > 0) { const f = pulse(t, T.extend + 0.3 + 1.3 * (ci / 70) * 0.9, 0.04, 0.7); if (f > 0.01) glow(ctx, crossX, pts[ci]!.y, 180, C.xray, f); }
     if (t > T.extend + 1.6) flow(ctx, t, T.extend + 1.6, pts, '#FFD2C2', 8, 0.35, 99);
-    const ip = springAt(t, T.industry - 0.15, 0.55, 11);
-    if (ip > 0) withT(ctx, INDUSTRY.x, INDUSTRY.y, clamp(ip, 0, 1.2), () => {
-      glow(ctx, 0, 0, INDUSTRY.r * 2, C.xray, 0.45);
-      ctx.beginPath(); ctx.arc(0, 0, INDUSTRY.r, 0, TAU); ctx.fillStyle = rgba(C.ink1, 0.9); ctx.fill(); strokeStyle(ctx, C.xray, 3); ctx.stroke();
-      I.factory(ctx, 0, -8, 170, t - T.industry, C.xray);
-    });
-    const lb = prog(t, T.industry, 0.6);
-    text(ctx, 'Industry partners', INDUSTRY.x, INDUSTRY.y + INDUSTRY.r + 80 + (1 - lb) * 20, { f: 'display', size: 50, weight: 600, align: 'center', alpha: lb });
   });
+}
+
+/** The industry node: r = radius, drawn at the origin (world or screen space). */
+function industryNode(ctx: Ctx, t: number, r: number, iconS: number) {
+  glow(ctx, 0, 0, r * 2, C.xray, 0.45);
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, TAU); ctx.fillStyle = rgba(C.ink1, 0.92); ctx.fill(); strokeStyle(ctx, C.xray, 3); ctx.stroke();
+  I.factory(ctx, 0, -r * 0.05, iconS, t - T.industry, C.xray);
+}
+function drawIndustryNode(ctx: Ctx, t: number) {
+  if (t < T.industry - 0.2 || t >= TH) return;
+  const ip = springAt(t, T.industry - 0.15, 0.55, 11);
+  if (ip > 0) withT(ctx, INDUSTRY.x, INDUSTRY.y, clamp(ip, 0, 1.2), () => industryNode(ctx, t, INDUSTRY.r, 170));
+  const lb = prog(t, T.industry, 0.6) * (1 - prog(t, T.services - 0.1, 0.5));
+  text(ctx, 'Industry partners', INDUSTRY.x, INDUSTRY.y + INDUSTRY.r + 80 + (1 - lb) * 20, { f: 'display', size: 50, weight: 600, align: 'center', alpha: lb });
 }
 
 // ---------------------------------------------------------------- section D: services
@@ -299,45 +309,72 @@ const SVC = [
   { title: ['Method', 'Development'], icon: I.method, color: C.violet },
   { title: ['Consultancy &', 'Collaboration'], icon: I.venn, color: C.magenta },
 ];
-const TILE = { w: 770, h: 300, xs: [165, 985], ys: [250, 600] };
+const TILE = { w: 640, h: 272 };
+const TILES = [{ x: 470, y: 358 }, { x: 1450, y: 358 }, { x: 470, y: 768 }, { x: 1450, y: 768 }];
+const HUB_R = 100;
+
+function hubRadius(t: number) {
+  return lerp(lerp(INDUSTRY.r, HUB_R, prog(t, TH, 0.7, ease.inOutCubic)), 46, prog(t, T.through + 0.3, 0.7, ease.inOutCubic));
+}
 
 function drawServices(ctx: Ctx, t: number) {
-  if (t < T.services + 0.2) return;
-  const conv = prog(t, T.through, 1.1, ease.inOutCubic);
-  if (conv >= 1) return;
-  const hp = prog(t, T.services + 0.2, 0.6);
-  withAlpha(ctx, hp * (1 - prog(t, T.through, 0.5)), () => {
-    typeText(ctx, 'SERVICES FOR INDUSTRY', t, T.services + 0.2, W / 2 - measure(ctx, 'SERVICES FOR INDUSTRY', { f: 'mono', size: 24, weight: 500, tracking: 6 }) / 2, 190, { f: 'mono', size: 24, weight: 500, color: C.text2, tracking: 6 }, 40);
+  if (t < T.services) return;
+  const hdr = prog(t, T.services + 0.1, 0.5) * (1 - prog(t, T.through, 0.5));
+  withAlpha(ctx, hdr, () => {
+    const st = { f: 'mono' as const, size: 24, weight: 500, color: C.text2, tracking: 6 };
+    typeText(ctx, 'SERVICES FOR INDUSTRY', t, T.services + 0.1, W / 2 - measure(ctx, 'SERVICES FOR INDUSTRY', st) / 2, 160, st, 40);
   });
+  if (t < TH) return;
+  const hr = hubRadius(t);
+  const hubA = 1 - prog(t, T.through + 0.55, 0.5);
   SVC.forEach((s, i) => {
     const t0 = T.svc[i]!;
-    const sp = springAt(t, t0 - 0.12, 0.6, 12);
+    const c = TILES[i]!;
+    const left = c.x < W / 2;
+    const edge = { x: c.x + (left ? TILE.w / 2 : -TILE.w / 2), y: c.y };
+    const dir = Math.atan2(edge.y - SH.y, edge.x - SH.x);
+    const from = { x: SH.x + Math.cos(dir) * hr, y: SH.y + Math.sin(dir) * hr };
+    const path = bezierPts(from, { x: from.x + Math.cos(dir) * 60, y: from.y + Math.sin(dir) * 60 }, { x: edge.x + (left ? 60 : -60), y: edge.y }, edge, 30);
+    const conv = prog(t, T.through + i * 0.06, 0.8, ease.inCubic);
+    // connector: draws out from the hub just before the keyword, retracts at the end
+    const lp = prog(t, t0 - 0.45, 0.35, ease.inOutCubic) * (1 - conv);
+    strokeStyle(ctx, s.color, 2.5, 0.8);
+    const h = polyPartial(ctx, path, lp);
+    if (h && lp < 0.99 && conv === 0) { glow(ctx, h.x, h.y, 40, s.color, 1); dot(ctx, h.x, h.y, 4, '#fff'); }
+    // hub pulse as it emits this service
+    const pu = pulse(t, t0 - 0.1, 0.04, 0.45);
+    if (pu > 0.01) { glow(ctx, SH.x, SH.y, hr * 2.4, s.color, pu * 0.9); withAlpha(ctx, pu, () => { ctx.beginPath(); ctx.arc(SH.x, SH.y, hr + (1 - pu) * 60, 0, TAU); strokeStyle(ctx, s.color, 3); ctx.stroke(); }); }
+    // tile: springs out of the connector end on the keyword, folds back into the hub
+    const sp = springAt(t, t0 - 0.1, 0.6, 12);
     if (sp <= 0) return;
-    const x = TILE.xs[i % 2]!, y = TILE.ys[Math.floor(i / 2)]!;
-    const cx = x + TILE.w / 2, cy = y + TILE.h / 2;
-    const k = lerp(clamp(sp, 0, 1.08), 0.15, conv);
-    const px = lerp(cx, W / 2, conv), py = lerp(cy, H / 2, conv);
-    withAlpha(ctx, clamp(sp * 2) * (1 - conv), () => withT(ctx, px, py, k, () => {
+    const k = clamp(sp, 0, 1.08);
+    let px = lerp(edge.x, c.x, clamp(sp)), py = lerp(edge.y, c.y, clamp(sp));
+    px = lerp(px, SH.x, conv); py = lerp(py, SH.y, conv);
+    const sc = lerp(lerp(0.25, 1, k), 0.1, conv);
+    withAlpha(ctx, clamp(sp * 2) * (1 - conv), () => withT(ctx, px, py, sc, () => {
       card(ctx, -TILE.w / 2, -TILE.h / 2, TILE.w, TILE.h, { r: 28, stroke: rgba(s.color, 0.6), glow: s.color, glowA: 0.16 });
-      s.icon(ctx, -TILE.w / 2 + 190, 6, 260, t - t0 + 0.05, s.color);
-      text(ctx, `0${i + 1}`, -TILE.w / 2 + 380, -54, { f: 'mono', size: 22, weight: 700, color: s.color, tracking: 2 });
+      s.icon(ctx, -TILE.w / 2 + 135, 6, 210, t - t0 + 0.05, s.color);
+      text(ctx, `0${i + 1}`, -TILE.w / 2 + 272, -54, { f: 'mono', size: 22, weight: 700, color: s.color, tracking: 2 });
       const lines = i === 3 ? ['Consultancy', t > T.collab - 0.1 ? '& Collaboration' : ''] : s.title;
-      revealWords(ctx, [lines[0]!], [t0], t, -TILE.w / 2 + 380, 0, { f: 'display', size: 44, weight: 600 });
-      if (lines[1]) revealWords(ctx, [lines[1]!], [i === 3 ? T.collab : t0 + 0.12], t, -TILE.w / 2 + 380, 52, { f: 'display', size: 44, weight: 600 });
+      revealWords(ctx, [lines[0]!], [t0], t, -TILE.w / 2 + 272, 0, { f: 'display', size: 40, weight: 600 });
+      if (lines[1]) revealWords(ctx, [lines[1]!], [i === 3 ? T.collab : t0 + 0.12], t, -TILE.w / 2 + 272, 48, { f: 'display', size: 40, weight: 600 });
     }));
   });
+  // the hub (was the industry node); it shrinks into the solutions orb
+  if (hubA > 0.002) withAlpha(ctx, hubA, () => withT(ctx, SH.x, SH.y, 1, () => industryNode(ctx, t, hr, hr * 1.13)));
 }
 
 // ---------------------------------------------------------------- section E: solutions → research / industry
 function drawSolutions(ctx: Ctx, t: number) {
   if (t < T.through + 0.5) return;
   const ex = prog(t, T.exit, 0.9, ease.inOutCubic);
-  // orb formed by the converging tiles
-  const orb = prog(t, T.through + 0.6, 0.6, ease.outBack);
-  const oy = lerp(H / 2, 380, prog(t, T.sol[0]! - 0.6, 0.7, ease.inOutCubic));
+  // the services hub cross-fades into the brand orb, then rises above the statement
+  const orb = prog(t, T.through + 0.55, 0.5);
+  const oy = lerp(SH.y, 380, prog(t, T.sol[0]! - 0.6, 0.7, ease.inOutCubic));
   const ox = W / 2;
   const toDot = ex;
-  const R = lerp(lerp(0, 46, orb), S4_DOT.r, toDot);
+  const R = lerp(46, S4_DOT.r, toDot);
+  ctx.save(); ctx.globalAlpha *= orb;
   const dx = lerp(ox, S4_DOT.x, toDot), dy = lerp(oy, S4_DOT.y, toDot);
   glow(ctx, dx, dy, R * 4, C.violet, 0.8);
   const gr = ctx.createLinearGradient(dx - R, dy - R, dx + R, dy + R); gr.addColorStop(0, C.blue); gr.addColorStop(1, C.magenta);
@@ -346,6 +383,7 @@ function drawSolutions(ctx: Ctx, t: number) {
     const u = ((t - T.through) * 0.6 + k * 0.5) % 1;
     withAlpha(ctx, (1 - u) * 0.4 * (1 - ex), () => { ctx.beginPath(); ctx.arc(dx, dy, R + u * 90, 0, TAU); strokeStyle(ctx, C.violet, 2); ctx.stroke(); });
   }
+  ctx.restore();
   withAlpha(ctx, 1 - ex, () => {
     revealWords(ctx, ['Practical', 'analytical', 'solutions'], T.sol, t, W / 2, 540, { f: 'display', size: 76, weight: 700, align: 'center' }, { dur: 0.6 });
     // fork
@@ -381,16 +419,17 @@ export const s3: Scene = {
   },
   draw(ctx, t) {
     // ISCE² diagram (sections A–C) lives in world space under the camera
-    const diagA = 1 - prog(t, T.services - 0.2, 0.7, ease.inOutCubic);
-    if (diagA > 0.002) {
+    const diagA = 1 - prog(t, T.services - 0.35, 1.0, ease.inOutCubic);
+    if (t < TH) {
       ctx.save();
       applyCam(ctx, cam(t));
       withAlpha(ctx, diagA, () => {
         drawBoundary(ctx, t, 1);
         drawPool(ctx, t, 1);
         drawCommunity(ctx, t, 1);
-        drawIndustry(ctx, t, 1);
+        drawIndustryStream(ctx, t, 1);
       });
+      drawIndustryNode(ctx, t);
       ctx.restore();
     }
     // domain cards stay screen-space (they dock as a header row)

@@ -11,8 +11,11 @@ type Clip = { duration: number; text: string; words: Word[]; speech: [number, nu
 const data: Record<string, Clip> = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/narration.json'), 'utf8'));
 
 /** Where each slide's narration starts on the master timeline (s). */
-export const OFFSET: Record<number, number> = { 1: 2.6, 2: 10.0, 3: 37.8, 4: 90.6 };
-export const DURATION = 187.0;
+export const OFFSET: Record<number, number> = {
+  1: 2.6, 2: 10.0, 3: 37.8, 4: 90.6,
+  5: 182.8, 6: 233.0, 7: 269.8, 8: 355.9, 9: 417.8, 10: 474.3, 11: 527.0, 12: 597.7,
+};
+export const DURATION = 630.0;
 /** Visuals lead the voice slightly so eye and ear land together. */
 export const LEAD = 0.08;
 
@@ -39,7 +42,7 @@ export function cue(n: number, phrase: string, nth = 0): { t: number; end: numbe
 /** All words of every clip on the global timeline (for captions / debugging). */
 export function allWords() {
   const out: (Word & { clip: number })[] = [];
-  for (const n of [1, 2, 3, 4]) {
+  for (const n of Object.keys(OFFSET).map(Number)) {
     const c = clip(n);
     for (const w of c.words) out.push({ w: w.w, start: w.start + c.offset, end: w.end + c.offset, clip: n });
   }

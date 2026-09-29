@@ -69,18 +69,19 @@ function drawRing(ctx: Ctx, t: number, a: number) {
   }
 }
 
-function drawHub(ctx: Ctx, t: number) {
+function drawHub(ctx: Ctx, t: number, k = 1) {
   const g = springAt(t, HUB.t - 0.1, 0.55, 11);
-  const r = lerp(26, HUB.r, clamp(g, 0, 1.15));
+  const r = lerp(26, HUB.r, clamp(g, 0, 1.15)) * k;
+  const ta = clamp((k - 0.5) / 0.5);
   const beat = 1 + 0.03 * Math.sin(t * 3);
   glow(ctx, HUB.x, HUB.y, r * 3.2, C.violet, 0.8);
   const gr = ctx.createLinearGradient(HUB.x - r, HUB.y - r, HUB.x + r, HUB.y + r); gr.addColorStop(0, C.blue); gr.addColorStop(1, C.magenta);
   ctx.beginPath(); ctx.arc(HUB.x, HUB.y, r * beat, 0, TAU); ctx.fillStyle = gr; ctx.fill(); ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 2.5; ctx.stroke();
-  text(ctx, 'ACI', HUB.x, HUB.y + 14, { f: 'display', size: 42, weight: 700, align: 'center', alpha: clamp(g) });
+  text(ctx, 'ACI', HUB.x, HUB.y + 14, { f: 'display', size: 42, weight: 700, align: 'center', alpha: clamp(g) * ta });
   // three domain colours orbiting inside the hub: the team lives here
   for (let i = 0; i < 3; i++) {
     const an = t * 0.9 + (i * TAU) / 3;
-    dot(ctx, HUB.x + Math.cos(an) * (r + 16), HUB.y + Math.sin(an) * (r + 16), 5 * clamp(g), [C.cms, C.xray, C.nmr][i]!);
+    dot(ctx, HUB.x + Math.cos(an) * (r + 16), HUB.y + Math.sin(an) * (r + 16), 5 * clamp(g), [C.cms, C.xray, C.nmr][i]!, ta);
   }
 }
 
@@ -153,41 +154,28 @@ function drawOutcomes(ctx: Ctx, t: number, k: number) {
   });
 }
 
-function drawEndCard(ctx: Ctx, t: number) {
-  const p = prog(t, T.end + 0.3, 0.9, ease.outCubic);
-  if (p <= 0) return;
-  const st = { f: 'display' as const, size: 200, weight: 700 };
-  withAlpha(ctx, p, () => {
-    const full = measure(ctx, 'ACI', st);
-    [0, 1, 2].forEach((i) => glow(ctx, W / 2 + (i - 1) * full * 0.34, 470, 240, BRAND[i]!, 0.35));
-    const g = ctx.createLinearGradient(W / 2 - full / 2, 0, W / 2 + full / 2, 0);
-    g.addColorStop(0, '#6F8BFF'); g.addColorStop(0.5, '#A374FF'); g.addColorStop(1, '#FF5FA2');
-    ctx.save(); ctx.font = `700 200px Display`; ctx.textAlign = 'center'; ctx.fillStyle = g; ctx.fillText('ACI', W / 2, 530 + (1 - p) * 30); ctx.restore();
-  });
-  revealWords(ctx, ['Advanced', 'Characterization', 'and', 'Instrumentation'], [T.end + 0.6, T.end + 0.7, T.end + 0.8, T.end + 0.9], t, W / 2, 640, { f: 'display', size: 46, weight: 500, align: 'center' });
-  const lp = prog(t, T.end + 1.2, 0.8);
-  if (lp > 0) { const lw = 280, lh = (img.logo.height / img.logo.width) * lw; withAlpha(ctx, lp, () => ctx.drawImage(img.logo, W / 2 - lw / 2, 740, lw, lh)); }
-}
+/** Hand-off to the site map: the hub shrinks into the pin that marks the ACI labs. */
+export const PIN = { x: HUB.x, y: HUB.y, t: T.end + 0.8 };
 
 export const s5: Scene = {
   id: 'resources',
   start: HUB.t,
-  end: DURATION,
+  end: PIN.t,
   bg: () => ({ grid: 0.9 }),
   draw(ctx, t) {
     const lay = layout(t);
-    const outro = prog(t, T.end - 0.2, 0.9, ease.inOutCubic);
+    const outro = prog(t, T.end - 0.2, 0.6, ease.inOutCubic);
+    const shrink = prog(t, T.end, 0.75, ease.inOutCubic);
+    const place = () => { ctx.translate(lay.x, lay.y); ctx.scale(lay.s, lay.s); ctx.translate(-HUB.x, -HUB.y); };
     withAlpha(ctx, 1 - outro, () => {
-      ctx.save();
-      ctx.translate(lay.x, lay.y); ctx.scale(lay.s * lerp(1, 0.6, outro), lay.s * lerp(1, 0.6, outro)); ctx.translate(-HUB.x, -HUB.y);
+      ctx.save(); place();
       drawRing(ctx, t, 1);
       drawNodes(ctx, t, lay);
-      drawHub(ctx, t);
       ctx.restore();
       drawOutcomes(ctx, t, lay.k);
       revealWords(ctx, ['Shared', 'scientific', 'resource', 'management'], [T.shared, T.shared + 0.15, T.shared + 0.3, T.shared + 0.45], t, W / 2, 168, { f: 'display', size: 44, weight: 600, align: 'center' });
     });
-    drawEndCard(ctx, t);
+    ctx.save(); place(); drawHub(ctx, t, lerp(1, 0.22, shrink)); ctx.restore();
   },
 };
 export const S5_TIMES = T;

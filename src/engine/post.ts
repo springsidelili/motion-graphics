@@ -91,6 +91,14 @@ export function finish(ctx: Ctx, a = 1) {
 // ---------------------------------------------------------------- HUD
 export type Chapter = { n: string; label: string; start: number; end: number };
 export function hud(ctx: Ctx, t: number, chapters: Chapter[], logoA: number) {
+  // soft band behind the HUD so labels stay legible over busy frames
+  const anyCh = chapters.reduce((m, ch) => Math.max(m, prog(t, ch.start, 0.7) * (1 - prog(t, ch.end - 0.5, 0.5))), 0);
+  const band = Math.max(anyCh, logoA);
+  if (band > 0.01) {
+    const g = ctx.createLinearGradient(0, 0, 0, 150);
+    g.addColorStop(0, `rgba(5,8,23,${0.72 * band})`); g.addColorStop(1, 'rgba(5,8,23,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, 150);
+  }
   for (const ch of chapters) {
     const inP = prog(t, ch.start, 0.7, ease.outCubic);
     const outP = prog(t, ch.end - 0.5, 0.5, ease.inCubic);

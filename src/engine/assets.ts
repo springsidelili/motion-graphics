@@ -24,7 +24,10 @@ export const FACES = ['andrew_lim', 'ong_li_li', 'ong_wai_chung', 'ng_fu_song', 
   'wang_zhan', 'chia_sze_chen', 'cao_xun', 'yeo_wen_cong', 'kuan_kai_cong'] as const;
 export type FaceId = (typeof FACES)[number];
 
-export const img: { faces: Record<string, Image>; logo: Image } = { faces: {}, logo: null as unknown as Image };
+export const PHOTOS = ['corridor', 'cms_ms', 'cms_lc', 'cms_gc', 'xray_sem', 'xray_tem', 'xray_xps', 'xray_saxs', 'xray_xrd', 'nmr_nmr', 'nmr_lab', 'nmr_lab2'] as const;
+export type PhotoId = (typeof PHOTOS)[number];
+
+export const img: { faces: Record<string, Image>; logo: Image; photos: Record<string, { color: Image; gray: Image }> } = { faces: {}, logo: null as unknown as Image, photos: {} };
 
 let loaded = false;
 export async function loadAssets() {
@@ -32,5 +35,6 @@ export async function loadAssets() {
   for (const [f, fam] of FONTS) GlobalFonts.registerFromPath(path.join(ROOT, 'node_modules/@expo-google-fonts', f), fam);
   for (const id of FACES) img.faces[id] = await loadImage(path.join(ROOT, 'assets/img/faces', `${id}.png`));
   img.logo = await loadImage(path.join(ROOT, 'assets/img/isce2_logo_white.png'));
+  for (const id of PHOTOS) img.photos[id] = { color: await loadImage(path.join(ROOT, 'assets/img/labs', `${id}.jpg`)), gray: await loadImage(path.join(ROOT, 'assets/img/labs', `${id}_g.jpg`)) };
   loaded = true;
 }

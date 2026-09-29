@@ -1,0 +1,635 @@
+1
+00:00:02,950 --> 00:00:07,330
+Welcome to ACI Advanced Characterization and Instrumentation.
+
+2
+00:00:10,330 --> 00:00:12,700
+Before introducing ACI in more detail,
+
+3
+00:00:13,140 --> 00:00:18,380
+this slide provides a quick overview of the ISCE² organizational structure.
+
+4
+00:00:18,970 --> 00:00:22,350
+Here, you can see where ACI sits within the Institute.
+
+5
+00:00:23,260 --> 00:00:26,100
+ACI is led by our Division Director,
+
+6
+00:00:26,380 --> 00:00:27,180
+Andrew Lim.
+
+7
+00:00:27,440 --> 00:00:28,670
+In the next few slides,
+
+8
+00:00:29,120 --> 00:00:33,680
+I will introduce our team and highlight the key analytical capabilities and
+
+9
+00:00:33,680 --> 00:00:36,280
+shared scientific resources that we offer.
+
+10
+00:00:38,150 --> 00:00:41,530
+ACI is organised into three technical domains,
+
+11
+00:00:42,050 --> 00:00:46,610
+chromatography and mass spectrometry, X-ray spectroscopy and microscopy,
+
+12
+00:00:47,090 --> 00:00:50,080
+and NMR, physical and thermal characterisation.
+
+13
+00:00:50,910 --> 00:00:55,400
+Together, our domain leads and staff manage a broad range of shared
+
+14
+00:00:55,400 --> 00:00:59,550
+scientific resources and provide analytical and characterisation support,
+
+15
+00:01:00,130 --> 00:01:01,960
+as well as technical training,
+
+16
+00:01:02,360 --> 00:01:04,060
+to our research community.
+
+17
+00:01:04,950 --> 00:01:07,710
+Beyond supporting our internal R&D activities,
+
+18
+00:01:08,170 --> 00:01:11,640
+we also extend our capabilities to industry partners,
+
+19
+00:01:12,050 --> 00:01:15,200
+providing services such as material characterisation,
+
+20
+00:01:15,640 --> 00:01:19,400
+failure diagnostics, method development, consultancy,
+
+21
+00:01:19,400 --> 00:01:20,410
+and collaboration.
+
+22
+00:01:21,310 --> 00:01:27,160
+Through these capabilities, we aim to provide practical analytical solutions to support
+
+23
+00:01:27,160 --> 00:01:29,090
+different research and industry needs.
+
+24
+00:01:30,950 --> 00:01:34,150
+The ACI division is led by our division director,
+
+25
+00:01:34,510 --> 00:01:38,500
+Andrew Lim, and Ong Li Li as the Division Deputy Director.
+
+26
+00:01:39,240 --> 00:01:41,770
+And it comprises three technical domains,
+
+27
+00:01:42,200 --> 00:01:44,620
+each led by our respective domain lead.
+
+28
+00:01:45,240 --> 00:01:49,160
+The Chromatography and Mass Spectrometry domain is led by Mr.
+
+29
+00:01:49,160 --> 00:01:52,470
+Ong Wai Chung, supported by our instrument specialists,
+
+30
+00:01:52,920 --> 00:01:54,970
+Ng Fu Song and Tan Kuan Yi.
+
+31
+00:01:55,640 --> 00:01:59,080
+The X-ray Spectroscopy and Microscopy domain is led by Ms.
+
+32
+00:01:59,080 --> 00:02:02,450
+Angeline Seo, together with three senior domain specialists,
+
+33
+00:02:03,120 --> 00:02:05,080
+Wang Zhan, Chia Sze Chen,
+
+34
+00:02:05,080 --> 00:02:07,880
+and Cao Xun, who specialize in XPS,
+
+35
+00:02:08,260 --> 00:02:10,900
+XRD and TEM respectively.
+
+36
+00:02:11,560 --> 00:02:15,190
+Ong Li Li also served as the domain lead of NMR,
+
+37
+00:02:15,630 --> 00:02:21,340
+Physical and Thermal Characterisation, supported by instrument specialists Yeo Wen Cong and
+
+38
+00:02:21,340 --> 00:02:23,110
+Kuan Kai Cong.
+
+39
+00:02:23,110 --> 00:02:25,850
+Beyond our analytical and characterisation work,
+
+40
+00:02:26,340 --> 00:02:31,720
+ACI also plays an important role in managing shared scientific resources across
+
+41
+00:02:31,720 --> 00:02:32,520
+the Institute.
+
+42
+00:02:33,220 --> 00:02:35,880
+Our responsibilities include equipment booking,
+
+43
+00:02:36,240 --> 00:02:39,130
+utilisation and charging, demand aggregation,
+
+44
+00:02:39,500 --> 00:02:41,740
+scientific equipment and systems refresh,
+
+45
+00:02:41,960 --> 00:02:43,880
+and equipment lifecycle management.
+
+46
+00:02:44,700 --> 00:02:48,530
+We also support digitalisation and sustainability initiatives.
+
+47
+00:02:49,330 --> 00:02:54,990
+Together, these activities help ensure that our scientific resources are effectively managed,
+
+48
+00:02:55,490 --> 00:03:00,360
+optimised, and kept relevant to support the evolving research needs across the
+
+49
+00:03:00,360 --> 00:03:01,160
+Institute.
+
+50
+00:03:03,150 --> 00:03:08,080
+This slide gives you an overview of where our ACI laboratories are
+
+51
+00:03:08,080 --> 00:03:09,480
+located within the Institute.
+
+52
+00:03:10,320 --> 00:03:15,430
+Our eight analytical laboratories are conveniently located together on level 1.
+
+53
+00:03:16,270 --> 00:03:20,100
+Chromatography and Mass Spectrometry is based in Lab 1-01.
+
+54
+00:03:20,930 --> 00:03:24,800
+X-ray spectroscopy and microscopy is located in Labs 1-02,
+
+55
+00:03:25,180 --> 00:03:31,200
+1-03 and 1-06, while NMR Physical and Thermal Characterisation is based in
+
+56
+00:03:31,200 --> 00:03:32,890
+Labs 1-04 and 1-05.
+
+57
+00:03:33,560 --> 00:03:38,200
+Labs 1-07 and 1-08 are shared laboratories with other R&D divisions.
+
+58
+00:03:39,010 --> 00:03:44,560
+Having our analytical capabilities located close to one another makes it easier
+
+59
+00:03:44,680 --> 00:03:49,680
+for our teams to provide integrated analytical support for a wide range
+
+60
+00:03:49,680 --> 00:03:50,720
+of research needs.
+
+61
+00:03:53,000 --> 00:03:56,400
+Let's now take a closer look at our three technical domains,
+
+62
+00:03:56,770 --> 00:03:59,270
+starting with chromatography and mass spectrometry.
+
+63
+00:03:59,820 --> 00:04:02,150
+This domain brings together three key areas,
+
+64
+00:04:02,630 --> 00:04:06,460
+gas chromatography, liquid chromatography, and mass spectrometry.
+
+65
+00:04:07,110 --> 00:04:10,200
+These complementary techniques allow us to separate,
+
+66
+00:04:10,650 --> 00:04:14,030
+identify, and analyze a wide range of chemical compounds,
+
+67
+00:04:14,460 --> 00:04:18,970
+supporting both routine testing and more complex analytical investigations.
+
+68
+00:04:19,640 --> 00:04:23,640
+In the following slides, I will briefly introduce some of the key
+
+69
+00:04:23,640 --> 00:04:28,050
+analytical capabilities and instrumentation available within this domain.
+
+70
+00:04:30,150 --> 00:04:34,040
+Within this domain, we have a broad range of instruments to support
+
+71
+00:04:34,150 --> 00:04:35,390
+different analytical needs.
+
+72
+00:04:36,040 --> 00:04:42,790
+For gas chromatography, our capabilities include conventional GC with TCD and FID
+
+73
+00:04:42,890 --> 00:04:47,370
+detectors, comprehensive two-dimensional GC, or GC×GC,
+
+74
+00:04:47,860 --> 00:04:51,060
+as well as GC-MS equipped with pyrolysis,
+
+75
+00:04:51,540 --> 00:04:54,270
+which can be used for microplastic analysis,
+
+76
+00:04:54,660 --> 00:04:57,250
+thermal desorption, and headspace capabilities.
+
+77
+00:04:58,110 --> 00:05:02,440
+We also have a refinery gas analyzer with a grab sampling system
+
+78
+00:05:02,520 --> 00:05:03,780
+for gas analysis.
+
+79
+00:05:04,440 --> 00:05:09,930
+For liquid chromatography, we have HPLC systems equipped with different detectors.
+
+80
+00:05:10,730 --> 00:05:16,170
+We also have GPC systems using either THF or aqueous system,
+
+81
+00:05:16,550 --> 00:05:18,730
+depending on the solubility of the samples.
+
+82
+00:05:19,570 --> 00:05:24,900
+Our combustion ion chromatography capability supports the quantification of halogens,
+
+83
+00:05:25,280 --> 00:05:27,290
+anions and cations in solid,
+
+84
+00:05:27,680 --> 00:05:29,100
+liquid, and gas samples.
+
+85
+00:05:29,720 --> 00:05:31,860
+For more advanced mass spectrometry,
+
+86
+00:05:32,200 --> 00:05:33,610
+we have LC-QTOF-MS
+
+87
+00:05:34,650 --> 00:05:36,270
+and high-resolution LC-MS/MS
+
+88
+00:05:37,800 --> 00:05:39,480
+using the Q Exactive Orbitrap,
+
+89
+00:05:39,990 --> 00:05:42,880
+supporting both targeted and non-targeted analysis.
+
+90
+00:05:43,710 --> 00:05:49,040
+Finally, for elemental analysis, we have ICP-MS and ICP-OES,
+
+91
+00:05:50,040 --> 00:05:53,350
+supported by microwave digestion for sample preparation.
+
+92
+00:05:56,250 --> 00:05:58,790
+Moving on to our second technical domain,
+
+93
+00:05:59,220 --> 00:06:02,380
+X-ray Spectroscopy and Microscopy, led by Ms.
+
+94
+00:06:02,380 --> 00:06:03,180
+Angeline Seo.
+
+95
+00:06:03,890 --> 00:06:07,500
+Here, you can see some of the key instruments available within this
+
+96
+00:06:07,500 --> 00:06:08,300
+domain.
+
+97
+00:06:08,700 --> 00:06:11,300
+We have SEM and TEM,
+
+98
+00:06:11,770 --> 00:06:15,730
+which allow us to examine the morphology and structure of materials at
+
+99
+00:06:15,730 --> 00:06:17,270
+very small length scales.
+
+100
+00:06:18,080 --> 00:06:23,150
+We also have SAXS and WAXS for studying material structures and XPS
+
+101
+00:06:23,260 --> 00:06:26,040
+for surface elemental and chemical analysis.
+
+102
+00:06:26,810 --> 00:06:32,140
+In addition, our Powder X-ray diffractometer is equipped with a reaction chamber
+
+103
+00:06:32,300 --> 00:06:34,310
+for in situ XRD studies,
+
+104
+00:06:34,830 --> 00:06:38,780
+allowing us to monitor structural changes under reaction conditions.
+
+105
+00:06:39,610 --> 00:06:45,530
+We also have XRF with mapping capability for elemental analysis and distribution.
+
+106
+00:06:46,360 --> 00:06:50,780
+Together, these instruments provide complementary information on the morphology,
+
+107
+00:06:51,170 --> 00:06:56,060
+structure, surface chemistry, and elemental composition of different materials.
+
+108
+00:06:58,140 --> 00:06:59,980
+Looking more closely to this domain,
+
+109
+00:07:00,280 --> 00:07:03,330
+we can broadly group our instruments into three areas.
+
+110
+00:07:03,960 --> 00:07:09,720
+For X-ray characterisation, we have powder X-ray diffraction with an in-situ reaction
+
+111
+00:07:09,720 --> 00:07:12,860
+chamber, X-ray fluorescence with mapping capability,
+
+112
+00:07:13,360 --> 00:07:16,790
+as well as small and wide-angle X-ray scattering,
+
+113
+00:07:17,130 --> 00:07:18,450
+or SAXS and WAXS.
+
+114
+00:07:19,160 --> 00:07:25,020
+For electron microscopy, we have SEM with EDS and BEX capabilities.
+
+115
+00:07:25,510 --> 00:07:29,620
+and TEM with advanced capabilities including Cryo-TEM,
+
+116
+00:07:30,000 --> 00:07:32,630
+EDS, 3D tomography and EELS.
+
+117
+00:07:33,320 --> 00:07:38,220
+We also have 3D X-ray micro-CT and atomic force microscopy,
+
+118
+00:07:38,760 --> 00:07:42,270
+allowing us to examine materials across different length scales.
+
+119
+00:07:43,130 --> 00:07:45,550
+For surface and molecular characterisation,
+
+120
+00:07:45,930 --> 00:07:48,610
+we have XPS and Raman spectroscopy,
+
+121
+00:07:49,160 --> 00:07:51,750
+both with in situ gas reaction capabilities.
+
+122
+00:07:54,650 --> 00:07:57,310
+Moving on to our third technical domain,
+
+123
+00:07:57,710 --> 00:08:00,640
+NMR, physical and thermal characterisation.
+
+124
+00:08:01,230 --> 00:08:04,460
+Our capabilities can broadly be divided into two areas.
+
+125
+00:08:04,940 --> 00:08:07,380
+The first is Nuclear Magnetic Resonance,
+
+126
+00:08:07,810 --> 00:08:14,240
+or NMR, where we have liquid-state NMR spectrometers for molecular structure identification,
+
+127
+00:08:14,660 --> 00:08:17,970
+structural characterisation, and quantitative analysis.
+
+128
+00:08:18,620 --> 00:08:20,270
+The second is our thermal,
+
+129
+00:08:20,510 --> 00:08:23,010
+chemical, and physical characterisation laboratory.
+
+130
+00:08:23,570 --> 00:08:27,720
+which houses a wide range of instruments for evaluating the thermal behavior,
+
+131
+00:08:28,240 --> 00:08:31,880
+physical properties, and other characteristics of different materials.
+
+132
+00:08:32,480 --> 00:08:36,700
+Together, these capabilities allow us to look at materials from both a
+
+133
+00:08:36,700 --> 00:08:39,020
+molecular and bulk property perspective,
+
+134
+00:08:39,520 --> 00:08:42,520
+providing complementary information to support research,
+
+135
+00:08:43,190 --> 00:08:45,250
+product development, and problem solving.
+
+136
+00:08:47,350 --> 00:08:49,310
+Looking more closely at third domain,
+
+137
+00:08:49,690 --> 00:08:52,940
+our capabilities can be broadly grouped into three areas.
+
+138
+00:08:53,520 --> 00:08:59,890
+First, for NMR, we have liquid-state NMR spectrometers equipped with both iProbe
+
+139
+00:08:59,990 --> 00:09:05,630
+and cryoprobe, supporting molecular structure characterisation and quantitative analysis.
+
+140
+00:09:06,280 --> 00:09:09,630
+The second area is chemical and physical characterisation,
+
+141
+00:09:10,120 --> 00:09:14,200
+where we have a wide range of instruments for measuring different material
+
+142
+00:09:14,200 --> 00:09:15,000
+properties.
+
+143
+00:09:15,590 --> 00:09:17,950
+These include surface area and pore size,
+
+144
+00:09:18,350 --> 00:09:22,820
+particle size, rheology, spectroscopy, dispersion and stability,
+
+145
+00:09:23,280 --> 00:09:26,710
+as well as mechanical and thermal conductivity measurements.
+
+146
+00:09:27,320 --> 00:09:29,490
+The third area is thermal analysis,
+
+147
+00:09:29,920 --> 00:09:32,720
+where our capabilities include TPDRO,
+
+148
+00:09:33,090 --> 00:09:39,240
+simultaneous DSC-TGA and DSC, allowing us to study how materials behave and
+
+149
+00:09:39,240 --> 00:09:41,560
+change under controlled temperature conditions.
+
+150
+00:09:42,190 --> 00:09:47,720
+Together, these complementary techniques allow us to characterize materials from their molecular
+
+151
+00:09:47,720 --> 00:09:49,790
+structure through to their physical,
+
+152
+00:09:50,040 --> 00:09:54,520
+chemical, and thermal properties, giving us a more comprehensive understanding of the
+
+153
+00:09:54,520 --> 00:09:55,700
+samples we analyze.
+
+154
+00:09:57,700 --> 00:10:02,820
+To summarize, this slide brings together the wide range of analytical capabilities
+
+155
+00:10:02,820 --> 00:10:06,870
+available within ACI across our three technical domains.
+
+156
+00:10:07,300 --> 00:10:09,940
+With this broad range of complementary techniques,
+
+157
+00:10:10,380 --> 00:10:14,220
+we are able to support different types of samples and analytical needs.
+
+158
+00:10:14,820 --> 00:10:19,300
+More importantly, our team can work with you to identify the most
+
+159
+00:10:19,300 --> 00:10:22,890
+appropriate analytical approach for your specific research needs.

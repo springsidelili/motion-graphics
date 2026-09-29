@@ -24,7 +24,18 @@ FIX = {
        (['Yo', 'Wenchang'], ['Yeo', 'Wen', 'Cong']), (['Kwan', 'Kaichong.'], ['Kuan', 'Kai', 'Cong.']), (['AC'], ['ACI']),
        (['characterization'], ['characterisation']), (['utilization'], ['utilisation']), (['lefesical'], ['lifecycle']),
        (['digitalization'], ['digitalisation']), (['optimized,'], ['optimised,'])],
+ '5': [(['1-1.'], ['1-01.']), (['1-2,'], ['1-02,']), (['1-3'], ['1-03']), (['1-6,'], ['1-06,']), (['1-4'], ['1-04']),
+       (['1-5.'], ['1-05.']), (['1-7'], ['1-07']), (['1-8'], ['1-08']), (['RD'], ['R&D'])],
+ '7': [(['GC', 'by', 'GC,'], ['GC×GC,']), (['GCMS'], ['GC-MS']), (['LCQ-TOF-MS'], ['LC-QTOF-MS']), (['LC-MSMS'], ['LC-MS/MS']),
+       (['QX', 'active', 'orbit', 'trap,'], ['Q', 'Exactive', 'Orbitrap,']), (['nintargeted'], ['non-targeted']),
+       (['ICPMS'], ['ICP-MS']), (['ICPOES,'], ['ICP-OES,'])],
+ '8': [(['Angel', 'Lin.'], ['Angeline', 'Seo.']), (['SACS'], ['SAXS']), (['WACS4'], ['WAXS', 'for']), (['Reaction', 'Chamber', '4'], ['reaction', 'chamber', 'for'])],
+ '9': [(['SACS'], ['SAXS']), (['WACS.'], ['WAXS.']), (['EALS.'], ['EELS.']), (['Raymond'], ['Raman'])],
+ '11': [(['eye', 'probe'], ['iProbe']), (['DSCTG'], ['DSC-TGA'])],
+ '12': [(['a', 'CI'], ['ACI'])],
 }
+# British -isation for the technique names (the division's official name, clip 1, keeps its z)
+ISE = re.compile(r'^([Cc])h[ae]ract[eo]rization')
 
 def apply_fix(words, fixes):
     for src, dst in fixes:
@@ -66,6 +77,8 @@ out = {}
 for clip, d in raw.items():
     words = [dict(w) for w in d['words']]
     words = apply_fix(words, FIX.get(clip, []))
+    if clip != '1':
+        for w in words: w['w'] = ISE.sub(lambda m: m.group(1) + 'haracterisation', w['w'])
     regs, dur = regions(os.path.join(WAV, f'm{clip}.wav'))
     snapped = 0
     for r0, r1 in regs:

@@ -1,7 +1,7 @@
 // Offline renderer CLI.
 //   stills: npx tsx scripts/render.ts stills --t 3.5,20,41 [--out out/stills]
 //   sheet:  npx tsx scripts/render.ts sheet --from 9 --to 37 [--n 16] [--cols 4] [--out out/sheet.png]  (or --times a,b,c)
-//   video:  npx tsx scripts/render.ts video [--from 0] [--to END] [--fps 60] [--workers 4] [--crf 17] [--out out/aci_part1.mp4] [--noaudio]
+//   video:  npx tsx scripts/render.ts video [--from 0] [--to END] [--fps 60] [--workers 4] [--crf 17] [--out out/aci_explainer.mp4] [--noaudio]
 // Video mode splits the frame range across worker processes (each pipes raw RGBA
 // into its own ffmpeg), concatenates the segments and muxes the mixed audio.
 import { createCanvas } from '@napi-rs/canvas';
@@ -62,7 +62,7 @@ async function video() {
   const fps = +opt('fps', '60')!;
   const from = +opt('from', '0')!, to = +opt('to', String(END))!;
   const workers = +opt('workers', '4')!;
-  const out = path.resolve(opt('out', path.join(ROOT, 'out/aci_part1.mp4'))!);
+  const out = path.resolve(opt('out', path.join(ROOT, 'out/aci_explainer.mp4'))!);
   const tmp = path.join(ROOT, 'out/tmp', path.basename(out, '.mp4'));
   fs.mkdirSync(tmp, { recursive: true });
   const f0 = Math.round(from * fps), f1 = Math.round(to * fps);
