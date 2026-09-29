@@ -1,0 +1,17 @@
+import { createCanvas } from '@napi-rs/canvas';
+import { loadAssets } from '../src/engine/assets';
+import { background, vignette, grain } from '../src/engine/post';
+import { glow } from '../src/engine/draw';
+import { scenes, renderFrame } from '../src/timeline';
+await loadAssets();
+const c = createCanvas(1920, 1080), ctx = c.getContext('2d');
+const T = +(process.argv[2] ?? 5);
+const time = (label: string, fn: () => void, n = 10) => { fn(); const t0 = performance.now(); for (let i = 0; i < n; i++) fn(); console.log(label.padEnd(16), ((performance.now() - t0) / n).toFixed(1), 'ms'); };
+time('background', () => background(ctx, T, {}));
+time('bg no blobs', () => background(ctx, T, { energy: 0 }));
+time('1 big glow', () => glow(ctx, 900, 500, 900, '#3A63FF', 0.2));
+time('vignette', () => vignette(ctx));
+time('grain', () => grain(ctx, T));
+for (const s of scenes) if (T >= s.start && T < s.end) time('scene ' + s.id, () => s.draw(ctx, T));
+time('full frame', () => renderFrame(ctx, T));
+time('readback', () => c.data());

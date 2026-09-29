@@ -1,0 +1,1766 @@
+{
+ "1": {
+  "text": "Welcome to ACI Advanced Characterization and Instrumentation.",
+  "words": [
+   {
+    "w": "Welcome",
+    "start": 0.16,
+    "end": 0.8
+   },
+   {
+    "w": "to",
+    "start": 0.8,
+    "end": 1.04
+   },
+   {
+    "w": "ACI",
+    "start": 1.04,
+    "end": 1.84
+   },
+   {
+    "w": "Advanced",
+    "start": 2.16,
+    "end": 2.8
+   },
+   {
+    "w": "Characterization",
+    "start": 2.8,
+    "end": 3.76
+   },
+   {
+    "w": "and",
+    "start": 3.76,
+    "end": 3.92
+   },
+   {
+    "w": "Instrumentation.",
+    "start": 3.92,
+    "end": 5.12
+   }
+  ],
+  "dur": 5.256
+ },
+ "2": {
+  "text": "Before introducing a CI in more detail, this slide provides a quick overview of the ISCE2 organizational structure. Here, you can see where a CI sits within the Institute. A CI is led by our Division Director, Andrew Lim. In the next few slides, I will introduce our team and highlight the key analytical capabilities and shared scientific resources that we offer.",
+  "words": [
+   {
+    "w": "Before",
+    "start": 0.0,
+    "end": 0.56
+   },
+   {
+    "w": "introducing",
+    "start": 0.56,
+    "end": 1.2
+   },
+   {
+    "w": "a",
+    "start": 1.2,
+    "end": 1.36
+   },
+   {
+    "w": "CI",
+    "start": 1.36,
+    "end": 1.84
+   },
+   {
+    "w": "in",
+    "start": 1.92,
+    "end": 2.08
+   },
+   {
+    "w": "more",
+    "start": 2.08,
+    "end": 2.32
+   },
+   {
+    "w": "detail,",
+    "start": 2.32,
+    "end": 3.12
+   },
+   {
+    "w": "this",
+    "start": 3.12,
+    "end": 3.36
+   },
+   {
+    "w": "slide",
+    "start": 3.36,
+    "end": 3.76
+   },
+   {
+    "w": "provides",
+    "start": 3.76,
+    "end": 4.16
+   },
+   {
+    "w": "a",
+    "start": 4.16,
+    "end": 4.32
+   },
+   {
+    "w": "quick",
+    "start": 4.32,
+    "end": 4.64
+   },
+   {
+    "w": "overview",
+    "start": 4.64,
+    "end": 5.12
+   },
+   {
+    "w": "of",
+    "start": 5.12,
+    "end": 5.28
+   },
+   {
+    "w": "the",
+    "start": 5.28,
+    "end": 5.52
+   },
+   {
+    "w": "ISCE2",
+    "start": 5.52,
+    "end": 6.88
+   },
+   {
+    "w": "organizational",
+    "start": 7.2,
+    "end": 7.92
+   },
+   {
+    "w": "structure.",
+    "start": 7.92,
+    "end": 8.88
+   },
+   {
+    "w": "Here,",
+    "start": 8.88,
+    "end": 9.52
+   },
+   {
+    "w": "you",
+    "start": 9.52,
+    "end": 9.76
+   },
+   {
+    "w": "can",
+    "start": 9.76,
+    "end": 9.92
+   },
+   {
+    "w": "see",
+    "start": 9.92,
+    "end": 10.08
+   },
+   {
+    "w": "where",
+    "start": 10.08,
+    "end": 10.32
+   },
+   {
+    "w": "a",
+    "start": 10.32,
+    "end": 10.56
+   },
+   {
+    "w": "CI",
+    "start": 10.56,
+    "end": 11.04
+   },
+   {
+    "w": "sits",
+    "start": 11.12,
+    "end": 11.52
+   },
+   {
+    "w": "within",
+    "start": 11.52,
+    "end": 11.76
+   },
+   {
+    "w": "the",
+    "start": 11.76,
+    "end": 11.92
+   },
+   {
+    "w": "Institute.",
+    "start": 11.92,
+    "end": 13.12
+   },
+   {
+    "w": "A",
+    "start": 13.12,
+    "end": 13.36
+   },
+   {
+    "w": "CI",
+    "start": 13.36,
+    "end": 14.0
+   },
+   {
+    "w": "is",
+    "start": 14.0,
+    "end": 14.24
+   },
+   {
+    "w": "led",
+    "start": 14.24,
+    "end": 14.56
+   },
+   {
+    "w": "by",
+    "start": 14.56,
+    "end": 14.8
+   },
+   {
+    "w": "our",
+    "start": 14.8,
+    "end": 14.96
+   },
+   {
+    "w": "Division",
+    "start": 14.96,
+    "end": 15.52
+   },
+   {
+    "w": "Director,",
+    "start": 15.52,
+    "end": 16.24
+   },
+   {
+    "w": "Andrew",
+    "start": 16.24,
+    "end": 16.72
+   },
+   {
+    "w": "Lim.",
+    "start": 16.72,
+    "end": 17.44
+   },
+   {
+    "w": "In",
+    "start": 17.44,
+    "end": 17.6
+   },
+   {
+    "w": "the",
+    "start": 17.6,
+    "end": 17.76
+   },
+   {
+    "w": "next",
+    "start": 17.76,
+    "end": 18.0
+   },
+   {
+    "w": "few",
+    "start": 18.0,
+    "end": 18.24
+   },
+   {
+    "w": "slides,",
+    "start": 18.24,
+    "end": 18.96
+   },
+   {
+    "w": "I",
+    "start": 18.96,
+    "end": 19.28
+   },
+   {
+    "w": "will",
+    "start": 19.28,
+    "end": 19.52
+   },
+   {
+    "w": "introduce",
+    "start": 19.52,
+    "end": 20.16
+   },
+   {
+    "w": "our",
+    "start": 20.16,
+    "end": 20.4
+   },
+   {
+    "w": "team",
+    "start": 20.4,
+    "end": 20.8
+   },
+   {
+    "w": "and",
+    "start": 20.8,
+    "end": 21.04
+   },
+   {
+    "w": "highlight",
+    "start": 21.04,
+    "end": 21.52
+   },
+   {
+    "w": "the",
+    "start": 21.52,
+    "end": 21.6
+   },
+   {
+    "w": "key",
+    "start": 21.6,
+    "end": 21.84
+   },
+   {
+    "w": "analytical",
+    "start": 21.84,
+    "end": 22.56
+   },
+   {
+    "w": "capabilities",
+    "start": 22.56,
+    "end": 23.52
+   },
+   {
+    "w": "and",
+    "start": 23.52,
+    "end": 23.76
+   },
+   {
+    "w": "shared",
+    "start": 23.76,
+    "end": 24.24
+   },
+   {
+    "w": "scientific",
+    "start": 24.24,
+    "end": 24.88
+   },
+   {
+    "w": "resources",
+    "start": 24.88,
+    "end": 25.52
+   },
+   {
+    "w": "that",
+    "start": 25.52,
+    "end": 25.76
+   },
+   {
+    "w": "we",
+    "start": 25.76,
+    "end": 26.0
+   },
+   {
+    "w": "offer.",
+    "start": 26.0,
+    "end": 26.56
+   }
+  ],
+  "dur": 26.832
+ },
+ "3": {
+  "text": "ACI is organized into three technical domains, chromatography and mass spectrometry, X-ray spectroscopy and microscopy, and NMR, physical and thermal cheracterization. Together, our domain leads and staff manage a broad range of shared scientific resources and provide analytical and characterization support, as well as technical training, to our research community. Beyond supporting our internal ERD activities, we also extend our capabilities to industry partners, providing services such as material cheracterization, failure diagnostics, method development, consultancy, and collaboration. Through these capabilities, we aim to provide practical analytical solutions to support different research and industry needs.",
+  "words": [
+   {
+    "w": "ACI",
+    "start": 0.24,
+    "end": 1.12
+   },
+   {
+    "w": "is",
+    "start": 1.12,
+    "end": 1.44
+   },
+   {
+    "w": "organized",
+    "start": 1.44,
+    "end": 2.0
+   },
+   {
+    "w": "into",
+    "start": 2.0,
+    "end": 2.32
+   },
+   {
+    "w": "three",
+    "start": 2.32,
+    "end": 2.56
+   },
+   {
+    "w": "technical",
+    "start": 2.56,
+    "end": 3.12
+   },
+   {
+    "w": "domains,",
+    "start": 3.12,
+    "end": 4.08
+   },
+   {
+    "w": "chromatography",
+    "start": 4.08,
+    "end": 5.12
+   },
+   {
+    "w": "and",
+    "start": 5.12,
+    "end": 5.2
+   },
+   {
+    "w": "mass",
+    "start": 5.2,
+    "end": 5.52
+   },
+   {
+    "w": "spectrometry,",
+    "start": 5.52,
+    "end": 6.64
+   },
+   {
+    "w": "X-ray",
+    "start": 6.64,
+    "end": 7.12
+   },
+   {
+    "w": "spectroscopy",
+    "start": 7.12,
+    "end": 7.92
+   },
+   {
+    "w": "and",
+    "start": 7.92,
+    "end": 8.08
+   },
+   {
+    "w": "microscopy,",
+    "start": 8.08,
+    "end": 9.2
+   },
+   {
+    "w": "and",
+    "start": 9.2,
+    "end": 9.44
+   },
+   {
+    "w": "NMR,",
+    "start": 9.44,
+    "end": 10.24
+   },
+   {
+    "w": "physical",
+    "start": 10.24,
+    "end": 10.8
+   },
+   {
+    "w": "and",
+    "start": 10.8,
+    "end": 10.96
+   },
+   {
+    "w": "thermal",
+    "start": 10.96,
+    "end": 11.28
+   },
+   {
+    "w": "cheracterization.",
+    "start": 11.28,
+    "end": 12.96
+   },
+   {
+    "w": "Together,",
+    "start": 12.96,
+    "end": 13.84
+   },
+   {
+    "w": "our",
+    "start": 13.84,
+    "end": 14.08
+   },
+   {
+    "w": "domain",
+    "start": 14.08,
+    "end": 14.72
+   },
+   {
+    "w": "leads",
+    "start": 14.72,
+    "end": 15.12
+   },
+   {
+    "w": "and",
+    "start": 15.12,
+    "end": 15.28
+   },
+   {
+    "w": "staff",
+    "start": 15.28,
+    "end": 15.68
+   },
+   {
+    "w": "manage",
+    "start": 15.68,
+    "end": 16.08
+   },
+   {
+    "w": "a",
+    "start": 16.08,
+    "end": 16.24
+   },
+   {
+    "w": "broad",
+    "start": 16.24,
+    "end": 16.64
+   },
+   {
+    "w": "range",
+    "start": 16.64,
+    "end": 16.96
+   },
+   {
+    "w": "of",
+    "start": 16.96,
+    "end": 17.2
+   },
+   {
+    "w": "shared",
+    "start": 17.2,
+    "end": 17.6
+   },
+   {
+    "w": "scientific",
+    "start": 17.6,
+    "end": 18.32
+   },
+   {
+    "w": "resources",
+    "start": 18.32,
+    "end": 19.12
+   },
+   {
+    "w": "and",
+    "start": 19.12,
+    "end": 19.36
+   },
+   {
+    "w": "provide",
+    "start": 19.36,
+    "end": 19.76
+   },
+   {
+    "w": "analytical",
+    "start": 19.76,
+    "end": 20.32
+   },
+   {
+    "w": "and",
+    "start": 20.32,
+    "end": 20.48
+   },
+   {
+    "w": "characterization",
+    "start": 20.48,
+    "end": 21.52
+   },
+   {
+    "w": "support,",
+    "start": 21.52,
+    "end": 22.4
+   },
+   {
+    "w": "as",
+    "start": 22.4,
+    "end": 22.64
+   },
+   {
+    "w": "well",
+    "start": 22.64,
+    "end": 22.8
+   },
+   {
+    "w": "as",
+    "start": 22.8,
+    "end": 23.04
+   },
+   {
+    "w": "technical",
+    "start": 23.04,
+    "end": 23.76
+   },
+   {
+    "w": "training,",
+    "start": 23.76,
+    "end": 24.56
+   },
+   {
+    "w": "to",
+    "start": 24.56,
+    "end": 24.88
+   },
+   {
+    "w": "our",
+    "start": 24.88,
+    "end": 25.12
+   },
+   {
+    "w": "research",
+    "start": 25.12,
+    "end": 26.0
+   },
+   {
+    "w": "community.",
+    "start": 26.0,
+    "end": 26.96
+   },
+   {
+    "w": "Beyond",
+    "start": 26.96,
+    "end": 27.6
+   },
+   {
+    "w": "supporting",
+    "start": 27.6,
+    "end": 28.16
+   },
+   {
+    "w": "our",
+    "start": 28.16,
+    "end": 28.4
+   },
+   {
+    "w": "internal",
+    "start": 28.4,
+    "end": 28.96
+   },
+   {
+    "w": "ERD",
+    "start": 28.96,
+    "end": 29.2
+   },
+   {
+    "w": "activities,",
+    "start": 29.36,
+    "end": 30.32
+   },
+   {
+    "w": "we",
+    "start": 30.32,
+    "end": 30.56
+   },
+   {
+    "w": "also",
+    "start": 30.56,
+    "end": 30.8
+   },
+   {
+    "w": "extend",
+    "start": 30.8,
+    "end": 31.36
+   },
+   {
+    "w": "our",
+    "start": 31.36,
+    "end": 31.6
+   },
+   {
+    "w": "capabilities",
+    "start": 31.6,
+    "end": 32.48
+   },
+   {
+    "w": "to",
+    "start": 32.48,
+    "end": 32.72
+   },
+   {
+    "w": "industry",
+    "start": 32.72,
+    "end": 33.28
+   },
+   {
+    "w": "partners,",
+    "start": 33.28,
+    "end": 34.16
+   },
+   {
+    "w": "providing",
+    "start": 34.16,
+    "end": 34.72
+   },
+   {
+    "w": "services",
+    "start": 34.72,
+    "end": 35.36
+   },
+   {
+    "w": "such",
+    "start": 35.36,
+    "end": 35.6
+   },
+   {
+    "w": "as",
+    "start": 35.6,
+    "end": 35.76
+   },
+   {
+    "w": "material",
+    "start": 35.76,
+    "end": 36.32
+   },
+   {
+    "w": "cheracterization,",
+    "start": 36.32,
+    "end": 37.68
+   },
+   {
+    "w": "failure",
+    "start": 37.68,
+    "end": 38.24
+   },
+   {
+    "w": "diagnostics,",
+    "start": 38.24,
+    "end": 39.36
+   },
+   {
+    "w": "method",
+    "start": 39.36,
+    "end": 39.84
+   },
+   {
+    "w": "development,",
+    "start": 39.84,
+    "end": 40.64
+   },
+   {
+    "w": "consultancy,",
+    "start": 40.64,
+    "end": 41.6
+   },
+   {
+    "w": "and",
+    "start": 41.6,
+    "end": 41.76
+   },
+   {
+    "w": "collaboration.",
+    "start": 41.76,
+    "end": 43.28
+   },
+   {
+    "w": "Through",
+    "start": 43.28,
+    "end": 43.68
+   },
+   {
+    "w": "these",
+    "start": 43.68,
+    "end": 43.92
+   },
+   {
+    "w": "capabilities,",
+    "start": 43.92,
+    "end": 45.04
+   },
+   {
+    "w": "we",
+    "start": 45.04,
+    "end": 45.28
+   },
+   {
+    "w": "aim",
+    "start": 45.28,
+    "end": 45.68
+   },
+   {
+    "w": "to",
+    "start": 45.68,
+    "end": 45.92
+   },
+   {
+    "w": "provide",
+    "start": 45.92,
+    "end": 46.4
+   },
+   {
+    "w": "practical",
+    "start": 46.4,
+    "end": 47.04
+   },
+   {
+    "w": "analytical",
+    "start": 47.04,
+    "end": 47.68
+   },
+   {
+    "w": "solutions",
+    "start": 47.68,
+    "end": 48.72
+   },
+   {
+    "w": "to",
+    "start": 48.72,
+    "end": 48.88
+   },
+   {
+    "w": "support",
+    "start": 48.88,
+    "end": 49.36
+   },
+   {
+    "w": "different",
+    "start": 49.36,
+    "end": 49.68
+   },
+   {
+    "w": "research",
+    "start": 49.68,
+    "end": 50.16
+   },
+   {
+    "w": "and",
+    "start": 50.16,
+    "end": 50.4
+   },
+   {
+    "w": "industry",
+    "start": 50.4,
+    "end": 50.96
+   },
+   {
+    "w": "needs.",
+    "start": 50.96,
+    "end": 51.6
+   }
+  ],
+  "dur": 51.792
+ },
+ "4": {
+  "text": "The CI division is led by our division director, Andrew Lim, and Aung Li Li as the Division Deputy Director. And it comprises three technical domains, each led by our respective domain lead. The Chromatography and Mass Spectrometry domain is led by Mr. Aung Wei Chung, supported by our instrument specialists, Eng Fu Song and Tan Kwan Yi. The X-ray Spectroscopy and Microscopy domain is led by Ms. Angel Lin, together with three senior domain specialists, Wanzan, Chia Shichen, and Chao Shin, who specialize in XPS, XRD and TEM respectively. Aung Li Li also served as the domain lead of NMR, Physical and Thermal Cheracterization, supported by instrument specialists Yo Wenchang and Kwan Kaichong. Beyond our analytical and characterization work, AC also plays an important role in managing shared scientific resources across the Institute. Our responsibilities include equipment booking, utilization and charging, demand aggregation, scientific equipment and systems refresh, and equipment lefesical management. We also support digitalization and sustainability initiatives. Together, these activities help ensure that our scientific resources are effectively managed, optimized, and kept relevant to support the evolving research needs across the Institute.",
+  "words": [
+   {
+    "w": "The",
+    "start": 0.0,
+    "end": 0.24
+   },
+   {
+    "w": "CI",
+    "start": 0.64,
+    "end": 1.12
+   },
+   {
+    "w": "division",
+    "start": 1.12,
+    "end": 1.68
+   },
+   {
+    "w": "is",
+    "start": 1.68,
+    "end": 1.84
+   },
+   {
+    "w": "led",
+    "start": 1.84,
+    "end": 2.16
+   },
+   {
+    "w": "by",
+    "start": 2.16,
+    "end": 2.32
+   },
+   {
+    "w": "our",
+    "start": 2.32,
+    "end": 2.56
+   },
+   {
+    "w": "division",
+    "start": 2.56,
+    "end": 3.04
+   },
+   {
+    "w": "director,",
+    "start": 3.04,
+    "end": 3.84
+   },
+   {
+    "w": "Andrew",
+    "start": 3.84,
+    "end": 4.24
+   },
+   {
+    "w": "Lim,",
+    "start": 4.24,
+    "end": 4.96
+   },
+   {
+    "w": "and",
+    "start": 4.96,
+    "end": 5.12
+   },
+   {
+    "w": "Aung",
+    "start": 5.12,
+    "end": 5.52
+   },
+   {
+    "w": "Li",
+    "start": 5.52,
+    "end": 5.84
+   },
+   {
+    "w": "Li",
+    "start": 5.84,
+    "end": 6.16
+   },
+   {
+    "w": "as",
+    "start": 6.24,
+    "end": 6.4
+   },
+   {
+    "w": "the",
+    "start": 6.4,
+    "end": 6.48
+   },
+   {
+    "w": "Division",
+    "start": 6.48,
+    "end": 6.96
+   },
+   {
+    "w": "Deputy",
+    "start": 6.96,
+    "end": 7.44
+   },
+   {
+    "w": "Director.",
+    "start": 7.44,
+    "end": 8.64
+   },
+   {
+    "w": "And",
+    "start": 8.64,
+    "end": 8.8
+   },
+   {
+    "w": "it",
+    "start": 8.8,
+    "end": 9.04
+   },
+   {
+    "w": "comprises",
+    "start": 9.04,
+    "end": 9.76
+   },
+   {
+    "w": "three",
+    "start": 9.76,
+    "end": 10.0
+   },
+   {
+    "w": "technical",
+    "start": 10.0,
+    "end": 10.64
+   },
+   {
+    "w": "domains,",
+    "start": 10.64,
+    "end": 11.52
+   },
+   {
+    "w": "each",
+    "start": 11.52,
+    "end": 11.84
+   },
+   {
+    "w": "led",
+    "start": 11.84,
+    "end": 12.24
+   },
+   {
+    "w": "by",
+    "start": 12.24,
+    "end": 12.4
+   },
+   {
+    "w": "our",
+    "start": 12.4,
+    "end": 12.64
+   },
+   {
+    "w": "respective",
+    "start": 12.64,
+    "end": 13.28
+   },
+   {
+    "w": "domain",
+    "start": 13.28,
+    "end": 13.84
+   },
+   {
+    "w": "lead.",
+    "start": 13.84,
+    "end": 14.32
+   },
+   {
+    "w": "The",
+    "start": 14.64,
+    "end": 14.8
+   },
+   {
+    "w": "Chromatography",
+    "start": 14.8,
+    "end": 15.76
+   },
+   {
+    "w": "and",
+    "start": 15.76,
+    "end": 15.92
+   },
+   {
+    "w": "Mass",
+    "start": 15.92,
+    "end": 16.24
+   },
+   {
+    "w": "Spectrometry",
+    "start": 16.24,
+    "end": 17.04
+   },
+   {
+    "w": "domain",
+    "start": 17.2,
+    "end": 17.68
+   },
+   {
+    "w": "is",
+    "start": 17.68,
+    "end": 17.84
+   },
+   {
+    "w": "led",
+    "start": 17.84,
+    "end": 18.0
+   },
+   {
+    "w": "by",
+    "start": 18.0,
+    "end": 18.16
+   },
+   {
+    "w": "Mr.",
+    "start": 18.16,
+    "end": 18.56
+   },
+   {
+    "w": "Aung",
+    "start": 18.56,
+    "end": 18.88
+   },
+   {
+    "w": "Wei",
+    "start": 18.88,
+    "end": 19.12
+   },
+   {
+    "w": "Chung,",
+    "start": 19.2,
+    "end": 19.92
+   },
+   {
+    "w": "supported",
+    "start": 19.92,
+    "end": 20.4
+   },
+   {
+    "w": "by",
+    "start": 20.4,
+    "end": 20.56
+   },
+   {
+    "w": "our",
+    "start": 20.56,
+    "end": 20.8
+   },
+   {
+    "w": "instrument",
+    "start": 20.8,
+    "end": 21.44
+   },
+   {
+    "w": "specialists,",
+    "start": 21.44,
+    "end": 22.32
+   },
+   {
+    "w": "Eng",
+    "start": 22.32,
+    "end": 22.64
+   },
+   {
+    "w": "Fu",
+    "start": 22.64,
+    "end": 22.96
+   },
+   {
+    "w": "Song",
+    "start": 22.96,
+    "end": 23.28
+   },
+   {
+    "w": "and",
+    "start": 23.44,
+    "end": 23.52
+   },
+   {
+    "w": "Tan",
+    "start": 23.52,
+    "end": 23.84
+   },
+   {
+    "w": "Kwan",
+    "start": 23.84,
+    "end": 24.16
+   },
+   {
+    "w": "Yi.",
+    "start": 24.24,
+    "end": 24.72
+   },
+   {
+    "w": "The",
+    "start": 25.04,
+    "end": 25.2
+   },
+   {
+    "w": "X-ray",
+    "start": 25.2,
+    "end": 25.76
+   },
+   {
+    "w": "Spectroscopy",
+    "start": 25.76,
+    "end": 26.4
+   },
+   {
+    "w": "and",
+    "start": 26.4,
+    "end": 26.56
+   },
+   {
+    "w": "Microscopy",
+    "start": 26.56,
+    "end": 27.28
+   },
+   {
+    "w": "domain",
+    "start": 27.28,
+    "end": 27.68
+   },
+   {
+    "w": "is",
+    "start": 27.68,
+    "end": 27.84
+   },
+   {
+    "w": "led",
+    "start": 27.84,
+    "end": 28.0
+   },
+   {
+    "w": "by",
+    "start": 28.0,
+    "end": 28.16
+   },
+   {
+    "w": "Ms.",
+    "start": 28.16,
+    "end": 28.48
+   },
+   {
+    "w": "Angel",
+    "start": 28.48,
+    "end": 28.8
+   },
+   {
+    "w": "Lin,",
+    "start": 28.8,
+    "end": 29.52
+   },
+   {
+    "w": "together",
+    "start": 29.52,
+    "end": 29.84
+   },
+   {
+    "w": "with",
+    "start": 29.84,
+    "end": 30.08
+   },
+   {
+    "w": "three",
+    "start": 30.08,
+    "end": 30.32
+   },
+   {
+    "w": "senior",
+    "start": 30.32,
+    "end": 30.88
+   },
+   {
+    "w": "domain",
+    "start": 30.88,
+    "end": 31.36
+   },
+   {
+    "w": "specialists,",
+    "start": 31.36,
+    "end": 32.4
+   },
+   {
+    "w": "Wanzan,",
+    "start": 32.4,
+    "end": 33.36
+   },
+   {
+    "w": "Chia",
+    "start": 33.36,
+    "end": 33.68
+   },
+   {
+    "w": "Shichen,",
+    "start": 33.84,
+    "end": 34.48
+   },
+   {
+    "w": "and",
+    "start": 34.48,
+    "end": 34.56
+   },
+   {
+    "w": "Chao",
+    "start": 34.56,
+    "end": 34.88
+   },
+   {
+    "w": "Shin,",
+    "start": 34.88,
+    "end": 35.52
+   },
+   {
+    "w": "who",
+    "start": 35.52,
+    "end": 35.76
+   },
+   {
+    "w": "specialize",
+    "start": 35.76,
+    "end": 36.32
+   },
+   {
+    "w": "in",
+    "start": 36.32,
+    "end": 36.48
+   },
+   {
+    "w": "XPS,",
+    "start": 36.48,
+    "end": 37.6
+   },
+   {
+    "w": "XRD",
+    "start": 37.6,
+    "end": 38.4
+   },
+   {
+    "w": "and",
+    "start": 38.48,
+    "end": 38.64
+   },
+   {
+    "w": "TEM",
+    "start": 38.64,
+    "end": 39.52
+   },
+   {
+    "w": "respectively.",
+    "start": 39.68,
+    "end": 40.96
+   },
+   {
+    "w": "Aung",
+    "start": 40.96,
+    "end": 41.28
+   },
+   {
+    "w": "Li",
+    "start": 41.28,
+    "end": 41.52
+   },
+   {
+    "w": "Li",
+    "start": 41.52,
+    "end": 41.92
+   },
+   {
+    "w": "also",
+    "start": 41.92,
+    "end": 42.16
+   },
+   {
+    "w": "served",
+    "start": 42.16,
+    "end": 42.48
+   },
+   {
+    "w": "as",
+    "start": 42.48,
+    "end": 42.64
+   },
+   {
+    "w": "the",
+    "start": 42.64,
+    "end": 42.8
+   },
+   {
+    "w": "domain",
+    "start": 42.8,
+    "end": 43.28
+   },
+   {
+    "w": "lead",
+    "start": 43.28,
+    "end": 43.6
+   },
+   {
+    "w": "of",
+    "start": 43.6,
+    "end": 43.84
+   },
+   {
+    "w": "NMR,",
+    "start": 43.84,
+    "end": 44.88
+   },
+   {
+    "w": "Physical",
+    "start": 44.88,
+    "end": 45.52
+   },
+   {
+    "w": "and",
+    "start": 45.52,
+    "end": 45.68
+   },
+   {
+    "w": "Thermal",
+    "start": 45.68,
+    "end": 46.08
+   },
+   {
+    "w": "Cheracterization,",
+    "start": 46.08,
+    "end": 47.52
+   },
+   {
+    "w": "supported",
+    "start": 47.52,
+    "end": 48.0
+   },
+   {
+    "w": "by",
+    "start": 48.0,
+    "end": 48.16
+   },
+   {
+    "w": "instrument",
+    "start": 48.16,
+    "end": 48.8
+   },
+   {
+    "w": "specialists",
+    "start": 48.8,
+    "end": 49.52
+   },
+   {
+    "w": "Yo",
+    "start": 49.52,
+    "end": 49.84
+   },
+   {
+    "w": "Wenchang",
+    "start": 49.92,
+    "end": 50.56
+   },
+   {
+    "w": "and",
+    "start": 50.64,
+    "end": 50.8
+   },
+   {
+    "w": "Kwan",
+    "start": 50.8,
+    "end": 51.12
+   },
+   {
+    "w": "Kaichong.",
+    "start": 51.12,
+    "end": 52.32
+   },
+   {
+    "w": "Beyond",
+    "start": 52.32,
+    "end": 52.88
+   },
+   {
+    "w": "our",
+    "start": 52.88,
+    "end": 53.12
+   },
+   {
+    "w": "analytical",
+    "start": 53.12,
+    "end": 53.84
+   },
+   {
+    "w": "and",
+    "start": 53.84,
+    "end": 54.0
+   },
+   {
+    "w": "characterization",
+    "start": 54.0,
+    "end": 55.12
+   },
+   {
+    "w": "work,",
+    "start": 55.12,
+    "end": 55.6
+   },
+   {
+    "w": "AC",
+    "start": 55.6,
+    "end": 56.0
+   },
+   {
+    "w": "also",
+    "start": 56.16,
+    "end": 56.4
+   },
+   {
+    "w": "plays",
+    "start": 56.4,
+    "end": 56.88
+   },
+   {
+    "w": "an",
+    "start": 56.88,
+    "end": 57.2
+   },
+   {
+    "w": "important",
+    "start": 57.2,
+    "end": 57.44
+   },
+   {
+    "w": "role",
+    "start": 57.44,
+    "end": 57.84
+   },
+   {
+    "w": "in",
+    "start": 57.84,
+    "end": 58.08
+   },
+   {
+    "w": "managing",
+    "start": 58.08,
+    "end": 58.8
+   },
+   {
+    "w": "shared",
+    "start": 58.8,
+    "end": 59.28
+   },
+   {
+    "w": "scientific",
+    "start": 59.28,
+    "end": 60.0
+   },
+   {
+    "w": "resources",
+    "start": 60.0,
+    "end": 60.72
+   },
+   {
+    "w": "across",
+    "start": 60.72,
+    "end": 61.12
+   },
+   {
+    "w": "the",
+    "start": 61.12,
+    "end": 61.28
+   },
+   {
+    "w": "Institute.",
+    "start": 61.28,
+    "end": 62.48
+   },
+   {
+    "w": "Our",
+    "start": 62.48,
+    "end": 62.8
+   },
+   {
+    "w": "responsibilities",
+    "start": 62.8,
+    "end": 63.92
+   },
+   {
+    "w": "include",
+    "start": 63.92,
+    "end": 64.32
+   },
+   {
+    "w": "equipment",
+    "start": 64.32,
+    "end": 64.88
+   },
+   {
+    "w": "booking,",
+    "start": 64.88,
+    "end": 65.52
+   },
+   {
+    "w": "utilization",
+    "start": 65.52,
+    "end": 66.4
+   },
+   {
+    "w": "and",
+    "start": 66.4,
+    "end": 66.56
+   },
+   {
+    "w": "charging,",
+    "start": 66.56,
+    "end": 67.28
+   },
+   {
+    "w": "demand",
+    "start": 67.28,
+    "end": 67.76
+   },
+   {
+    "w": "aggregation,",
+    "start": 67.76,
+    "end": 68.8
+   },
+   {
+    "w": "scientific",
+    "start": 68.8,
+    "end": 69.52
+   },
+   {
+    "w": "equipment",
+    "start": 69.52,
+    "end": 70.0
+   },
+   {
+    "w": "and",
+    "start": 70.0,
+    "end": 70.16
+   },
+   {
+    "w": "systems",
+    "start": 70.16,
+    "end": 70.56
+   },
+   {
+    "w": "refresh,",
+    "start": 70.56,
+    "end": 71.36
+   },
+   {
+    "w": "and",
+    "start": 71.36,
+    "end": 71.52
+   },
+   {
+    "w": "equipment",
+    "start": 71.52,
+    "end": 72.0
+   },
+   {
+    "w": "lefesical",
+    "start": 72.0,
+    "end": 72.72
+   },
+   {
+    "w": "management.",
+    "start": 72.88,
+    "end": 74.0
+   },
+   {
+    "w": "We",
+    "start": 74.0,
+    "end": 74.32
+   },
+   {
+    "w": "also",
+    "start": 74.32,
+    "end": 74.64
+   },
+   {
+    "w": "support",
+    "start": 74.64,
+    "end": 75.04
+   },
+   {
+    "w": "digitalization",
+    "start": 75.04,
+    "end": 76.16
+   },
+   {
+    "w": "and",
+    "start": 76.16,
+    "end": 76.4
+   },
+   {
+    "w": "sustainability",
+    "start": 76.4,
+    "end": 77.36
+   },
+   {
+    "w": "initiatives.",
+    "start": 77.36,
+    "end": 78.56
+   },
+   {
+    "w": "Together,",
+    "start": 78.56,
+    "end": 79.36
+   },
+   {
+    "w": "these",
+    "start": 79.36,
+    "end": 79.6
+   },
+   {
+    "w": "activities",
+    "start": 79.6,
+    "end": 80.32
+   },
+   {
+    "w": "help",
+    "start": 80.32,
+    "end": 80.64
+   },
+   {
+    "w": "ensure",
+    "start": 80.64,
+    "end": 81.04
+   },
+   {
+    "w": "that",
+    "start": 81.04,
+    "end": 81.28
+   },
+   {
+    "w": "our",
+    "start": 81.28,
+    "end": 81.52
+   },
+   {
+    "w": "scientific",
+    "start": 81.52,
+    "end": 82.32
+   },
+   {
+    "w": "resources",
+    "start": 82.32,
+    "end": 83.04
+   },
+   {
+    "w": "are",
+    "start": 83.04,
+    "end": 83.28
+   },
+   {
+    "w": "effectively",
+    "start": 83.28,
+    "end": 83.92
+   },
+   {
+    "w": "managed,",
+    "start": 83.92,
+    "end": 84.8
+   },
+   {
+    "w": "optimized,",
+    "start": 84.8,
+    "end": 85.76
+   },
+   {
+    "w": "and",
+    "start": 85.76,
+    "end": 86.0
+   },
+   {
+    "w": "kept",
+    "start": 86.0,
+    "end": 86.32
+   },
+   {
+    "w": "relevant",
+    "start": 86.32,
+    "end": 86.88
+   },
+   {
+    "w": "to",
+    "start": 86.88,
+    "end": 87.12
+   },
+   {
+    "w": "support",
+    "start": 87.12,
+    "end": 87.6
+   },
+   {
+    "w": "the",
+    "start": 87.6,
+    "end": 87.84
+   },
+   {
+    "w": "evolving",
+    "start": 87.84,
+    "end": 88.32
+   },
+   {
+    "w": "research",
+    "start": 88.32,
+    "end": 88.8
+   },
+   {
+    "w": "needs",
+    "start": 88.8,
+    "end": 89.2
+   },
+   {
+    "w": "across",
+    "start": 89.2,
+    "end": 89.6
+   },
+   {
+    "w": "the",
+    "start": 89.6,
+    "end": 89.76
+   },
+   {
+    "w": "Institute.",
+    "start": 89.76,
+    "end": 90.48
+   }
+  ],
+  "dur": 90.801625
+ }
+}
