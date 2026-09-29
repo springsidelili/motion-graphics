@@ -1,6 +1,6 @@
 # ACI Division — Motion Graphics Storyboard (Part 1: slides 1–4)
 
-Runtime ≈ 3:06 · 1920×1080 · 60 fps · narration = the deck's own audio (mastered), word-synced.
+Runtime 3:07 · 1920×1080 · 60 fps · narration = the deck's own audio (mastered), word-synced.
 
 ## Design principles (from the brief)
 
@@ -18,9 +18,11 @@ Runtime ≈ 3:06 · 1920×1080 · 60 fps · narration = the deck's own audio (ma
 - **Texture** — slow drifting colour fields, a faint microplate dot-grid, vignette and film grain (grain also stops gradient banding after YouTube compression).
 - **HUD** — chapter tag top-left (`02 · Where ACI sits`), ISCE² logo top-right, as in the deck.
 
-## Beat sheet (global time, s)
+## Beat sheet
 
-### 1 · Welcome (0 – 9.4) — slide 1
+Times are indicative (seconds). The code never hard-codes them: every beat is looked up from the spoken word, so re-timing the narration re-times the picture.
+
+### 1 · Welcome (0 – 9.75) — slide 1
 | t | Narration | Picture |
 |---|---|---|
 | 0.0 | — | Perspective microplate fades up; pipette tip descends, a drop forms. |
@@ -30,7 +32,7 @@ Runtime ≈ 3:06 · 1920×1080 · 60 fps · narration = the deck's own audio (ma
 | 4.85–6.5 | "Advanced Characterization and Instrumentation" | Full name reveals word by word; **A**, **C**, **I** are tinted and connected to the big letters by thin leader lines — the acronym is explained visually. |
 | 8.3 | — | Letters collapse into a single glowing dot — the ACI node (**whoosh**). |
 
-### 2 · Where ACI sits (9.2 – 37.3) — slide 2
+### 2 · Where ACI sits (9.75 – 37.95) — slide 2
 | t | Narration | Picture |
 |---|---|---|
 | 9.5 | "Before introducing ACI…" | The ACI dot idles centre-screen. |
@@ -40,7 +42,7 @@ Runtime ≈ 3:06 · 1920×1080 · 60 fps · narration = the deck's own audio (ma
 | 29.6 / 31.0 / 32.9 | "our team… analytical capabilities… shared scientific resources" | Road-map: three chips branch out, one per phrase: 01 Our team, 02 Analytical capabilities, 03 Shared resources. |
 | 35.8 | — | Chips fold back into the ACI dot. |
 
-### 3 · What ACI does (37.0 – 90.2) — slide 3
+### 3 · What ACI does (37.95 – 90.7) — slide 3
 | t | Narration | Picture |
 |---|---|---|
 | 39.4 | "three technical domains" | The ACI circle divides (mitosis) into three coloured circles. |
@@ -53,7 +55,7 @@ Runtime ≈ 3:06 · 1920×1080 · 60 fps · narration = the deck's own audio (ma
 | 72.8–78.8 | "material characterisation, failure diagnostics, method development, consultancy and collaboration" | 2×2 service tiles, each with its own mechanism: scanned lattice, crack under a loupe, iterate-loop, two circles merging. |
 | 83.4–88.0 | "practical analytical solutions… research and industry needs" | Tiles fold into one statement that forks into *Research* and *Industry*. |
 
-### 4 · Our team & shared resources (89.8 – 186) — slide 4
+### 4 · Our team & shared resources (90.7 – 187) — slide 4
 | t | Narration | Picture |
 |---|---|---|
 | 92.4 / 94.9 | "Division Director, Andrew Lim… Ong Li Li… Deputy Director" | Leadership cards land on the management row. |

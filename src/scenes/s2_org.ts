@@ -154,12 +154,12 @@ function drawACI(ctx: Ctx, t: number, fade: number) {
   withAlpha(ctx, fade, () => {
     if (form < 1) {
       const idle = 1 + 0.08 * Math.sin((t - ACI_DOT.t) * 4) * (1 - mv);
-      glow(ctx, x, y, 90, C.violet, 0.9 * (1 - form));
+      glow(ctx, x, y, 90, C.violet, (1 - form));
       dot(ctx, x, y, ACI_DOT.r * idle * (1 - form * 0.5), '#FFFFFF', 1 - form);
       // idle pulse rings + label while it waits at centre
       for (let k = 0; k < 2; k++) {
         const u = ((t - ACI_DOT.t) * 0.7 + k * 0.5) % 1;
-        withAlpha(ctx, (1 - u) * 0.5 * (1 - mv), () => { ctx.beginPath(); ctx.arc(x, y, 18 + u * 70, 0, TAU); strokeStyle(ctx, C.violet, 2); ctx.stroke(); });
+        withAlpha(ctx, (1 - u) * 0.5 * (1 - mv) * prog(t, ACI_DOT.t, 0.8), () => { ctx.beginPath(); ctx.arc(x, y, 18 + u * 70, 0, TAU); strokeStyle(ctx, C.violet, 2); ctx.stroke(); });
       }
       const la = prog(t, T.aciWord, 0.5) * (1 - prog(t, T.move, 0.4));
       text(ctx, 'ACI', x + 38, y + 14, { f: 'display', size: 40, weight: 700, alpha: la });

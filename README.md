@@ -2,8 +2,9 @@
 
 This repo builds an employee-learning video about ISCE²'s Advanced Characterization and Instrumentation (ACI) division. It's generated entirely in code from the division's PowerPoint deck (`ISCE2_ACI_slides.pptx`) and that deck's own narration.
 
-- **Output:** 1920×1080, 60 fps, H.264 + AAC, about 3:07
-- **Captions:** `out/aci_part1.en.srt`, ready to upload to YouTube
+- **Watch:** [`renders/aci_part1_review_1080p30.mp4`](renders/aci_part1_review_1080p30.mp4) is the review copy (1080p30, 42 MB). The 60 fps master is rebuilt with the commands under **Build**.
+- **Output:** 1920×1080, 60 fps, H.264 + AAC, 3:07, mixed to -15 LUFS
+- **Captions:** [`renders/aci_part1.en.srt`](renders/aci_part1.en.srt), ready to upload to YouTube
 - **Storyboard:** [`docs/STORYBOARD.md`](docs/STORYBOARD.md) has the design principles and a beat sheet synced to each spoken word
 
 ## How it works
@@ -20,7 +21,7 @@ scripts/render.ts ──► N worker processes × (Skia canvas → raw RGBA → 
 tools/audio.py    ──► narration mastering + procedural SFX + ducked pad ──► -15 LUFS mix
 ```
 
-- **Renderer:** [`@napi-rs/canvas`](https://github.com/Brooooooklyn/canvas), which is Skia running in Node. It needs no browser and no GPU, and 4 workers render the whole piece in a few minutes.
+- **Renderer:** [`@napi-rs/canvas`](https://github.com/Brooooooklyn/canvas), which is Skia running in Node. It needs no browser and no GPU; 4 CPU workers render all 11,220 frames at 1080p60 in about 5 minutes.
 - **Determinism:** scenes never use `Math.random()` or the wall clock. Randomness comes from seeded `mulberry32` or `hash`, so any frame can be rendered alone, in any order, on any worker.
 - **Type:** Space Grotesk (display), Inter (body) and JetBrains Mono (labels), all SIL OFL and installed from npm.
 - **Sound:** every SFX and the pad is synthesised in `tools/audio.py`, so there are no licensing questions.
@@ -33,7 +34,7 @@ tools/audio.py    ──► narration mastering + procedural SFX + ducked pad �
 | `src/scenes/` | `s1_title` · `s2_org` · `s3_domains` · `s4_team` · `s5_resources` |
 | `src/timeline.ts` | Scene windows, chapters, finishing passes |
 | `src/sfx.ts` | Sound cue sheet |
-| `scripts/` | `render.ts` (stills / contact sheet / video), `worker.ts`, `cues.ts` (audio cues + SRT), `icons.ts` (icon test sheet), `perf.ts` |
+| `scripts/` | `render.ts` (stills / contact sheet / video), `worker.ts`, `cues.ts` (audio cues + SRT), `icons.ts` (icon test sheet), `perf.ts` (per-pass cost), `diffat.ts` (locates single-frame pops) |
 | `tools/` | `transcribe.py` (ASR), `align.py` (canonical spellings + onset snapping), `prep_images.py` (face crops, white logo), `audio.py` (mix) |
 | `assets/` | The narration from the deck (slides 1–4), headshots, ISCE² logo |
 | `data/` | `asr_raw.json`, `narration.json` |

@@ -1,0 +1,195 @@
+1
+00:00:02,950 --> 00:00:07,330
+Welcome to ACI Advanced Characterization and Instrumentation.
+
+2
+00:00:10,330 --> 00:00:12,700
+Before introducing ACI in more detail,
+
+3
+00:00:13,140 --> 00:00:18,380
+this slide provides a quick overview of the ISCE² organizational structure.
+
+4
+00:00:18,970 --> 00:00:22,350
+Here, you can see where ACI sits within the Institute.
+
+5
+00:00:23,260 --> 00:00:26,100
+ACI is led by our Division Director,
+
+6
+00:00:26,380 --> 00:00:27,180
+Andrew Lim.
+
+7
+00:00:27,440 --> 00:00:28,670
+In the next few slides,
+
+8
+00:00:29,120 --> 00:00:33,680
+I will introduce our team and highlight the key analytical capabilities and
+
+9
+00:00:33,680 --> 00:00:36,280
+shared scientific resources that we offer.
+
+10
+00:00:38,150 --> 00:00:41,530
+ACI is organised into three technical domains,
+
+11
+00:00:42,050 --> 00:00:46,610
+chromatography and mass spectrometry, X-ray spectroscopy and microscopy,
+
+12
+00:00:47,090 --> 00:00:50,080
+and NMR, physical and thermal characterisation.
+
+13
+00:00:50,910 --> 00:00:55,400
+Together, our domain leads and staff manage a broad range of shared
+
+14
+00:00:55,400 --> 00:00:59,550
+scientific resources and provide analytical and characterisation support,
+
+15
+00:01:00,130 --> 00:01:01,960
+as well as technical training,
+
+16
+00:01:02,360 --> 00:01:04,060
+to our research community.
+
+17
+00:01:04,950 --> 00:01:07,710
+Beyond supporting our internal R&D activities,
+
+18
+00:01:08,170 --> 00:01:11,640
+we also extend our capabilities to industry partners,
+
+19
+00:01:12,050 --> 00:01:15,200
+providing services such as material characterisation,
+
+20
+00:01:15,640 --> 00:01:19,400
+failure diagnostics, method development, consultancy,
+
+21
+00:01:19,400 --> 00:01:20,410
+and collaboration.
+
+22
+00:01:21,310 --> 00:01:27,160
+Through these capabilities, we aim to provide practical analytical solutions to support
+
+23
+00:01:27,160 --> 00:01:29,090
+different research and industry needs.
+
+24
+00:01:30,950 --> 00:01:34,150
+The ACI division is led by our division director,
+
+25
+00:01:34,510 --> 00:01:38,500
+Andrew Lim, and Ong Li Li as the Division Deputy Director.
+
+26
+00:01:39,240 --> 00:01:41,770
+And it comprises three technical domains,
+
+27
+00:01:42,200 --> 00:01:44,620
+each led by our respective domain lead.
+
+28
+00:01:45,240 --> 00:01:49,160
+The Chromatography and Mass Spectrometry domain is led by Mr.
+
+29
+00:01:49,160 --> 00:01:52,470
+Ong Wai Chung, supported by our instrument specialists,
+
+30
+00:01:52,920 --> 00:01:54,970
+Ng Fu Song and Tan Kuan Yi.
+
+31
+00:01:55,640 --> 00:01:59,080
+The X-ray Spectroscopy and Microscopy domain is led by Ms.
+
+32
+00:01:59,080 --> 00:02:02,450
+Angeline Seo, together with three senior domain specialists,
+
+33
+00:02:03,120 --> 00:02:05,080
+Wang Zhan, Chia Sze Chen,
+
+34
+00:02:05,080 --> 00:02:07,880
+and Cao Xun, who specialize in XPS,
+
+35
+00:02:08,260 --> 00:02:10,900
+XRD and TEM respectively.
+
+36
+00:02:11,560 --> 00:02:15,190
+Ong Li Li also served as the domain lead of NMR,
+
+37
+00:02:15,630 --> 00:02:21,340
+Physical and Thermal Characterisation, supported by instrument specialists Yeo Wen Cong and
+
+38
+00:02:21,340 --> 00:02:23,110
+Kuan Kai Cong.
+
+39
+00:02:23,110 --> 00:02:25,850
+Beyond our analytical and characterisation work,
+
+40
+00:02:26,340 --> 00:02:31,720
+ACI also plays an important role in managing shared scientific resources across
+
+41
+00:02:31,720 --> 00:02:32,520
+the Institute.
+
+42
+00:02:33,220 --> 00:02:35,880
+Our responsibilities include equipment booking,
+
+43
+00:02:36,240 --> 00:02:39,130
+utilisation and charging, demand aggregation,
+
+44
+00:02:39,500 --> 00:02:41,740
+scientific equipment and systems refresh,
+
+45
+00:02:41,960 --> 00:02:43,880
+and equipment lifecycle management.
+
+46
+00:02:44,700 --> 00:02:48,530
+We also support digitalisation and sustainability initiatives.
+
+47
+00:02:49,330 --> 00:02:54,990
+Together, these activities help ensure that our scientific resources are effectively managed,
+
+48
+00:02:55,490 --> 00:03:00,360
+optimised, and kept relevant to support the evolving research needs across the
+
+49
+00:03:00,360 --> 00:03:01,160
+Institute.

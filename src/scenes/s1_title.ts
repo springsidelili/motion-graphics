@@ -222,7 +222,8 @@ export const s1: Scene = {
   id: 'title',
   start: 0,
   end: ACI_DOT.t + 0.05,
-  bg: (t) => ({ energy: keys(t, [[0, 0.25], [2.1, 0.45], [2.6, 1.0], [8.5, 1], [9, 0.7]]), grid: keys(t, [[0, 0], [3, 0], [5, 0.5], [9, 0.8]]) }),
+  // ends on the same background state scene 2 starts with (energy 1, grid 0.9)
+  bg: (t) => ({ energy: keys(t, [[0, 0.25], [2.1, 0.45], [2.6, 1.0]]), grid: keys(t, [[0, 0], [3, 0], [5, 0.5], [9, 0.9]]) }),
   draw(ctx, t) {
     const fadeIn = prog(t, 0, 0.8, ease.outCubic);
     withAlpha(ctx, fadeIn, () => {

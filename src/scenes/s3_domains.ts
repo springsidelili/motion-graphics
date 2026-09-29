@@ -373,8 +373,11 @@ export const s3: Scene = {
   end: S4_DOT.t,
   bg: (t) => {
     const c = cam(t);
-    const dom = prog(t, T.dom[0]!, 1) * (1 - prog(t, T.together, 1));
-    return { gx: -(c.x - W / 2) * c.z * 0.4, gy: -(c.y - H / 2) * c.z * 0.4, grid: 0.9, hue: dom > 0.5 ? [C.cms, C.xray, C.nmr] : undefined, energy: 1 };
+    // blend the colour fields toward the domain colours while the domain cards are up
+    const dom = Math.round(16 * prog(t, T.dom[0]!, 1.5, ease.inOutCubic) * (1 - prog(t, T.together, 1.5, ease.inOutCubic))) / 16;
+    const brand = [C.blue, C.violet, C.magenta], doms = [C.cms, C.xray, C.nmr];
+    const hue = brand.map((b, i) => rgba(mixRGB(b, doms[i]!, dom), 1)) as [string, string, string];
+    return { gx: -(c.x - W / 2) * c.z * 0.4, gy: -(c.y - H / 2) * c.z * 0.4, grid: 0.9, hue, energy: 1 };
   },
   draw(ctx, t) {
     // ISCE² diagram (sections A–C) lives in world space under the camera

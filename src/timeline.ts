@@ -2,7 +2,7 @@
 import type { Ctx } from './engine/assets';
 import type { Scene } from './engine/scene';
 import { DURATION, clip } from './engine/narration';
-import { background, vignette, grain, hud, type Chapter } from './engine/post';
+import { background, finish, hud, type Chapter } from './engine/post';
 import { ease, prog, keys } from './engine/util';
 import { s1 } from './scenes/s1_title';
 import { s2, S3_DOT } from './scenes/s2_org';
@@ -29,8 +29,7 @@ export function renderFrame(ctx: Ctx, t: number) {
   background(ctx, t, top?.bg?.(t) ?? {});
   for (const s of active) { ctx.save(); s.draw(ctx, t); ctx.restore(); }
   hud(ctx, t, chapters, keys(t, [[clip(2).offset - 0.2, 0], [clip(2).offset + 0.6, 1], [S5_TIMES.end - 0.3, 1], [S5_TIMES.end + 0.4, 0]]));
-  vignette(ctx, 1);
-  grain(ctx, t, 0.9);
+  finish(ctx, 1);
   const fade = prog(t, END - 0.9, 0.9, ease.inCubic);
   if (fade > 0) { ctx.fillStyle = `rgba(0,0,0,${fade})`; ctx.fillRect(0, 0, 1920, 1080); }
 }

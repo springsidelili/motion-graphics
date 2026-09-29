@@ -68,8 +68,8 @@ const FOCUS: Cam[] = [
 ];
 function cam(t: number): Cam {
   let c = CAM0;
-  for (let i = 0; i < 3; i++) c = lerpCam(c, FOCUS[i]!, prog(t, T.focus[i]!, 1.1, ease.inOutCubic));
-  c = lerpCam(c, { x: W / 2, y: 560, z: 0.98 }, prog(t, T.wide, 1.3, ease.inOutCubic));
+  for (let i = 0; i < 3; i++) c = lerpCam(c, FOCUS[i]!, prog(t, T.focus[i]!, 1.4, ease.inOutCubic));
+  c = lerpCam(c, { x: W / 2, y: 560, z: 0.98 }, prog(t, T.wide, 1.7, ease.inOutCubic));
   return c;
 }
 /** 0..1 how strongly column i is in focus (others dim). */
@@ -116,7 +116,7 @@ function drawColumn(ctx: Ctx, i: number, t: number, fold: number) {
   if (rise <= 0) return;
   const f = focusOf(i, t);
   const colFold = prog(t, T.fold + 0.45, 0.6, ease.inOutCubic);
-  const cardsFold = prog(t, T.fold, 0.5, ease.inCubic);
+  const cardsFold = prog(t, T.fold, 0.4, ease.inOutCubic);
   withAlpha(ctx, f * (1 - prog(t, T.fold + 0.9, 0.3)), () => {
     const h = (COL.bottom - COL.top) * rise * (1 - colFold);
     const w = lerp(COL.w, 40, colFold);
@@ -128,7 +128,7 @@ function drawColumn(ctx: Ctx, i: number, t: number, fold: number) {
     ctx.fillStyle = gr; ctx.fill(); strokeStyle(ctx, D.color, 2, 0.55); ctx.stroke();
     if (colFold > 0) return;
     // header band
-    const hp = prog(t, T.cols + i * 0.15 + 0.3, 0.5);
+    const hp = prog(t, T.cols + i * 0.15 + 0.3, 0.5) * (1 - prog(t, T.fold + 0.05, 0.35, ease.inOutCubic));
     withAlpha(ctx, hp, () => {
       ctx.save(); rr(ctx, x - w / 2, top, w, h, 22); ctx.clip();
       ctx.fillStyle = rgba(D.color, 0.9); ctx.fillRect(x - w / 2, top, w, 94);
@@ -174,12 +174,13 @@ function drawFlight(ctx: Ctx, t: number, fold: number) {
     polyPartial(ctx, path, u); ctx.setLineDash([]);
     const w = lerp(MG.w, CARD.w, u), h = lerp(MG.h, CARD.h, u);
     const lift = Math.sin(u * Math.PI) * 0.08;
+    const k = ease.inOutCubic(clamp((u - 0.3) / 0.4)); // violet deputy-director card → green domain-lead card
     withT(ctx, q.x, q.y, 1 + lift, () => {
       if (u < 1) glow(ctx, 0, 0, w * 0.6, C.violet, 0.5 * Math.sin(u * Math.PI));
-      personCard(ctx, t, 0, { id: 'ong_li_li', name: 'Ong Li Li', role: u < 0.5 ? 'Division Deputy Director' : 'Domain Lead' }, -w / 2, -h / 2, w, h, u < 0.5 ? C.violet : C.nmr,
-        { nameSize: 26, roleT: u < 0.5 ? 0 : flyStart() + 0.6 });
+      withAlpha(ctx, 1 - k, () => personCard(ctx, t, 0, { id: 'ong_li_li', name: 'Ong Li Li', role: 'Division Deputy Director' }, -w / 2, -h / 2, w, h, C.violet, { nameSize: 26 }));
+      withAlpha(ctx, k, () => personCard(ctx, t, 0, { id: 'ong_li_li', name: 'Ong Li Li', role: 'Domain Lead' }, -w / 2, -h / 2, w, h, C.nmr, { nameSize: 26, roleT: flyStart() + 0.55 }));
     });
-    const land = pulse(t, flyLand(), 0.03, 0.5);
+    const land = pulse(t, flyLand(), 0.1, 0.5) * 0.8;
     if (land > 0.01) glow(ctx, B.x, B.y, 320, C.nmr, land);
   });
 }
@@ -210,7 +211,7 @@ export const s4: Scene = {
     drawHeader(ctx, t, fold);
     drawManagement(ctx, t, fold);
     for (let i = 0; i < 3; i++) drawColumn(ctx, i, t, fold);
-    drawFlight(ctx, t, fold);
+    drawFlight(ctx, t, prog(t, T.fold, 0.4, ease.inOutCubic));
     drawFold(ctx, t);
     ctx.restore();
   },

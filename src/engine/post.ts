@@ -1,29 +1,38 @@
 import { createCanvas, type Canvas } from '@napi-rs/canvas';
 import { img, type Ctx, W, H } from './assets';
 import { C } from './theme';
-import { clamp, mulberry32, noise1, rgba, prog, ease, lerp } from './util';
+import { mulberry32, noise1, rgba, prog, ease, lerp } from './util';
 import { glow, text, withAlpha, measure } from './draw';
 
 // ---------------------------------------------------------------- background
-let gridTile: Canvas | null = null;
+// Cost matters (Skia runs on the CPU): the smooth colour fields are drawn at
+// quarter resolution and upscaled; the dot grid and the vignette+grain overlay
+// are pre-rendered once and blitted.
+const LO = 4;
+let lo: Canvas | null = null;
+let gridFull: Canvas | null = null;
 function grid() {
-  if (gridTile) return gridTile;
-  gridTile = createCanvas(48, 48);
-  const g = gridTile.getContext('2d');
+  if (gridFull) return gridFull;
+  gridFull = createCanvas(W + 48, H + 48);
+  const g = gridFull.getContext('2d');
   g.fillStyle = 'rgba(160,178,255,0.10)';
-  g.beginPath(); g.arc(24, 24, 1.7, 0, Math.PI * 2); g.fill();
-  return gridTile;
+  for (let y = 24; y < H + 48; y += 48) for (let x = 24; x < W + 48; x += 48) { g.beginPath(); g.arc(x, y, 1.7, 0, Math.PI * 2); g.fill(); }
+  return gridFull;
 }
 
 export type BG = { hue?: [string, string, string]; energy?: number; grid?: number; gx?: number; gy?: number; flash?: number };
 
 /** Base plate: deep gradient, three drifting colour fields, microplate dot grid. */
 export function background(ctx: Ctx, t: number, o: BG = {}) {
-  const g = ctx.createLinearGradient(0, 0, W * 0.3, H);
+  if (!lo) lo = createCanvas(W / LO, H / LO);
+  const l = lo.getContext('2d');
+  l.setTransform(1, 0, 0, 1, 0, 0);
+  l.globalCompositeOperation = 'source-over';
+  const g = l.createLinearGradient(0, 0, (W * 0.3) / LO, H / LO);
   g.addColorStop(0, C.ink1);
   g.addColorStop(1, C.ink0);
-  ctx.fillStyle = g;
-  ctx.fillRect(0, 0, W, H);
+  l.fillStyle = g;
+  l.fillRect(0, 0, W / LO, H / LO);
   const hues = o.hue ?? [C.blue, C.violet, C.magenta];
   const en = o.energy ?? 1;
   const blobs = [
@@ -31,72 +40,52 @@ export function background(ctx: Ctx, t: number, o: BG = {}) {
     { x: 0.85, y: 0.3, r: 800, a: 0.17, s: 2 },
     { x: 0.6, y: 0.95, r: 1000, a: 0.14, s: 3 },
   ];
+  l.scale(1 / LO, 1 / LO);
   blobs.forEach((b, i) => {
     const x = (b.x + 0.07 * noise1(t * 0.05, b.s)) * W;
     const y = (b.y + 0.07 * noise1(t * 0.043, b.s + 10)) * H;
-    glow(ctx, x, y, b.r, hues[i]!, b.a * en);
+    glow(l as unknown as Ctx, x, y, b.r, hues[i]!, b.a * en);
   });
+  ctx.save();
+  ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(lo, 0, 0, W, H);
+  ctx.restore();
   const ga = o.grid ?? 1;
   if (ga > 0.01) {
-    ctx.save();
-    ctx.globalAlpha = clamp(ga);
-    const pat = ctx.createPattern(grid(), 'repeat')!;
     const ox = ((o.gx ?? 0) % 48 + 48) % 48, oy = ((o.gy ?? 0) % 48 + 48) % 48;
-    ctx.translate(ox - 48, oy - 48);
-    ctx.fillStyle = pat;
-    ctx.fillRect(0, 0, W + 96, H + 96);
-    ctx.restore();
+    withAlpha(ctx, ga, () => ctx.drawImage(grid(), ox - 48, oy - 48));
   }
 }
 
 // ---------------------------------------------------------------- finishing
-let vig: Canvas | null = null;
-export function vignette(ctx: Ctx, a = 1) {
-  if (!vig) {
-    vig = createCanvas(W, H);
-    const g = vig.getContext('2d');
+let overlay: Canvas | null = null;
+/**
+ * Vignette + static fine grain in one pre-rendered layer. The grain is there to
+ * dither the dark gradients (no banding after YouTube's re-encode); it is static
+ * so it costs the encoder almost nothing.
+ */
+export function finish(ctx: Ctx, a = 1) {
+  if (!overlay) {
+    overlay = createCanvas(W, H);
+    const g = overlay.getContext('2d');
     const gr = g.createRadialGradient(W / 2, H * 0.48, H * 0.35, W / 2, H / 2, W * 0.72);
     gr.addColorStop(0, 'rgba(3,5,16,0)');
     gr.addColorStop(0.6, 'rgba(3,5,16,0.28)');
     gr.addColorStop(1, 'rgba(3,5,16,0.78)');
     g.fillStyle = gr; g.fillRect(0, 0, W, H);
-  }
-  withAlpha(ctx, a, () => ctx.drawImage(vig!, 0, 0));
-}
-
-const grainTiles: Canvas[] = [];
-function grainTile(i: number) {
-  if (!grainTiles.length) {
-    for (let k = 0; k < 6; k++) {
-      const c = createCanvas(256, 256);
-      const g = c.getContext('2d');
-      const id = g.createImageData(256, 256);
-      const rnd = mulberry32(1234 + k * 77);
-      for (let p = 0; p < 256 * 256; p++) {
-        const v = rnd();
-        const white = v > 0.5;
-        const a = Math.abs(v - 0.5) * 2;
-        id.data[p * 4] = id.data[p * 4 + 1] = id.data[p * 4 + 2] = white ? 255 : 0;
-        id.data[p * 4 + 3] = Math.round(a * a * 26);
-      }
-      g.putImageData(id, 0, 0);
-      grainTiles.push(c);
+    const nz = createCanvas(W, H), n = nz.getContext('2d');
+    const id = n.createImageData(W, H);
+    const rnd = mulberry32(1234);
+    for (let p = 0; p < W * H; p++) {
+      const v = rnd();
+      const white = v > 0.5, k = Math.abs(v - 0.5) * 2;
+      id.data[p * 4] = id.data[p * 4 + 1] = id.data[p * 4 + 2] = white ? 255 : 0;
+      id.data[p * 4 + 3] = Math.round(k * k * 14);
     }
+    n.putImageData(id, 0, 0);
+    g.drawImage(nz, 0, 0);
   }
-  return grainTiles[i % grainTiles.length]!;
-}
-/** Film grain: also dithers the dark gradients so H.264 / YouTube don't band them. */
-export function grain(ctx: Ctx, t: number, a = 1) {
-  const f = Math.floor(t * 30);
-  const tile = grainTile(f);
-  const ox = (f * 97) % 256, oy = (f * 61) % 256;
-  ctx.save();
-  ctx.globalAlpha = a;
-  const pat = ctx.createPattern(tile, 'repeat')!;
-  ctx.translate(-ox, -oy);
-  ctx.fillStyle = pat;
-  ctx.fillRect(0, 0, W + 256, H + 256);
-  ctx.restore();
+  withAlpha(ctx, a, () => ctx.drawImage(overlay!, 0, 0));
 }
 
 // ---------------------------------------------------------------- HUD
